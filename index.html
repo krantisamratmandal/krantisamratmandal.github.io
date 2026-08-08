@@ -3,163 +3,626 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
+
 <title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
+
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
-header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
-.logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
-h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
-header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
-.tag{font-size:19px;font-weight:800;margin:8px} .location{font-size:15px}
-nav{position:sticky;top:0;z-index:99;background:#620000;display:flex;justify-content:center;flex-wrap:wrap;box-shadow:0 3px 14px #0005}
-nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-right:1px solid #d99a00}
-nav a:hover,nav a.active{background:#e7a300;color:#570000}
-section{max-width:1100px;margin:auto;padding:38px 14px}
-.title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
-.event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
-.event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
-.event .icon{font-size:40px} .event b{display:block;font-size:21px;margin:6px} .event p{margin:0;line-height:1.7}
-.box{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px #0002;border:1px solid #ffd38a}
-.info{background:#fff5df;border-left:5px solid #e2a000;padding:14px;border-radius:9px;margin:10px 0;line-height:1.6}
-.person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
-.person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
-.badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
-.gallery img{width:115px;height:115px;object-fit:contain;display:block;margin:0 auto;border-radius:50%;border:3px solid #ffd34f}
-.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold}
-footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small{font-size:13px;opacity:.9}
-@media(max-width:600px){nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}.cards{grid-template-columns:repeat(3,1fr);gap:7px}.person{padding:10px 4px;font-size:13px;word-break:break-word}.person b{font-size:14px}}
+
+body{
+ margin:0;
+ font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+ background:#fff7e8;
+ color:#35120b
+}
+
+header{
+ background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);
+ color:#fff;
+ text-align:center;
+ padding:22px 12px 30px
+}
+
+.logo{
+ width:82px;
+ height:82px;
+ object-fit:contain;
+ border-radius:50%;
+ background:#fff;
+ padding:5px;
+ border:3px solid #ffd54f;
+ box-shadow:0 4px 18px #0007
+}
+
+h1{
+ font-size:clamp(30px,8vw,58px);
+ margin:8px 0 0;
+ font-weight:900
+}
+
+header h2{
+ font-size:clamp(17px,4.5vw,29px);
+ margin:3px 0
+}
+
+.tag{
+ font-size:19px;
+ font-weight:800;
+ margin:8px
+}
+
+.location{
+ font-size:15px
+}
+
+nav{
+ position:sticky;
+ top:0;
+ z-index:99;
+ background:#620000;
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ box-shadow:0 3px 14px #0005
+}
+
+nav a{
+ color:#fff;
+ text-decoration:none;
+ font-weight:800;
+ font-size:14px;
+ padding:13px 10px;
+ border-right:1px solid #d99a00
+}
+
+nav a:hover,
+nav a.active{
+ background:#e7a300;
+ color:#570000
+}
+
+section{
+ max-width:1100px;
+ margin:auto;
+ padding:38px 14px
+}
+
+.title{
+ text-align:center;
+ color:#8a0000;
+ font-size:29px;
+ font-weight:900;
+ margin:0 0 20px
+}
+
+.cards{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px
+}
+
+.event{
+ color:#fff;
+ text-align:center;
+ padding:22px 12px;
+ border-radius:18px;
+ border:2px solid #ffc94d;
+ box-shadow:0 6px 18px #0003;
+ background:linear-gradient(145deg,#8a0000,#ed4b00)
+}
+
+.event:nth-child(2){
+ background:linear-gradient(145deg,#d05b00,#f6a600)
+}
+
+.event:nth-child(3){
+ background:linear-gradient(145deg,#70004e,#bd1763)
+}
+
+.event .icon{
+ font-size:40px
+}
+
+.event b{
+ display:block;
+ font-size:21px;
+ margin:6px
+}
+
+.event p{
+ margin:0;
+ line-height:1.7
+}
+
+.box{
+ background:#fff;
+ border-radius:18px;
+ padding:20px;
+ box-shadow:0 5px 22px #0002;
+ border:1px solid #ffd38a
+}
+
+.info{
+ background:#fff5df;
+ border-left:5px solid #e2a000;
+ padding:14px;
+ border-radius:9px;
+ margin:10px 0;
+ line-height:1.6
+}
+
+.person{
+ background:#fff;
+ border:1px solid #ffd28a;
+ border-radius:15px;
+ text-align:center;
+ padding:15px;
+ box-shadow:0 3px 12px #0001;
+ font-size:17px
+}
+
+.person b{
+ display:block;
+ color:#8a0000;
+ margin-bottom:5px;
+ font-size:18px
+}
+
+.badge{
+ display:inline-block;
+ background:#ffe08a;
+ color:#650000;
+ padding:3px 9px;
+ border-radius:15px;
+ font-size:12px;
+ font-weight:bold
+}
+
+/* GALLERY */
+
+.gallery-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px
+}
+
+.gallery-item{
+ background:#fff;
+ padding:10px;
+ border-radius:16px;
+ box-shadow:0 4px 15px #0002;
+ border:1px solid #ffd28a;
+ cursor:pointer;
+ transition:.2s
+}
+
+.gallery-item:hover{
+ transform:translateY(-3px)
+}
+
+.gallery-item img{
+ width:100%;
+ height:210px;
+ object-fit:cover;
+ border-radius:12px
+}
+
+.gallery-item p{
+ margin:8px 2px 3px;
+ text-align:center;
+ font-weight:bold;
+ color:#7b0000
+}
+
+/* BUTTON */
+
+.btn{
+ display:inline-block;
+ margin:6px;
+ padding:12px 18px;
+ border-radius:25px;
+ background:linear-gradient(135deg,#d94b00,#820000);
+ color:#fff;
+ text-decoration:none;
+ font-weight:bold;
+ border:0;
+ cursor:pointer
+}
+
+/* ADMIN */
+
+.admin-login{
+ position:fixed;
+ inset:0;
+ background:#0009;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ z-index:1000;
+ padding:15px
+}
+
+.admin-login.show{
+ display:flex
+}
+
+.login-box{
+ width:min(420px,100%);
+ background:#fff;
+ padding:25px;
+ border-radius:20px;
+ box-shadow:0 10px 40px #0007
+}
+
+.login-box h2{
+ text-align:center;
+ color:#800000
+}
+
+.input{
+ width:100%;
+ padding:13px;
+ margin:7px 0;
+ border:1px solid #ddd;
+ border-radius:10px;
+ font-size:16px
+}
+
+.admin-panel{
+ display:none;
+ background:#fff;
+ border:3px solid #e0a000;
+ border-radius:20px;
+ padding:20px;
+ margin:20px auto;
+ max-width:1100px;
+ box-shadow:0 5px 25px #0003
+}
+
+.admin-panel.show{
+ display:block
+}
+
+.admin-section{
+ border:1px solid #ffd28a;
+ border-radius:15px;
+ padding:15px;
+ margin:15px 0;
+ background:#fffaf0
+}
+
+.admin-section h3{
+ color:#800000;
+ margin-top:0
+}
+
+.admin-row{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:10px;
+ margin:8px 0
+}
+
+.admin-row input,
+.admin-row textarea{
+ width:100%;
+ padding:10px;
+ border:1px solid #ddd;
+ border-radius:8px
+}
+
+.admin-row textarea{
+ min-height:80px
+}
+
+.admin-actions{
+ text-align:center;
+ margin-top:15px
+}
+
+.status{
+ text-align:center;
+ padding:10px;
+ border-radius:10px;
+ background:#fff0bd;
+ margin:10px 0;
+ font-weight:bold
+}
+
+.admin-only-button{
+ position:fixed;
+ bottom:12px;
+ right:12px;
+ z-index:500;
+ background:#570000;
+ color:#fff;
+ border:2px solid #ffd54f;
+ border-radius:25px;
+ padding:8px 13px;
+ font-size:12px;
+ cursor:pointer;
+ opacity:.75
+}
+
+/* IMAGE VIEWER */
+
+.viewer{
+ position:fixed;
+ inset:0;
+ background:#000e;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ z-index:2000;
+ padding:15px
+}
+
+.viewer.show{
+ display:flex
+}
+
+.viewer img{
+ max-width:95%;
+ max-height:90vh;
+ object-fit:contain;
+ border-radius:10px
+}
+
+.viewer-close{
+ position:absolute;
+ top:15px;
+ right:20px;
+ color:#fff;
+ font-size:35px;
+ cursor:pointer
+}
+
+footer{
+ background:#570000;
+ color:#fff;
+ text-align:center;
+ padding:28px 12px
+}
+
+.small{
+ font-size:13px;
+ opacity:.9
+}
+
+@media(max-width:700px){
+
+ .cards{
+  grid-template-columns:repeat(2,1fr);
+  gap:8px
+ }
+
+ .gallery-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:10px
+ }
+
+ .gallery-item img{
+  height:150px
+ }
+
+ .admin-row{
+  grid-template-columns:1fr
+ }
+
+}
+
+@media(max-width:450px){
+
+ nav a{
+  padding:10px 6px;
+  font-size:12px
+ }
+
+ section{
+  padding:30px 11px
+ }
+
+ .cards{
+  grid-template-columns:repeat(2,1fr)
+ }
+
+ .person{
+  padding:10px 4px;
+  font-size:13px;
+  word-break:break-word
+ }
+
+ .person b{
+  font-size:14px
+ }
+
+ .gallery-grid{
+  grid-template-columns:repeat(2,1fr)
+ }
+
+ .gallery-item img{
+  height:125px
+ }
+}
 </style>
 </head>
+
 <body>
 
 <header id="home">
-<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो">
+
+<img class="logo"
+src="mandal-logo.jpg"
+alt="क्रांती सम्राट मंडळाचा लोगो">
+
 <h1>क्रांती सम्राट</h1>
+
 <h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
+
 <div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
-<div class="location">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
+
+<div class="location">
+📍 पडवळवाडी, ता. वाळवा, जि. सांगली
+</div>
+
 </header>
 
+
 <nav>
+
 <a href="#home">🏠 Home</a>
+
 <a href="#mandal">🏛️ मंडळ</a>
+
 <a href="#program">📅 कार्यक्रम</a>
+
 <a href="#office">👑 पदाधिकारी</a>
+
 <a href="#members">👥 सदस्य</a>
+
 <a href="#gallery">📸 Gallery</a>
+
 <a href="#contact">📞 संपर्क</a>
+
 </nav>
 
-<section>
-<h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
-<div class="cards">
-<div class="event"><div class="icon">🚩</div><b>गणपती आगमन</b><p>सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p></div>
-<div class="event"><div class="icon">🍛</div><b>महाप्रसाद</b><p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p></div>
-<div class="event"><div class="icon">🌺</div><b>विसर्जन</b><p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p></div>
+
+<!-- ADMIN LOGIN -->
+
+<div id="adminLogin" class="admin-login">
+
+<div class="login-box">
+
+<h2>👑 Admin Login</h2>
+
+<p style="text-align:center">
+फक्त मंडळाच्या Admin साठी
+</p>
+
+<input
+id="loginEmail"
+class="input"
+type="email"
+placeholder="Admin Email">
+
+<input
+id="loginPassword"
+class="input"
+type="password"
+placeholder="Password">
+
+<button class="btn" style="width:100%"
+onclick="adminLogin()">
+🔐 Login
+</button>
+
+<button class="btn"
+style="background:#555;width:100%"
+onclick="closeLogin()">
+❌ बंद करा
+</button>
+
+<p id="loginMessage"
+style="color:#b00000;text-align:center">
+</p>
+
 </div>
-</section>
 
-<section id="mandal">
-<h2 class="title">🏛️ मंडळाची माहिती</h2>
-<div class="box">
-<p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
-<div class="cards">
-<div class="person"><b>स्थापना</b>१९९२</div>
-<div class="person"><b>गणेशोत्सव</b>२०२६</div>
-<div class="person"><b>ठिकाण</b>पडवळवाडी, ता. वाळवा, जि. सांगली</div>
-<div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
 </div>
+
+
+<!-- ADMIN PANEL -->
+
+<div id="adminPanel" class="admin-panel">
+
+<h2 class="title">👑 Admin Panel</h2>
+
+<div class="status">
+✅ Admin Login झाले आहे
 </div>
-</section>
 
-<section id="program">
-<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
-<div class="box">
-<div class="info">🚩 <b>गणपती आगमन:</b> सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</div>
-<div class="info">🙏 <b>स्थापना व आरती:</b> गणेशोत्सवातील धार्मिक कार्यक्रम</div>
-<div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
-<div class="info">🍛 <b>महाप्रसाद:</b> मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</div>
-<div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
+<div class="admin-section">
+
+<h3>📅 कार्यक्रम बदल</h3>
+
+<div class="admin-row">
+
+<input id="event1Title"
+placeholder="कार्यक्रम 1 नाव">
+
+<input id="event1Date"
+placeholder="तारीख / वेळ">
+
 </div>
-</section>
 
-<section id="office">
-<h2 class="title">👑 पदाधिकारी</h2>
-<div class="cards">
-<div class="person"><b>अथर्व खोत</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>संग्राम पवार</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>संदेश पवार</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>अमोल पवार</b>सचिव<br><span class="badge">पदाधिकारी</span></div>
+<div class="admin-row">
+
+<input id="event2Title"
+placeholder="कार्यक्रम 2 नाव">
+
+<input id="event2Date"
+placeholder="तारीख / वेळ">
+
 </div>
-</section>
 
-<section id="members">
-<h2 class="title">👥 मंडळाचे सदस्य — २७</h2>
-<div class="box"><div class="cards">
-<div class="person">1. अरुण खोत</div>
-<div class="person">2. राहुल खोत</div>
-<div class="person">3. प्रवीण मोरे</div>
-<div class="person">4. कैलास खोत</div>
-<div class="person">5. जगदीश लोहार</div>
-<div class="person">6. महेंद्र पवार</div>
-<div class="person">7. आदित्य घाडगे</div>
-<div class="person">8. जयंत खोत</div>
-<div class="person">9. सुशांत पवार</div>
-<div class="person">10. प्रवीण पवार</div>
-<div class="person">11. दिलीप खोत</div>
-<div class="person">12. आशिष खोत</div>
-<div class="person">13. विशाल घाडगे</div>
-<div class="person">14. अमोल घाडगे</div>
-<div class="person">15. अनिकेत घाडगे</div>
-<div class="person">16. संग्राम घाडगे</div>
-<div class="person">17. सुशांत चव्हाण</div>
-<div class="person">18. प्रणव खोत</div>
-<div class="person">19. राहुल जाधव</div>
-<div class="person">20. भूषण खोत</div>
-<div class="person">21. सुजय दिंडे</div>
-<div class="person">22. संस्कार मोरे</div>
-<div class="person">23. विराज घाडगे</div>
-<div class="person">24. आर्यन खोत</div>
-<div class="person">25. श्रेयश पवार</div>
-<div class="person">26. अनसाली चाऊस</div>
-<div class="person">27. श्रेयश जावीर</div>
-</div></div>
-</section>
+<div class="admin-row">
 
-<section id="gallery">
-<h2 class="title">📸 Photo & Video Gallery</h2>
+<input id="event3Title"
+placeholder="कार्यक्रम 3 नाव">
+
+<input id="event3Date"
+placeholder="तारीख / वेळ">
+
 </div>
-</section>
 
-<section id="contact">
-<h2 class="title">📞 संपर्क</h2>
-<div class="box" style="text-align:center">
-<p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</b></p>
-<p>📍 पडवळवाडी, ता. वाळवा, जि. सांगली</p>
-<a class="btn" href="https://www.instagram.com/kranti_samrat_ganesh_mandal/" target="_blank">📷 Instagram</a>
-<a class="btn" href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी" target="_blank">🔎 Google</a>
 </div>
-</section>
 
-<footer>
-<b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
-गणेशोत्सव २०२६<br><br>
-<div class="small">Website Designed & Created by — संदेश पवार</div><br>
-<div class="small">© २०२६ सर्व हक्क राखीव</div>
-</footer>
 
-<script>
-const links=document.querySelectorAll("nav a");
-const sections=[...links].map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
-window.addEventListener("scroll",function(){
-  let current="home";
-  sections.forEach(function(s){if(window.scrollY>=s.offsetTop-130)current=s.id;});
-  links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+current);});
-});
-</script>
-</body>
-</html>
+<div class="admin-section">
+
+<h3>👑 पदाधिकारी</h3>
+
+<textarea
+id="officersData"
+style="width:100%;min-height:130px"
+placeholder="एक नाव एका ओळीत&#10;अथर्व खोत | अध्यक्ष&#10;संग्राम पवार | उपाध्यक्ष">
+</textarea>
+
+</div>
+
+
+<div class="admin-section">
+
+<h3>👥 सदस्य</h3>
+
+<textarea
+id="membersData"
+style="width:100%;min-height:220px"
+placeholder="एक सदस्य एका ओळीत">
+</textarea>
+
+</div>
+
+
+<div class="admin-section">
+
+<h3>🖼️ Gallery Photo</h3>
+
+<p>
+फोटो निवडा. Firebase Storage चालू असल्यास फोटो upload करून Gallery मध्ये दिसेल.
+</p>
+
+<input
+id="photoFile"
+type="file"
+accept="image/*">
+
+<input
+id="photoCaption"
+class="input"
+placeholder="फोटोचे नाव / माहिती">
+
+<button class="btn"
+onclick="uploadPhoto
