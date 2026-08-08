@@ -18,7 +18,7 @@ nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13p
 nav a:hover,nav a.active{background:#e7a300;color:#570000}
 section{max-width:1100px;margin:auto;padding:38px 14px}
 .title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
 .event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
 .event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
@@ -28,10 +28,10 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
 .person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
 .badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
-.gallery img{width:100%;max-width:500px;display:block;margin:auto;border-radius:15px;border:3px solid #ffd34f}
+.gallery img{width:115px;height:115px;object-fit:contain;display:block;margin:0 auto;border-radius:50%;border:3px solid #ffd34f}
 .btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold}
 footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small{font-size:13px;opacity:.9}
-@media(max-width:600px){nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}}
+@media(max-width:600px){nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}.cards{grid-template-columns:repeat(3,1fr);gap:7px}.person{padding:10px 4px;font-size:13px;word-break:break-word}.person b{font-size:14px}}
 </style>
 </head>
 <body>
@@ -99,8 +99,7 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small
 
 <section id="members">
 <h2 class="title">👥 मंडळाचे सदस्य — २७</h2>
-<div class="box">
-<div class="cards">
+<div class="box"><div class="cards">
 <div class="person">1. अरुण खोत</div>
 <div class="person">2. राहुल खोत</div>
 <div class="person">3. प्रवीण मोरे</div>
@@ -128,8 +127,7 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small
 <div class="person">25. श्रेयश पवार</div>
 <div class="person">26. अनसाली चाऊस</div>
 <div class="person">27. श्रेयश जावीर</div>
-</div>
-</div>
+</div></div>
 </section>
 
 <section id="gallery">
