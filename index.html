@@ -3,685 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
-
+<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
 <title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
 
 <style>
-
-/* ================= BASIC ================= */
-
-*{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
-
-body{
-  margin:0;
-  font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
-  background:#fff7e8;
-  color:#35120b;
-}
-
-header{
-  background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);
-  color:#fff;
-  text-align:center;
-  padding:22px 12px 30px;
-}
-
-.logo{
-  width:95px;
-  height:95px;
-  object-fit:contain;
-  border-radius:50%;
-  background:#fff;
-  padding:5px;
-  border:3px solid #ffd54f;
-  box-shadow:0 4px 18px #0007;
-}
-
-h1{
-  font-size:clamp(30px,8vw,58px);
-  margin:8px 0 0;
-  font-weight:900;
-}
-
-header h2{
-  font-size:clamp(17px,4.5vw,29px);
-  margin:3px 0;
-}
-
-.tag{
-  font-size:19px;
-  font-weight:800;
-  margin:8px;
-}
-
-.location{
-  font-size:15px;
-}
-
-
-/* ================= NAV ================= */
-
-nav{
-  position:sticky;
-  top:0;
-  z-index:99;
-  background:#620000;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  box-shadow:0 3px 14px #0005;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:800;
-  font-size:14px;
-  padding:13px 10px;
-  border-right:1px solid #d99a00;
-}
-
-nav a:hover,
-nav a.active{
-  background:#e7a300;
-  color:#570000;
-}
-
-
-/* ================= SECTION ================= */
-
-section{
-  max-width:1100px;
-  margin:auto;
-  padding:38px 14px;
-}
-
-.title{
-  text-align:center;
-  color:#8a0000;
-  font-size:29px;
-  font-weight:900;
-  margin:0 0 20px;
-}
-
-
-/* ================= CARDS ================= */
-
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
-.event{
-  color:#fff;
-  text-align:center;
-  padding:22px 12px;
-  border-radius:18px;
-  border:2px solid #ffc94d;
-  box-shadow:0 6px 18px #0003;
-  background:linear-gradient(145deg,#8a0000,#ed4b00);
-}
-
-.event:nth-child(2){
-  background:linear-gradient(145deg,#d05b00,#f6a600);
-}
-
-.event:nth-child(3){
-  background:linear-gradient(145deg,#70004e,#bd1763);
-}
-
-.event .icon{
-  font-size:40px;
-}
-
-.event b{
-  display:block;
-  font-size:21px;
-  margin:6px;
-}
-
-.event p{
-  margin:0;
-  line-height:1.7;
-}
-
-.box{
-  background:#fff;
-  border-radius:18px;
-  padding:20px;
-  box-shadow:0 5px 22px #0002;
-  border:1px solid #ffd38a;
-}
-
-.info{
-  background:#fff5df;
-  border-left:5px solid #e2a000;
-  padding:14px;
-  border-radius:9px;
-  margin:10px 0;
-  line-height:1.6;
-}
-
-
-/* ================= PERSON ================= */
-
-.person{
-  background:#fff;
-  border:1px solid #ffd28a;
-  border-radius:15px;
-  text-align:center;
-  padding:15px;
-  box-shadow:0 3px 12px #0001;
-  font-size:17px;
-}
-
-.person b{
-  display:block;
-  color:#8a0000;
-  margin-bottom:5px;
-  font-size:18px;
-}
-
-.badge{
-  display:inline-block;
-  background:#ffe08a;
-  color:#650000;
-  padding:3px 9px;
-  border-radius:15px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-
-/* ================= COUNTDOWN ================= */
-
-.countdown-box{
-  max-width:900px;
-  margin:28px auto 0;
-  padding:22px 12px;
-  text-align:center;
-  border-radius:22px;
-  color:#fff;
-  background:linear-gradient(135deg,#650000,#b40000,#f39a00);
-  border:3px solid #ffd34f;
-  box-shadow:0 8px 30px #0005;
-  animation:countdownGlow 2s infinite alternate;
-}
-
-.countdown-title{
-  font-size:clamp(20px,5vw,30px);
-  font-weight:900;
-  margin-bottom:15px;
-}
-
-.countdown{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:10px;
-  max-width:650px;
-  margin:auto;
-}
-
-.time-box{
-  background:#fff;
-  color:#700000;
-  border-radius:15px;
-  padding:12px 5px;
-  box-shadow:0 4px 15px #0004;
-  animation:timePulse 1s infinite alternate;
-}
-
-.time-box span{
-  display:block;
-  font-size:clamp(25px,7vw,45px);
-  font-weight:900;
-  line-height:1;
-}
-
-.time-box small{
-  font-size:13px;
-  font-weight:800;
-}
-
-.countdown-end{
-  display:none;
-  font-size:25px;
-  font-weight:900;
-  animation:blink 1s infinite;
-}
-
-@keyframes countdownGlow{
-  from{box-shadow:0 8px 25px #0004}
-  to{box-shadow:0 8px 35px #ffd34f99}
-}
-
-@keyframes timePulse{
-  from{transform:scale(1)}
-  to{transform:scale(1.04)}
-}
-
-@keyframes blink{
-  50%{opacity:.4}
-}
-
-
-/* ================= SMART CALENDAR ================= */
-
-.smart-calendar{
-  max-width:900px;
-  margin:28px auto;
-  padding:20px 15px;
-  text-align:center;
-  border-radius:24px;
-  background:linear-gradient(135deg,#650000,#a90000,#f39a00);
-  color:#fff;
-  border:3px solid #ffd34f;
-  box-shadow:0 8px 28px #0005;
-}
-
-.calendar-icon{
-  width:88px;
-  height:88px;
-  margin:0 auto 12px;
-  border-radius:20px;
-  background:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:50px;
-  cursor:pointer;
-  box-shadow:0 5px 18px #0005;
-  transition:.3s;
-}
-
-.calendar-icon:hover{
-  transform:scale(1.08) rotate(-3deg);
-}
-
-.calendar-date{
-  font-size:24px;
-  font-weight:900;
-  margin:5px 0;
-}
-
-.calendar-day{
-  font-size:16px;
-  font-weight:bold;
-}
-
-.calendar-name{
-  font-size:19px;
-  font-weight:900;
-  margin-top:10px;
-}
-
-.festival-card{
-  margin:18px auto 0;
-  max-width:600px;
-  background:#fff;
-  color:#650000;
-  border-radius:20px;
-  overflow:hidden;
-  box-shadow:0 6px 22px #0004;
-}
-
-.festival-photo{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  display:block;
-}
-
-.festival-title{
-  font-size:25px;
-  font-weight:900;
-  padding:15px 10px 5px;
-}
-
-.festival-wish{
-  font-size:19px;
-  font-weight:800;
-  line-height:1.6;
-  padding:5px 15px 12px;
-}
-
-.wish-by{
-  background:#fff1c7;
-  padding:14px 10px;
-  color:#700000;
-  font-size:16px;
-  font-weight:900;
-  line-height:1.5;
-}
-
-.calendar-hint{
-  font-size:13px;
-  margin-top:10px;
-  opacity:.9;
-}
-
-
-/* ================= BUTTON ================= */
-
-.btn{
-  display:inline-block;
-  margin:6px;
-  padding:12px 18px;
-  border-radius:25px;
-  background:linear-gradient(135deg,#d94b00,#820000);
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  border:0;
-  cursor:pointer;
-}
-
-
-/* ================= GALLERY ================= */
-
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-top:20px;
-}
-
-.gallery img{
-  width:115px;
-  height:115px;
-  object-fit:cover;
-  display:block;
-  margin:0 auto;
-  border-radius:15px;
-  border:3px solid #ffd34f;
-}
-
-
-/* ================= FOOTER ================= */
-
-footer{
-  background:#570000;
-  color:#fff;
-  text-align:center;
-  padding:28px 12px;
-}
-
-.small{
-  font-size:13px;
-  opacity:.9;
-}
-
-.admin-link{
-  color:#ffd34f;
-  cursor:pointer;
-  font-size:13px;
-  text-decoration:underline;
-}
-
-
-/* =====================================================
-   🔐 ADMIN LOGIN
-===================================================== */
-
-.admin-overlay{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  background:#000b;
-  align-items:center;
-  justify-content:center;
-  padding:15px;
-}
-
-.admin-box{
-  width:100%;
-  max-width:420px;
-  background:#fff7e8;
-  border-radius:22px;
-  padding:25px;
-  box-shadow:0 10px 40px #0008;
-  border:3px solid #ffd34f;
-  text-align:center;
-}
-
-.admin-box h2{
-  color:#780000;
-  margin-top:0;
-}
-
-.admin-input{
-  width:100%;
-  padding:13px;
-  margin:7px 0;
-  border:1px solid #d9a15b;
-  border-radius:10px;
-  font-size:16px;
-  outline:none;
-}
-
-.admin-input:focus{
-  border:2px solid #a90000;
-}
-
-.login-error{
-  display:none;
-  color:#b00000;
-  font-weight:bold;
-  margin:8px 0;
-}
-
-
-/* =====================================================
-   🛠️ ADMIN PANEL
-===================================================== */
-
-.admin-panel{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:9998;
-  background:#fff7e8;
-  overflow-y:auto;
-}
-
-.admin-header{
-  background:linear-gradient(135deg,#650000,#a90000,#f39a00);
-  color:#fff;
-  padding:18px;
-  text-align:center;
-  position:sticky;
-  top:0;
-  z-index:10;
-}
-
-.admin-header h2{
-  margin:0 0 8px;
-}
-
-.admin-content{
-  max-width:1000px;
-  margin:auto;
-  padding:20px 14px 50px;
-}
-
-.admin-card{
-  background:#fff;
-  border:1px solid #ffd28a;
-  border-radius:18px;
-  padding:18px;
-  margin-bottom:15px;
-  box-shadow:0 4px 15px #0002;
-}
-
-.admin-card h3{
-  color:#800000;
-  margin-top:0;
-}
-
-.admin-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-}
-
-.admin-save{
-  background:linear-gradient(135deg,#d94b00,#820000);
-  color:#fff;
-  border:0;
-  border-radius:25px;
-  padding:13px 25px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.admin-close{
-  background:#fff;
-  color:#700000;
-  border:2px solid #ffd34f;
-  border-radius:25px;
-  padding:10px 20px;
-  font-weight:bold;
-  cursor:pointer;
-}
-
-.admin-message{
-  display:none;
-  margin-top:10px;
-  padding:10px;
-  background:#dff7df;
-  color:#176b17;
-  border-radius:10px;
-  font-weight:bold;
-}
-
-
-/* ================= MOBILE ================= */
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
+header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
+.logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
+h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
+header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
+.tag{font-size:19px;font-weight:800;margin:8px}.location{font-size:15px}
+
+nav{position:sticky;top:0;z-index:99;background:#620000;display:flex;justify-content:center;flex-wrap:wrap;box-shadow:0 3px 14px #0005}
+nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-right:1px solid #d99a00}
+nav a:hover,nav a.active{background:#e7a300;color:#570000}
+
+section{max-width:1100px;margin:auto;padding:38px 14px}
+.title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+
+.event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
+.event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
+.event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
+.event .icon{font-size:40px}.event b{display:block;font-size:21px;margin:6px}.event p{margin:0;line-height:1.7}
+
+.box{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px #0002;border:1px solid #ffd38a}
+.info{background:#fff5df;border-left:5px solid #e2a000;padding:14px;border-radius:9px;margin:10px 0;line-height:1.6}
+
+.person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
+.person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
+.badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
+
+/* COUNTDOWN */
+.countdown-box{max-width:900px;margin:28px auto 0;padding:22px 12px;text-align:center;border-radius:22px;color:#fff;background:linear-gradient(135deg,#650000,#b40000,#f39a00);border:3px solid #ffd34f;box-shadow:0 8px 30px #0005}
+.countdown-title{font-size:clamp(20px,5vw,30px);font-weight:900;margin-bottom:15px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
+.time-box{background:#fff;color:#700000;border-radius:15px;padding:12px 5px;box-shadow:0 4px 15px #0004}
+.time-box span{display:block;font-size:clamp(25px,7vw,45px);font-weight:900;line-height:1}
+.time-box small{font-size:13px;font-weight:800}
+.countdown-end{display:none;font-size:25px;font-weight:900}
+
+/* SMART CALENDAR */
+.smart-calendar{max-width:900px;margin:28px auto;padding:20px 15px;text-align:center;border-radius:24px;background:linear-gradient(135deg,#650000,#a90000,#f39a00);color:#fff;border:3px solid #ffd34f;box-shadow:0 8px 28px #0005}
+.calendar-icon{width:88px;height:88px;margin:0 auto 12px;border-radius:20px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:50px;cursor:pointer;box-shadow:0 5px 18px #0005;transition:.3s}
+.calendar-icon:hover{transform:scale(1.08) rotate(-3deg)}
+.calendar-date{font-size:24px;font-weight:900;margin:5px 0}
+.calendar-day{font-size:16px;font-weight:bold}
+.calendar-name{font-size:19px;font-weight:900;margin-top:10px}
+
+.festival-card{margin:18px auto 0;max-width:600px;background:#fff;color:#650000;border-radius:20px;overflow:hidden;box-shadow:0 6px 22px #0004}
+.festival-photo{width:100%;height:280px;object-fit:cover;display:block}
+.festival-title{font-size:25px;font-weight:900;padding:15px 10px 5px}
+.festival-wish{font-size:19px;font-weight:800;line-height:1.6;padding:5px 15px 12px}
+.wish-by{background:#fff1c7;padding:14px 10px;color:#700000;font-size:16px;font-weight:900;line-height:1.5}
+.calendar-hint{font-size:13px;margin-top:10px;opacity:.9}
+
+.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.gallery img{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f}
+
+footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}
+.small{font-size:13px;opacity:.9}
+.admin-link{color:#ffd34f;cursor:pointer;font-size:13px;text-decoration:underline}
+
+/* ADMIN LOGIN */
+.admin-overlay{display:none;position:fixed;inset:0;z-index:9999;background:#000b;align-items:center;justify-content:center;padding:15px}
+.admin-box{width:100%;max-width:420px;background:#fff7e8;border-radius:22px;padding:25px;box-shadow:0 10px 40px #0008;border:3px solid #ffd34f;text-align:center}
+.admin-box h2{color:#780000;margin-top:0}
+.admin-input{width:100%;padding:13px;margin:7px 0;border:1px solid #d9a15b;border-radius:10px;font-size:16px;outline:none}
+.login-error{display:none;color:#b00000;font-weight:bold;margin:8px 0}
+
+/* ADMIN PANEL */
+.admin-panel{display:none;position:fixed;inset:0;z-index:9998;background:#fff7e8;overflow-y:auto}
+.admin-header{background:linear-gradient(135deg,#650000,#a90000,#f39a00);color:#fff;padding:18px;text-align:center;position:sticky;top:0;z-index:10}
+.admin-header h2{margin:0 0 8px}
+.admin-content{max-width:1000px;margin:auto;padding:20px 14px 50px}
+.admin-card{background:#fff;border:1px solid #ffd28a;border-radius:18px;padding:18px;margin-bottom:15px;box-shadow:0 4px 15px #0002}
+.admin-card h3{color:#800000;margin-top:0}
+.admin-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.admin-save{background:linear-gradient(135deg,#d94b00,#820000);color:#fff;border:0;border-radius:25px;padding:13px 25px;font-size:16px;font-weight:bold;cursor:pointer}
+.admin-close{background:#fff;color:#700000;border:2px solid #ffd34f;border-radius:25px;padding:10px 20px;font-weight:bold;cursor:pointer}
+.admin-message{display:none;margin-top:10px;padding:10px;background:#dff7df;color:#176b17;border-radius:10px;font-weight:bold}
 
 @media(max-width:600px){
-
-  nav a{
-    padding:11px 7px;
-    font-size:13px;
-  }
-
-  section{
-    padding:30px 11px;
-  }
-
-  .logo{
-    width:82px;
-    height:82px;
-  }
-
-  .cards{
-    grid-template-columns:repeat(3,1fr);
-    gap:7px;
-  }
-
-  .person{
-    padding:10px 4px;
-    font-size:13px;
-    word-break:break-word;
-  }
-
-  .person b{
-    font-size:14px;
-  }
-
-  .countdown{
-    gap:6px;
-  }
-
-  .time-box{
-    padding:10px 3px;
-  }
-
-  .time-box small{
-    font-size:11px;
-  }
-
-  .smart-calendar{
-    margin:20px 5px;
-    padding:16px 10px;
-  }
-
-  .calendar-date{
-    font-size:21px;
-  }
-
-  .festival-photo{
-    height:220px;
-  }
-
-  .festival-title{
-    font-size:21px;
-  }
-
-  .festival-wish{
-    font-size:17px;
-  }
-
-  .wish-by{
-    font-size:14px;
-  }
-
-  .admin-grid{
-    grid-template-columns:1fr;
-  }
-
+nav a{padding:11px 7px;font-size:13px}
+section{padding:30px 11px}
+.logo{width:82px;height:82px}
+.cards{grid-template-columns:repeat(3,1fr);gap:7px}
+.person{padding:10px 4px;font-size:13px;word-break:break-word}
+.person b{font-size:14px}
+.countdown{gap:6px}
+.time-box{padding:10px 3px}
+.time-box small{font-size:11px}
+.smart-calendar{margin:20px 5px;padding:16px 10px}
+.calendar-date{font-size:21px}
+.festival-photo{height:220px}
+.festival-title{font-size:21px}
+.festival-wish{font-size:17px}
+.wish-by{font-size:14px}
+.admin-grid{grid-template-columns:1fr}
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     🚩 HEADER
-===================================================== -->
-
 <header id="home">
-
-<img
-class="logo"
-src="mandal-logo.jpg"
-alt="क्रांती सम्राट मंडळाचा लोगो"
->
-
+<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो">
 <h1>क्रांती सम्राट</h1>
-
-<h2>
-कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी
-</h2>
-
-<div class="tag">
-🚩 गणेशोत्सव २०२६ 🚩
-</div>
-
-<div class="location">
-📍 पडवळवाडी, ता. वाळवा, जि. सांगली
-</div>
-
+<h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
+<div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
+<div class="location">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
 </header>
 
-
-<!-- =====================================================
-     🧭 NAV
-===================================================== -->
-
 <nav>
-
 <a href="#home">🏠 Home</a>
 <a href="#mandal">🏛️ मंडळ</a>
 <a href="#program">📅 कार्यक्रम</a>
@@ -689,69 +126,33 @@ alt="क्रांती सम्राट मंडळाचा लोगो
 <a href="#members">👥 सदस्य</a>
 <a href="#gallery">📸 Gallery</a>
 <a href="#contact">📞 संपर्क</a>
-
 </nav>
-
-
-<!-- =====================================================
-     🚩 PROGRAM + COUNTDOWN + CALENDAR
-===================================================== -->
 
 <section>
 
-<h2 class="title">
-🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम
-</h2>
-
+<h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
 
 <div class="cards">
 
 <div class="event">
-
 <div class="icon">🚩</div>
-
 <b>गणपती आगमन</b>
-
-<p>
-सोमवार<br>
-१४ सप्टेंबर २०२६<br>
-सायं. ४:०० वाजता
-</p>
-
+<p>सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p>
 </div>
 
-
 <div class="event">
-
 <div class="icon">🍛</div>
-
 <b>महाप्रसाद</b>
-
-<p>
-मंगळवार<br>
-१५ सप्टेंबर २०२६<br>
-सायं. ५:०० ते रात्री ९:००
-</p>
-
+<p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p>
 </div>
-
 
 <div class="event">
-
 <div class="icon">🌺</div>
-
 <b>विसर्जन</b>
-
-<p>
-शुक्रवार<br>
-२५ सप्टेंबर २०२६<br>
-रात्री ७:०० वाजता
-</p>
-
+<p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p>
 </div>
 
 </div>
-
 
 <!-- COUNTDOWN -->
 
@@ -791,29 +192,19 @@ alt="क्रांती सम्राट मंडळाचा लोगो
 
 </div>
 
-
 <!-- SMART CALENDAR -->
 
 <div class="smart-calendar">
 
-<div
-class="calendar-icon"
-onclick="showCalendarMessage()"
->
+<div class="calendar-icon" onclick="showCalendarMessage()">
 📅
 </div>
 
-<div
-class="calendar-date"
-id="todayDate"
->
+<div class="calendar-date" id="todayDate">
 तारीख लोड होत आहे...
 </div>
 
-<div
-class="calendar-day"
-id="todayDay"
->
+<div class="calendar-day" id="todayDay">
 वार लोड होत आहे...
 </div>
 
@@ -831,17 +222,11 @@ alt="सणाचा फोटो"
 onerror="this.src='mandal-logo.jpg'"
 >
 
-<div
-class="festival-title"
-id="festivalTitle"
->
+<div class="festival-title" id="festivalTitle">
 🎉 हार्दिक शुभेच्छा!
 </div>
 
-<div
-class="festival-wish"
-id="festivalWish"
->
+<div class="festival-wish" id="festivalWish">
 क्रांती सम्राट गणेश मंडळाकडून आपल्याला हार्दिक शुभेच्छा!
 </div>
 
@@ -869,28 +254,15 @@ id="festivalWish"
 
 </section>
 
-
-
-<!-- =====================================================
-     🏛️ MANDAL
-===================================================== -->
-
 <section id="mandal">
 
-<h2 class="title">
-🏛️ मंडळाची माहिती
-</h2>
+<h2 class="title">🏛️ मंडळाची माहिती</h2>
 
 <div class="box">
 
 <p>
-
-<b>
-क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी
-</b>
-
+<b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b>
 हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.
-
 </p>
 
 <div class="cards">
@@ -921,24 +293,15 @@ id="festivalWish"
 
 </section>
 
-
-
-<!-- =====================================================
-     📅 PROGRAM
-===================================================== -->
-
 <section id="program">
 
-<h2 class="title">
-📅 कार्यक्रमांची संपूर्ण माहिती
-</h2>
+<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
 
 <div class="box">
 
 <div class="info">
 🚩 <b>गणपती आगमन:</b>
-सोमवार, १४ सप्टेंबर २०२६ —
-सायं. ४:०० वाजता
+सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता
 </div>
 
 <div class="info">
@@ -953,59 +316,45 @@ id="festivalWish"
 
 <div class="info">
 🍛 <b>महाप्रसाद:</b>
-मंगळवार, १५ सप्टेंबर २०२६ —
-सायं. ५:०० ते रात्री ९:००
+मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००
 </div>
 
 <div class="info">
 🌺 <b>विसर्जन:</b>
-शुक्रवार, २५ सप्टेंबर २०२६ —
-रात्री ७:०० वाजता
+शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता
 </div>
 
 </div>
 
 </section>
 
-
-
-<!-- =====================================================
-     👑 OFFICE
-===================================================== -->
-
 <section id="office">
 
-<h2 class="title">
-👑 पदाधिकारी
-</h2>
+<h2 class="title">👑 पदाधिकारी</h2>
 
 <div class="cards">
 
 <div class="person">
 <b>अथर्व खोत</b>
-अध्यक्ष
-<br>
+अध्यक्ष<br>
 <span class="badge">पदाधिकारी</span>
 </div>
 
 <div class="person">
 <b>संग्राम पवार</b>
-उपाध्यक्ष
-<br>
+उपाध्यक्ष<br>
 <span class="badge">पदाधिकारी</span>
 </div>
 
 <div class="person">
 <b>संदेश पवार</b>
-खजिनदार
-<br>
+खजिनदार<br>
 <span class="badge">पदाधिकारी</span>
 </div>
 
 <div class="person">
 <b>अमोल पवार</b>
-सचिव
-<br>
+सचिव<br>
 <span class="badge">पदाधिकारी</span>
 </div>
 
@@ -1013,17 +362,9 @@ id="festivalWish"
 
 </section>
 
-
-
-<!-- =====================================================
-     👥 MEMBERS
-===================================================== -->
-
 <section id="members">
 
-<h2 class="title">
-👥 मंडळाचे सदस्य — २८
-</h2>
+<h2 class="title">👥 मंडळाचे सदस्य — २८</h2>
 
 <div class="box">
 
@@ -1064,92 +405,53 @@ id="festivalWish"
 
 </section>
 
-
-
-<!-- =====================================================
-     📸 GALLERY
-===================================================== -->
-
 <section id="gallery">
 
-<h2 class="title">
-📸 Photo & Video Gallery
-</h2>
+<h2 class="title">📸 Photo & Video Gallery</h2>
 
 <p style="text-align:center">
-मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे पुढे जोडता येतील.
+मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे जोडता येतील.
 </p>
 
 <div class="gallery">
 
-<img
-src="mandal-logo.jpg"
-alt="मंडळाचा लोगो"
-onerror="this.style.display='none'"
->
+<img src="mandal-logo.jpg" alt="मंडळाचा लोगो">
 
-<img
-src="ganeshotsav.jpg"
-alt="गणेशोत्सव फोटो"
-onerror="this.style.display='none'"
->
+<img src="ganeshotsav.jpg" alt="गणेशोत्सव फोटो">
 
 </div>
 
 </section>
 
-
-
-<!-- =====================================================
-     📞 CONTACT
-===================================================== -->
-
 <section id="contact">
 
-<h2 class="title">
-📞 संपर्क
-</h2>
+<h2 class="title">📞 संपर्क</h2>
 
-<div
-class="box"
-style="text-align:center"
->
+<div class="box" style="text-align:center">
 
 <p>
-<b>
-क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ
-</b>
+<b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</b>
 </p>
 
 <p>
 📍 पडवळवाडी, ता. वाळवा, जि. सांगली
 </p>
 
-<a
-class="btn"
+<a class="btn"
 href="https://www.instagram.com/kranti_samrat_ganesh_mandal/"
-target="_blank"
->
+target="_blank">
 📷 Instagram
 </a>
 
-<a
-class="btn"
+<a class="btn"
 href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी"
-target="_blank"
->
+target="_blank">
 🔎 Google
 </a>
 
 </div>
 
 </section>
-
-
-
-<!-- =====================================================
-     🚩 FOOTER
-===================================================== -->
 
 <footer>
 
@@ -1175,35 +477,22 @@ Website Designed & Created by — संदेश पवार
 
 <br><br>
 
-<span
-class="admin-link"
-onclick="openAdminLogin()"
->
+<span class="admin-link" onclick="openAdminLogin()">
 🔐 Admin Login
 </span>
 
 </footer>
 
 
+<!-- ADMIN LOGIN -->
 
-<!-- =====================================================
-     🔐 ADMIN LOGIN POPUP
-===================================================== -->
-
-<div
-class="admin-overlay"
-id="adminLogin"
->
+<div class="admin-overlay" id="adminLogin">
 
 <div class="admin-box">
 
-<h2>
-🔐 Admin Login
-</h2>
+<h2>🔐 Admin Login</h2>
 
-<p>
-🚩 क्रांती सम्राट मंडळ
-</p>
+<p>🚩 क्रांती सम्राट मंडळ</p>
 
 <input
 class="admin-input"
@@ -1219,24 +508,15 @@ type="password"
 placeholder="🔑 Password"
 >
 
-<div
-class="login-error"
-id="loginError"
->
+<div class="login-error" id="loginError">
 ❌ Username किंवा Password चुकीचा आहे!
 </div>
 
-<button
-class="btn"
-onclick="adminLogin()"
->
+<button class="btn" onclick="adminLogin()">
 🔓 Login
 </button>
 
-<button
-class="admin-close"
-onclick="closeAdminLogin()"
->
+<button class="admin-close" onclick="closeAdminLogin()">
 ✖ बंद करा
 </button>
 
@@ -1245,15 +525,9 @@ onclick="closeAdminLogin()"
 </div>
 
 
+<!-- ADMIN PANEL -->
 
-<!-- =====================================================
-     🛠️ ADMIN PANEL
-===================================================== -->
-
-<div
-class="admin-panel"
-id="adminPanel"
->
+<div class="admin-panel" id="adminPanel">
 
 <div class="admin-header">
 
@@ -1261,26 +535,17 @@ id="adminPanel"
 🚩 क्रांती सम्राट — Admin Panel
 </h2>
 
-<button
-class="admin-close"
-onclick="logoutAdmin()"
->
+<button class="admin-close" onclick="logoutAdmin()">
 🚪 Logout
 </button>
 
 </div>
 
-
 <div class="admin-content">
-
-
-<!-- GENERAL -->
 
 <div class="admin-card">
 
-<h3>
-🏛️ मंडळाची माहिती
-</h3>
+<h3>🏛️ मंडळाची माहिती</h3>
 
 <input
 class="admin-input"
@@ -1294,39 +559,26 @@ id="editLocation"
 placeholder="पत्ता"
 >
 
-<button
-class="admin-save"
-onclick="saveGeneral()"
->
+<button class="admin-save" onclick="saveGeneral()">
 💾 Save
 </button>
 
-<div
-class="admin-message"
-id="generalSaved"
->
+<div class="admin-message" id="generalSaved">
 ✅ माहिती Save झाली!
 </div>
 
 </div>
 
 
-
-<!-- PROGRAM -->
-
 <div class="admin-card">
 
-<h3>
-📅 कार्यक्रम
-</h3>
+<h3>📅 कार्यक्रम</h3>
 
 <div class="admin-grid">
 
 <div>
 
-<label>
-🚩 गणपती आगमन
-</label>
+<label>🚩 गणपती आगमन</label>
 
 <input
 class="admin-input"
@@ -1342,12 +594,9 @@ type="time"
 
 </div>
 
-
 <div>
 
-<label>
-🍛 महाप्रसाद
-</label>
+<label>🍛 महाप्रसाद</label>
 
 <input
 class="admin-input"
@@ -1366,33 +615,596 @@ placeholder="उदा. सायं. ५:०० ते रात्री ९:�
 
 </div>
 
-<button
-class="admin-save"
-onclick="saveProgram()"
->
+<button class="admin-save" onclick="saveProgram()">
 💾 कार्यक्रम Save करा
 </button>
 
-<div
-class="admin-message"
-id="programSaved"
->
+<div class="admin-message" id="programSaved">
 ✅ कार्यक्रम Save झाला!
 </div>
 
 </div>
 
 
-
-<!-- FESTIVAL -->
-
 <div class="admin-card">
 
-<h3>
-🎉 सण / जयंती शुभेच्छा
-</h3>
+<h3>🎉 सण / जयंती शुभेच्छा</h3>
 
 <input
 class="admin-input"
 id="wishTitle"
-placeholder="उदा. गणेश चतुर्थीच्या हार्दिक
+placeholder="उदा. गणेश चतुर्थीच्या हार्दिक शुभेच्छा!"
+>
+
+<textarea
+class="admin-input"
+id="wishText"
+rows="4"
+placeholder="शुभेच्छा संदेश">
+</textarea>
+
+<input
+class="admin-input"
+id="wishPhoto"
+placeholder="फोटोचे नाव उदा. ganeshotsav.jpg"
+>
+
+<button class="admin-save" onclick="saveWish()">
+💾 शुभेच्छा Save करा
+</button>
+
+<div class="admin-message" id="wishSaved">
+✅ शुभेच्छा Save झाल्या!
+</div>
+
+</div>
+
+
+<div class="admin-card">
+
+<h3>👑 पदाधिकारी</h3>
+
+<div class="admin-grid">
+
+<input
+class="admin-input"
+id="president"
+placeholder="अध्यक्ष"
+>
+
+<input
+class="admin-input"
+id="vicePresident"
+placeholder="उपाध्यक्ष"
+>
+
+<input
+class="admin-input"
+id="treasurer"
+placeholder="खजिनदार"
+>
+
+<input
+class="admin-input"
+id="secretary"
+placeholder="सचिव"
+>
+
+</div>
+
+<button class="admin-save" onclick="saveOffice()">
+💾 पदाधिकारी Save करा
+</button>
+
+<div class="admin-message" id="officeSaved">
+✅ पदाधिकारी Save झाले!
+</div>
+
+</div>
+
+
+<div class="admin-card">
+
+<h3>ℹ️ Admin सूचना</h3>
+
+<p>
+या version मध्ये Admin मधील बदल या browser/device च्या Local Storage मध्ये Save होतात.
+</p>
+
+<p>
+<b>Username:</b> admin
+<br>
+<b>Password:</b> Kranti@2026
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const ganpatiDate =
+new Date(2026,8,14,16,0,0).getTime();
+
+function updateCountdown(){
+
+const now =
+new Date().getTime();
+
+const distance =
+ganpatiDate - now;
+
+if(distance <= 0){
+
+document.getElementById("countdown").style.display =
+"none";
+
+document.getElementById("countdownEnd").style.display =
+"block";
+
+return;
+
+}
+
+const days =
+Math.floor(
+distance /
+(1000*60*60*24)
+);
+
+const hours =
+Math.floor(
+(distance %
+(1000*60*60*24)) /
+(1000*60*60)
+);
+
+const minutes =
+Math.floor(
+(distance %
+(1000*60*60)) /
+(1000*60)
+);
+
+const seconds =
+Math.floor(
+(distance %
+(1000*60)) /
+1000
+);
+
+document.getElementById("days").innerText =
+String(days).padStart(2,"0");
+
+document.getElementById("hours").innerText =
+String(hours).padStart(2,"0");
+
+document.getElementById("minutes").innerText =
+String(minutes).padStart(2,"0");
+
+document.getElementById("seconds").innerText =
+String(seconds).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+
+
+/* =========================
+   AUTO CALENDAR
+========================= */
+
+function updateSmartCalendar(){
+
+const today =
+new Date();
+
+const days = [
+"रविवार",
+"सोमवार",
+"मंगळवार",
+"बुधवार",
+"गुरुवार",
+"शुक्रवार",
+"शनिवार"
+];
+
+const months = [
+"जानेवारी",
+"फेब्रुवारी",
+"मार्च",
+"एप्रिल",
+"मे",
+"जून",
+"जुलै",
+"ऑगस्ट",
+"सप्टेंबर",
+"ऑक्टोबर",
+"नोव्हेंबर",
+"डिसेंबर"
+];
+
+document.getElementById("todayDate").innerText =
+"📅 " +
+today.getDate() +
+" " +
+months[today.getMonth()] +
+" " +
+today.getFullYear();
+
+document.getElementById("todayDay").innerText =
+"🗓️ " +
+days[today.getDay()];
+
+updateFestival(today);
+
+}
+
+
+/* =========================
+   FESTIVAL WISH
+========================= */
+
+function updateFestival(today){
+
+const d =
+today.getDate();
+
+const m =
+today.getMonth()+1;
+
+let title =
+"🎉 हार्दिक शुभेच्छा!";
+
+let wish =
+"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळाकडून आपल्याला हार्दिक शुभेच्छा!";
+
+let photo =
+"ganeshotsav.jpg";
+
+
+if(m===8 && d===15){
+
+title =
+"🇮🇳 स्वातंत्र्य दिनाच्या हार्दिक शुभेच्छा!";
+
+wish =
+"स्वातंत्र्य दिनाच्या सर्वांना मनःपूर्वक शुभेच्छा!";
+
+photo =
+"independence-day.jpg";
+
+}
+
+
+else if(m===1 && d===26){
+
+title =
+"🇮🇳 प्रजासत्ताक दिनाच्या हार्दिक शुभेच्छा!";
+
+wish =
+"प्रजासत्ताक दिनाच्या सर्वांना मनःपूर्वक शुभेच्छा!";
+
+photo =
+"republic-day.jpg";
+
+}
+
+
+else if(m===9 && d>=14 && d<=25){
+
+title =
+"🚩 गणेशोत्सव २०२६ 🚩";
+
+wish =
+"श्री गणेशाच्या आगमनानिमित्त सर्व गणेशभक्तांना हार्दिक शुभेच्छा! गणपती बाप्पा मोरया!";
+
+photo =
+"ganeshotsav.jpg";
+
+}
+
+
+document.getElementById("festivalTitle").innerText =
+title;
+
+document.getElementById("festivalWish").innerText =
+wish;
+
+document.getElementById("festivalPhoto").src =
+photo;
+
+}
+
+
+/* =========================
+   CALENDAR CLICK
+========================= */
+
+function showCalendarMessage(){
+
+alert(
+"📅 आजची तारीख\n\n" +
+document.getElementById("todayDate").innerText +
+"\n" +
+document.getElementById("todayDay").innerText +
+"\n\n" +
+"🚩 क्रांती सम्राट गणेश मंडळ 🚩\n\n" +
+"पडवळवाडी, ता. वाळवा, जि. सांगली"
+);
+
+}
+
+
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+function openAdminLogin(){
+
+document.getElementById("adminLogin").style.display =
+"flex";
+
+document.getElementById("loginError").style.display =
+"none";
+
+}
+
+
+function closeAdminLogin(){
+
+document.getElementById("adminLogin").style.display =
+"none";
+
+}
+
+
+function adminLogin(){
+
+const username =
+document.getElementById("adminUsername").value.trim();
+
+const password =
+document.getElementById("adminPassword").value;
+
+
+if(
+username === "admin" &&
+password === "Kranti@2026"
+){
+
+document.getElementById("adminLogin").style.display =
+"none";
+
+document.getElementById("adminPanel").style.display =
+"block";
+
+loadAdminData();
+
+}
+
+else{
+
+document.getElementById("loginError").style.display =
+"block";
+
+}
+
+}
+
+
+function logoutAdmin(){
+
+document.getElementById("adminPanel").style.display =
+"none";
+
+}
+
+
+/* =========================
+   LOAD ADMIN
+========================= */
+
+function loadAdminData(){
+
+document.getElementById("editMandalName").value =
+localStorage.getItem("mandalName") ||
+"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ";
+
+document.getElementById("editLocation").value =
+localStorage.getItem("location") ||
+"पडवळवाडी, ता. वाळवा, जि. सांगली";
+
+document.getElementById("wishTitle").value =
+localStorage.getItem("wishTitle") ||
+"🎉 हार्दिक शुभेच्छा!";
+
+document.getElementById("wishText").value =
+localStorage.getItem("wishText") ||
+"क्रांती सम्राट गणेश मंडळाकडून आपल्याला हार्दिक शुभेच्छा!";
+
+document.getElementById("wishPhoto").value =
+localStorage.getItem("wishPhoto") ||
+"ganeshotsav.jpg";
+
+document.getElementById("president").value =
+localStorage.getItem("president") ||
+"अथर्व खोत";
+
+document.getElementById("vicePresident").value =
+localStorage.getItem("vicePresident") ||
+"संग्राम पवार";
+
+document.getElementById("treasurer").value =
+localStorage.getItem("treasurer") ||
+"संदेश पवार";
+
+document.getElementById("secretary").value =
+localStorage.getItem("secretary") ||
+"अमोल पवार";
+
+}
+
+
+/* =========================
+   SAVE GENERAL
+========================= */
+
+function saveGeneral(){
+
+localStorage.setItem(
+"mandalName",
+document.getElementById("editMandalName").value
+);
+
+localStorage.setItem(
+"location",
+document.getElementById("editLocation").value
+);
+
+document.getElementById("generalSaved").style.display =
+"block";
+
+setTimeout(function(){
+
+document.getElementById("generalSaved").style.display =
+"none";
+
+},2500);
+
+}
+
+
+/* =========================
+   SAVE PROGRAM
+========================= */
+
+function saveProgram(){
+
+localStorage.setItem(
+"arrivalDate",
+document.getElementById("arrivalDate").value
+);
+
+localStorage.setItem(
+"arrivalTime",
+document.getElementById("arrivalTime").value
+);
+
+localStorage.setItem(
+"prasadDate",
+document.getElementById("prasadDate").value
+);
+
+localStorage.setItem(
+"prasadTime",
+document.getElementById("prasadTime").value
+);
+
+document.getElementById("programSaved").style.display =
+"block";
+
+setTimeout(function(){
+
+document.getElementById("programSaved").style.display =
+"none";
+
+},2500);
+
+}
+
+
+/* =========================
+   SAVE WISH
+========================= */
+
+function saveWish(){
+
+localStorage.setItem(
+"wishTitle",
+document.getElementById("wishTitle").value
+);
+
+localStorage.setItem(
+"wishText",
+document.getElementById("wishText").value
+);
+
+localStorage.setItem(
+"wishPhoto",
+document.getElementById("wishPhoto").value
+);
+
+updateSmartCalendar();
+
+document.getElementById("wishSaved").style.display =
+"block";
+
+setTimeout(function(){
+
+document.getElementById("wishSaved").style.display =
+"none";
+
+},2500);
+
+}
+
+
+/* =========================
+   SAVE OFFICE
+========================= */
+
+function saveOffice(){
+
+localStorage.setItem(
+"president",
+document.getElementById("president").value
+);
+
+localStorage.setItem(
+"vicePresident",
+document.getElementById("vicePresident").value
+);
+
+localStorage.setItem(
+"treasurer",
+document.getElementById("treasurer").value
+);
+
+localStorage.setItem(
+"secretary",
+document.getElementById("secretary").value
+);
+
+document.getElementById("officeSaved").style.display =
+"block";
+
+setTimeout(function(){
+
+document.getElementById("officeSaved").style.display =
+"none";
+
+},2500);
+
+}
+
+
+/* =========================
+   START
+========================= */
+
+updateSmartCalendar();
+
+</script>
+
+</body>
+</html>
