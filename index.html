@@ -214,36 +214,6 @@ section{padding:30px 11px}
 
 <div class="festival-card">
 
-<img
-id="festivalPhoto"
-class="festival-photo"
-src="ganeshotsav.jpg"
-alt="सणाचा फोटो"
-onerror="this.src='mandal-logo.jpg'"
->
-
-<div class="festival-title" id="festivalTitle">
-🎉 हार्दिक शुभेच्छा!
-</div>
-
-<div class="festival-wish" id="festivalWish">
-क्रांती सम्राट गणेश मंडळाकडून आपल्याला हार्दिक शुभेच्छा!
-</div>
-
-<div class="wish-by">
-
-🚩 शुभेच्छुक 🚩<br>
-
-<b>
-क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ
-</b>
-
-<br>
-
-पडवळवाडी, ता. वाळवा, जि. सांगली
-
-</div>
-
 </div>
 
 <div class="calendar-hint">
@@ -850,80 +820,8 @@ updateFestival(today);
 }
 
 
-/* =========================
-   FESTIVAL WISH
-========================= */
-
-function updateFestival(today){
-
-const d =
-today.getDate();
-
-const m =
-today.getMonth()+1;
-
-let title =
-"🎉 हार्दिक शुभेच्छा!";
-
-let wish =
-"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळाकडून आपल्याला हार्दिक शुभेच्छा!";
-
-let photo =
-"ganeshotsav.jpg";
-
-
-if(m===8 && d===15){
 
 title =
-"🇮🇳 स्वातंत्र्य दिनाच्या हार्दिक शुभेच्छा!";
-
-wish =
-"स्वातंत्र्य दिनाच्या सर्वांना मनःपूर्वक शुभेच्छा!";
-
-photo =
-"independence-day.jpg";
-
-}
-
-
-else if(m===1 && d===26){
-
-title =
-"🇮🇳 प्रजासत्ताक दिनाच्या हार्दिक शुभेच्छा!";
-
-wish =
-"प्रजासत्ताक दिनाच्या सर्वांना मनःपूर्वक शुभेच्छा!";
-
-photo =
-"republic-day.jpg";
-
-}
-
-
-else if(m===9 && d>=14 && d<=25){
-
-title =
-"🚩 गणेशोत्सव २०२६ 🚩";
-
-wish =
-"श्री गणेशाच्या आगमनानिमित्त सर्व गणेशभक्तांना हार्दिक शुभेच्छा! गणपती बाप्पा मोरया!";
-
-photo =
-"ganeshotsav.jpg";
-
-}
-
-
-document.getElementById("festivalTitle").innerText =
-title;
-
-document.getElementById("festivalWish").innerText =
-wish;
-
-document.getElementById("festivalPhoto").src =
-photo;
-
-}
 
 
 /* =========================
@@ -940,10 +838,6 @@ document.getElementById("todayDay").innerText +
 "\n\n" +
 "🚩 क्रांती सम्राट गणेश मंडळ 🚩\n\n" +
 "पडवळवाडी, ता. वाळवा, जि. सांगली"
-);
-
-}
-
 
 /* =========================
    ADMIN LOGIN
