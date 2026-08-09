@@ -3,48 +3,685 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
+
+<meta name="description"
+content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
+
 <title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
+
 <style>
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
-header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
-.logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
-h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
-header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
-.tag{font-size:19px;font-weight:800;margin:8px} .location{font-size:15px}
-nav{position:sticky;top:0;z-index:99;background:#620000;display:flex;justify-content:center;flex-wrap:wrap;box-shadow:0 3px 14px #0005}
-nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-right:1px solid #d99a00}
-nav a:hover,nav a.active{background:#e7a300;color:#570000}
-section{max-width:1100px;margin:auto;padding:38px 14px}
-.title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
-.event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
-.event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
-.event .icon{font-size:40px} .event b{display:block;font-size:21px;margin:6px} .event p{margin:0;line-height:1.7}
-.box{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px #0002;border:1px solid #ffd38a}
-.info{background:#fff5df;border-left:5px solid #e2a000;padding:14px;border-radius:9px;margin:10px 0;line-height:1.6}
-.person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
-.person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
-.badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
-.gallery img{width:115px;height:115px;object-fit:contain;display:block;margin:0 auto;border-radius:50%;border:3px solid #ffd34f}
-.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold}
-footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small{font-size:13px;opacity:.9}
-@media(max-width:600px){nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}.cards{grid-template-columns:repeat(3,1fr);gap:7px}.person{padding:10px 4px;font-size:13px;word-break:break-word}.person b{font-size:14px}}
+
+/* ================= BASIC ================= */
+
+*{
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;
+  background:#fff7e8;
+  color:#35120b;
+}
+
+header{
+  background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);
+  color:#fff;
+  text-align:center;
+  padding:22px 12px 30px;
+}
+
+.logo{
+  width:95px;
+  height:95px;
+  object-fit:contain;
+  border-radius:50%;
+  background:#fff;
+  padding:5px;
+  border:3px solid #ffd54f;
+  box-shadow:0 4px 18px #0007;
+}
+
+h1{
+  font-size:clamp(30px,8vw,58px);
+  margin:8px 0 0;
+  font-weight:900;
+}
+
+header h2{
+  font-size:clamp(17px,4.5vw,29px);
+  margin:3px 0;
+}
+
+.tag{
+  font-size:19px;
+  font-weight:800;
+  margin:8px;
+}
+
+.location{
+  font-size:15px;
+}
+
+
+/* ================= NAV ================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:99;
+  background:#620000;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  box-shadow:0 3px 14px #0005;
+}
+
+nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:800;
+  font-size:14px;
+  padding:13px 10px;
+  border-right:1px solid #d99a00;
+}
+
+nav a:hover,
+nav a.active{
+  background:#e7a300;
+  color:#570000;
+}
+
+
+/* ================= SECTION ================= */
+
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:38px 14px;
+}
+
+.title{
+  text-align:center;
+  color:#8a0000;
+  font-size:29px;
+  font-weight:900;
+  margin:0 0 20px;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.event{
+  color:#fff;
+  text-align:center;
+  padding:22px 12px;
+  border-radius:18px;
+  border:2px solid #ffc94d;
+  box-shadow:0 6px 18px #0003;
+  background:linear-gradient(145deg,#8a0000,#ed4b00);
+}
+
+.event:nth-child(2){
+  background:linear-gradient(145deg,#d05b00,#f6a600);
+}
+
+.event:nth-child(3){
+  background:linear-gradient(145deg,#70004e,#bd1763);
+}
+
+.event .icon{
+  font-size:40px;
+}
+
+.event b{
+  display:block;
+  font-size:21px;
+  margin:6px;
+}
+
+.event p{
+  margin:0;
+  line-height:1.7;
+}
+
+.box{
+  background:#fff;
+  border-radius:18px;
+  padding:20px;
+  box-shadow:0 5px 22px #0002;
+  border:1px solid #ffd38a;
+}
+
+.info{
+  background:#fff5df;
+  border-left:5px solid #e2a000;
+  padding:14px;
+  border-radius:9px;
+  margin:10px 0;
+  line-height:1.6;
+}
+
+
+/* ================= PERSON ================= */
+
+.person{
+  background:#fff;
+  border:1px solid #ffd28a;
+  border-radius:15px;
+  text-align:center;
+  padding:15px;
+  box-shadow:0 3px 12px #0001;
+  font-size:17px;
+}
+
+.person b{
+  display:block;
+  color:#8a0000;
+  margin-bottom:5px;
+  font-size:18px;
+}
+
+.badge{
+  display:inline-block;
+  background:#ffe08a;
+  color:#650000;
+  padding:3px 9px;
+  border-radius:15px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+
+/* ================= COUNTDOWN ================= */
+
+.countdown-box{
+  max-width:900px;
+  margin:28px auto 0;
+  padding:22px 12px;
+  text-align:center;
+  border-radius:22px;
+  color:#fff;
+  background:linear-gradient(135deg,#650000,#b40000,#f39a00);
+  border:3px solid #ffd34f;
+  box-shadow:0 8px 30px #0005;
+  animation:countdownGlow 2s infinite alternate;
+}
+
+.countdown-title{
+  font-size:clamp(20px,5vw,30px);
+  font-weight:900;
+  margin-bottom:15px;
+}
+
+.countdown{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  max-width:650px;
+  margin:auto;
+}
+
+.time-box{
+  background:#fff;
+  color:#700000;
+  border-radius:15px;
+  padding:12px 5px;
+  box-shadow:0 4px 15px #0004;
+  animation:timePulse 1s infinite alternate;
+}
+
+.time-box span{
+  display:block;
+  font-size:clamp(25px,7vw,45px);
+  font-weight:900;
+  line-height:1;
+}
+
+.time-box small{
+  font-size:13px;
+  font-weight:800;
+}
+
+.countdown-end{
+  display:none;
+  font-size:25px;
+  font-weight:900;
+  animation:blink 1s infinite;
+}
+
+@keyframes countdownGlow{
+  from{box-shadow:0 8px 25px #0004}
+  to{box-shadow:0 8px 35px #ffd34f99}
+}
+
+@keyframes timePulse{
+  from{transform:scale(1)}
+  to{transform:scale(1.04)}
+}
+
+@keyframes blink{
+  50%{opacity:.4}
+}
+
+
+/* ================= SMART CALENDAR ================= */
+
+.smart-calendar{
+  max-width:900px;
+  margin:28px auto;
+  padding:20px 15px;
+  text-align:center;
+  border-radius:24px;
+  background:linear-gradient(135deg,#650000,#a90000,#f39a00);
+  color:#fff;
+  border:3px solid #ffd34f;
+  box-shadow:0 8px 28px #0005;
+}
+
+.calendar-icon{
+  width:88px;
+  height:88px;
+  margin:0 auto 12px;
+  border-radius:20px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:50px;
+  cursor:pointer;
+  box-shadow:0 5px 18px #0005;
+  transition:.3s;
+}
+
+.calendar-icon:hover{
+  transform:scale(1.08) rotate(-3deg);
+}
+
+.calendar-date{
+  font-size:24px;
+  font-weight:900;
+  margin:5px 0;
+}
+
+.calendar-day{
+  font-size:16px;
+  font-weight:bold;
+}
+
+.calendar-name{
+  font-size:19px;
+  font-weight:900;
+  margin-top:10px;
+}
+
+.festival-card{
+  margin:18px auto 0;
+  max-width:600px;
+  background:#fff;
+  color:#650000;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 6px 22px #0004;
+}
+
+.festival-photo{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  display:block;
+}
+
+.festival-title{
+  font-size:25px;
+  font-weight:900;
+  padding:15px 10px 5px;
+}
+
+.festival-wish{
+  font-size:19px;
+  font-weight:800;
+  line-height:1.6;
+  padding:5px 15px 12px;
+}
+
+.wish-by{
+  background:#fff1c7;
+  padding:14px 10px;
+  color:#700000;
+  font-size:16px;
+  font-weight:900;
+  line-height:1.5;
+}
+
+.calendar-hint{
+  font-size:13px;
+  margin-top:10px;
+  opacity:.9;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn{
+  display:inline-block;
+  margin:6px;
+  padding:12px 18px;
+  border-radius:25px;
+  background:linear-gradient(135deg,#d94b00,#820000);
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  border:0;
+  cursor:pointer;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:20px;
+}
+
+.gallery img{
+  width:115px;
+  height:115px;
+  object-fit:cover;
+  display:block;
+  margin:0 auto;
+  border-radius:15px;
+  border:3px solid #ffd34f;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#570000;
+  color:#fff;
+  text-align:center;
+  padding:28px 12px;
+}
+
+.small{
+  font-size:13px;
+  opacity:.9;
+}
+
+.admin-link{
+  color:#ffd34f;
+  cursor:pointer;
+  font-size:13px;
+  text-decoration:underline;
+}
+
+
+/* =====================================================
+   🔐 ADMIN LOGIN
+===================================================== */
+
+.admin-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:#000b;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+.admin-box{
+  width:100%;
+  max-width:420px;
+  background:#fff7e8;
+  border-radius:22px;
+  padding:25px;
+  box-shadow:0 10px 40px #0008;
+  border:3px solid #ffd34f;
+  text-align:center;
+}
+
+.admin-box h2{
+  color:#780000;
+  margin-top:0;
+}
+
+.admin-input{
+  width:100%;
+  padding:13px;
+  margin:7px 0;
+  border:1px solid #d9a15b;
+  border-radius:10px;
+  font-size:16px;
+  outline:none;
+}
+
+.admin-input:focus{
+  border:2px solid #a90000;
+}
+
+.login-error{
+  display:none;
+  color:#b00000;
+  font-weight:bold;
+  margin:8px 0;
+}
+
+
+/* =====================================================
+   🛠️ ADMIN PANEL
+===================================================== */
+
+.admin-panel{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9998;
+  background:#fff7e8;
+  overflow-y:auto;
+}
+
+.admin-header{
+  background:linear-gradient(135deg,#650000,#a90000,#f39a00);
+  color:#fff;
+  padding:18px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.admin-header h2{
+  margin:0 0 8px;
+}
+
+.admin-content{
+  max-width:1000px;
+  margin:auto;
+  padding:20px 14px 50px;
+}
+
+.admin-card{
+  background:#fff;
+  border:1px solid #ffd28a;
+  border-radius:18px;
+  padding:18px;
+  margin-bottom:15px;
+  box-shadow:0 4px 15px #0002;
+}
+
+.admin-card h3{
+  color:#800000;
+  margin-top:0;
+}
+
+.admin-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.admin-save{
+  background:linear-gradient(135deg,#d94b00,#820000);
+  color:#fff;
+  border:0;
+  border-radius:25px;
+  padding:13px 25px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.admin-close{
+  background:#fff;
+  color:#700000;
+  border:2px solid #ffd34f;
+  border-radius:25px;
+  padding:10px 20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.admin-message{
+  display:none;
+  margin-top:10px;
+  padding:10px;
+  background:#dff7df;
+  color:#176b17;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:600px){
+
+  nav a{
+    padding:11px 7px;
+    font-size:13px;
+  }
+
+  section{
+    padding:30px 11px;
+  }
+
+  .logo{
+    width:82px;
+    height:82px;
+  }
+
+  .cards{
+    grid-template-columns:repeat(3,1fr);
+    gap:7px;
+  }
+
+  .person{
+    padding:10px 4px;
+    font-size:13px;
+    word-break:break-word;
+  }
+
+  .person b{
+    font-size:14px;
+  }
+
+  .countdown{
+    gap:6px;
+  }
+
+  .time-box{
+    padding:10px 3px;
+  }
+
+  .time-box small{
+    font-size:11px;
+  }
+
+  .smart-calendar{
+    margin:20px 5px;
+    padding:16px 10px;
+  }
+
+  .calendar-date{
+    font-size:21px;
+  }
+
+  .festival-photo{
+    height:220px;
+  }
+
+  .festival-title{
+    font-size:21px;
+  }
+
+  .festival-wish{
+    font-size:17px;
+  }
+
+  .wish-by{
+    font-size:14px;
+  }
+
+  .admin-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
 </style>
 </head>
+
+
 <body>
 
+
+<!-- =====================================================
+     🚩 HEADER
+===================================================== -->
+
 <header id="home">
-<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो">
+
+<img
+class="logo"
+src="mandal-logo.jpg"
+alt="क्रांती सम्राट मंडळाचा लोगो"
+>
+
 <h1>क्रांती सम्राट</h1>
-<h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
-<div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
-<div class="location">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
+
+<h2>
+कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी
+</h2>
+
+<div class="tag">
+🚩 गणेशोत्सव २०२६ 🚩
+</div>
+
+<div class="location">
+📍 पडवळवाडी, ता. वाळवा, जि. सांगली
+</div>
+
 </header>
 
+
+<!-- =====================================================
+     🧭 NAV
+===================================================== -->
+
 <nav>
+
 <a href="#home">🏠 Home</a>
 <a href="#mandal">🏛️ मंडळ</a>
 <a href="#program">📅 कार्यक्रम</a>
@@ -52,54 +689,346 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small
 <a href="#members">👥 सदस्य</a>
 <a href="#gallery">📸 Gallery</a>
 <a href="#contact">📞 संपर्क</a>
+
 </nav>
 
+
+<!-- =====================================================
+     🚩 PROGRAM + COUNTDOWN + CALENDAR
+===================================================== -->
+
 <section>
-<h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
+
+<h2 class="title">
+🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम
+</h2>
+
+
 <div class="cards">
-<div class="event"><div class="icon">🚩</div><b>गणपती आगमन</b><p>सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p></div>
-<div class="event"><div class="icon">🍛</div><b>महाप्रसाद</b><p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p></div>
-<div class="event"><div class="icon">🌺</div><b>विसर्जन</b><p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p></div>
+
+<div class="event">
+
+<div class="icon">🚩</div>
+
+<b>गणपती आगमन</b>
+
+<p>
+सोमवार<br>
+१४ सप्टेंबर २०२६<br>
+सायं. ४:०० वाजता
+</p>
+
 </div>
+
+
+<div class="event">
+
+<div class="icon">🍛</div>
+
+<b>महाप्रसाद</b>
+
+<p>
+मंगळवार<br>
+१५ सप्टेंबर २०२६<br>
+सायं. ५:०० ते रात्री ९:००
+</p>
+
+</div>
+
+
+<div class="event">
+
+<div class="icon">🌺</div>
+
+<b>विसर्जन</b>
+
+<p>
+शुक्रवार<br>
+२५ सप्टेंबर २०२६<br>
+रात्री ७:०० वाजता
+</p>
+
+</div>
+
+</div>
+
+
+<!-- COUNTDOWN -->
+
+<div class="countdown-box">
+
+<div class="countdown-title">
+🚩 गणपती आगमनाला उरले आहेत 🚩
+</div>
+
+<div class="countdown" id="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+<small>दिवस</small>
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+<small>तास</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+<small>मिनिटे</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+<small>सेकंद</small>
+</div>
+
+</div>
+
+<div class="countdown-end" id="countdownEnd">
+🚩 गणपती बाप्पा मोरया! 🚩
+</div>
+
+</div>
+
+
+<!-- SMART CALENDAR -->
+
+<div class="smart-calendar">
+
+<div
+class="calendar-icon"
+onclick="showCalendarMessage()"
+>
+📅
+</div>
+
+<div
+class="calendar-date"
+id="todayDate"
+>
+तारीख लोड होत आहे...
+</div>
+
+<div
+class="calendar-day"
+id="todayDay"
+>
+वार लोड होत आहे...
+</div>
+
+<div class="calendar-name">
+🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ 🚩
+</div>
+
+<div class="festival-card">
+
+<img
+id="festivalPhoto"
+class="festival-photo"
+src="ganeshotsav.jpg"
+alt="सणाचा फोटो"
+onerror="this.src='mandal-logo.jpg'"
+>
+
+<div
+class="festival-title"
+id="festivalTitle"
+>
+🎉 हार्दिक शुभेच्छा!
+</div>
+
+<div
+class="festival-wish"
+id="festivalWish"
+>
+क्रांती सम्राट गणेश मंडळाकडून आपल्याला हार्दिक शुभेच्छा!
+</div>
+
+<div class="wish-by">
+
+🚩 शुभेच्छुक 🚩<br>
+
+<b>
+क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ
+</b>
+
+<br>
+
+पडवळवाडी, ता. वाळवा, जि. सांगली
+
+</div>
+
+</div>
+
+<div class="calendar-hint">
+📅 Calendar वर क्लिक करा
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- =====================================================
+     🏛️ MANDAL
+===================================================== -->
 
 <section id="mandal">
-<h2 class="title">🏛️ मंडळाची माहिती</h2>
+
+<h2 class="title">
+🏛️ मंडळाची माहिती
+</h2>
+
 <div class="box">
-<p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
+
+<p>
+
+<b>
+क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी
+</b>
+
+हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.
+
+</p>
+
 <div class="cards">
-<div class="person"><b>स्थापना</b>१९९२</div>
-<div class="person"><b>गणेशोत्सव</b>२०२६</div>
-<div class="person"><b>ठिकाण</b>पडवळवाडी, ता. वाळवा, जि. सांगली</div>
-<div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
+
+<div class="person">
+<b>स्थापना</b>
+१९९२
 </div>
+
+<div class="person">
+<b>गणेशोत्सव</b>
+२०२६
 </div>
+
+<div class="person">
+<b>ठिकाण</b>
+पडवळवाडी, ता. वाळवा, जि. सांगली
+</div>
+
+<div class="person">
+<b>उद्देश</b>
+कला • क्रीडा • संस्कृती • सामाजिक एकोपा
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- =====================================================
+     📅 PROGRAM
+===================================================== -->
 
 <section id="program">
-<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
+
+<h2 class="title">
+📅 कार्यक्रमांची संपूर्ण माहिती
+</h2>
+
 <div class="box">
-<div class="info">🚩 <b>गणपती आगमन:</b> सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</div>
-<div class="info">🙏 <b>स्थापना व आरती:</b> गणेशोत्सवातील धार्मिक कार्यक्रम</div>
-<div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
-<div class="info">🍛 <b>महाप्रसाद:</b> मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</div>
-<div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
+
+<div class="info">
+🚩 <b>गणपती आगमन:</b>
+सोमवार, १४ सप्टेंबर २०२६ —
+सायं. ४:०० वाजता
 </div>
+
+<div class="info">
+🙏 <b>स्थापना व आरती:</b>
+गणेशोत्सवातील धार्मिक कार्यक्रम
+</div>
+
+<div class="info">
+🎉 <b>सांस्कृतिक कार्यक्रम:</b>
+विविध सांस्कृतिक व विशेष कार्यक्रम
+</div>
+
+<div class="info">
+🍛 <b>महाप्रसाद:</b>
+मंगळवार, १५ सप्टेंबर २०२६ —
+सायं. ५:०० ते रात्री ९:००
+</div>
+
+<div class="info">
+🌺 <b>विसर्जन:</b>
+शुक्रवार, २५ सप्टेंबर २०२६ —
+रात्री ७:०० वाजता
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- =====================================================
+     👑 OFFICE
+===================================================== -->
 
 <section id="office">
-<h2 class="title">👑 पदाधिकारी</h2>
+
+<h2 class="title">
+👑 पदाधिकारी
+</h2>
+
 <div class="cards">
-<div class="person"><b>अथर्व खोत</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>संग्राम पवार</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>संदेश पवार</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
-<div class="person"><b>अमोल पवार</b>सचिव<br><span class="badge">पदाधिकारी</span></div>
+
+<div class="person">
+<b>अथर्व खोत</b>
+अध्यक्ष
+<br>
+<span class="badge">पदाधिकारी</span>
 </div>
+
+<div class="person">
+<b>संग्राम पवार</b>
+उपाध्यक्ष
+<br>
+<span class="badge">पदाधिकारी</span>
+</div>
+
+<div class="person">
+<b>संदेश पवार</b>
+खजिनदार
+<br>
+<span class="badge">पदाधिकारी</span>
+</div>
+
+<div class="person">
+<b>अमोल पवार</b>
+सचिव
+<br>
+<span class="badge">पदाधिकारी</span>
+</div>
+
+</div>
+
 </section>
 
+
+
+<!-- =====================================================
+     👥 MEMBERS
+===================================================== -->
+
 <section id="members">
-<h2 class="title">👥 मंडळाचे सदस्य — २८</h2>
-<div class="box"><div class="cards">
+
+<h2 class="title">
+👥 मंडळाचे सदस्य — २८
+</h2>
+
+<div class="box">
+
+<div class="cards">
+
 <div class="person">1. अरुण खोत</div>
 <div class="person">2. राहुल खोत</div>
 <div class="person">3. प्रवीण मोरे</div>
@@ -123,45 +1052,347 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px} .small
 <div class="person">21. सुजय दिंडे</div>
 <div class="person">22. संस्कार मोरे</div>
 <div class="person">23. विराज घाडगे</div>
- <div class="person">24. ऋतुराज खोत</div>
+<div class="person">24. ऋतुराज खोत</div>
 <div class="person">25. आर्यन खोत</div>
 <div class="person">26. श्रेयश पवार</div>
 <div class="person">27. अनसाली चाऊस</div>
 <div class="person">28. श्रेयश जावीर</div>
-</div></div>
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- =====================================================
+     📸 GALLERY
+===================================================== -->
 
 <section id="gallery">
-<h2 class="title">📸 Photo & Video Gallery</h2>
-<p style="text-align:center">मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे पुढे जोडता येतील.</p>
+
+<h2 class="title">
+📸 Photo & Video Gallery
+</h2>
+
+<p style="text-align:center">
+मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे पुढे जोडता येतील.
+</p>
+
+<div class="gallery">
+
+<img
+src="mandal-logo.jpg"
+alt="मंडळाचा लोगो"
+onerror="this.style.display='none'"
+>
+
+<img
+src="ganeshotsav.jpg"
+alt="गणेशोत्सव फोटो"
+onerror="this.style.display='none'"
+>
+
 </div>
+
 </section>
+
+
+
+<!-- =====================================================
+     📞 CONTACT
+===================================================== -->
 
 <section id="contact">
-<h2 class="title">📞 संपर्क</h2>
-<div class="box" style="text-align:center">
-<p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</b></p>
-<p>📍 पडवळवाडी, ता. वाळवा, जि. सांगली</p>
-<a class="btn" href="https://www.instagram.com/kranti_samrat_ganesh_mandal/" target="_blank">📷 Instagram</a>
-<a class="btn" href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी" target="_blank">🔎 Google</a>
+
+<h2 class="title">
+📞 संपर्क
+</h2>
+
+<div
+class="box"
+style="text-align:center"
+>
+
+<p>
+<b>
+क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ
+</b>
+</p>
+
+<p>
+📍 पडवळवाडी, ता. वाळवा, जि. सांगली
+</p>
+
+<a
+class="btn"
+href="https://www.instagram.com/kranti_samrat_ganesh_mandal/"
+target="_blank"
+>
+📷 Instagram
+</a>
+
+<a
+class="btn"
+href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी"
+target="_blank"
+>
+🔎 Google
+</a>
+
 </div>
+
 </section>
 
+
+
+<!-- =====================================================
+     🚩 FOOTER
+===================================================== -->
+
 <footer>
-<b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
-गणेशोत्सव २०२६<br><br>
-<div class="small">Website Designed & Created by — संदेश पवार</div><br>
-<div class="small">© २०२६ सर्व हक्क राखीव</div>
+
+<b>
+🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩
+</b>
+
+<br>
+
+गणेशोत्सव २०२६
+
+<br><br>
+
+<div class="small">
+Website Designed & Created by — संदेश पवार
+</div>
+
+<br>
+
+<div class="small">
+© २०२६ सर्व हक्क राखीव
+</div>
+
+<br><br>
+
+<span
+class="admin-link"
+onclick="openAdminLogin()"
+>
+🔐 Admin Login
+</span>
+
 </footer>
 
-<script>
-const links=document.querySelectorAll("nav a");
-const sections=[...links].map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
-window.addEventListener("scroll",function(){
-  let current="home";
-  sections.forEach(function(s){if(window.scrollY>=s.offsetTop-130)current=s.id;});
-  links.forEach(function(a){a.classList.toggle("active",a.getAttribute("href")==="#"+current);});
-});
-</script>
-</body>
-</html>
+
+
+<!-- =====================================================
+     🔐 ADMIN LOGIN POPUP
+===================================================== -->
+
+<div
+class="admin-overlay"
+id="adminLogin"
+>
+
+<div class="admin-box">
+
+<h2>
+🔐 Admin Login
+</h2>
+
+<p>
+🚩 क्रांती सम्राट मंडळ
+</p>
+
+<input
+class="admin-input"
+id="adminUsername"
+type="text"
+placeholder="👤 Username"
+>
+
+<input
+class="admin-input"
+id="adminPassword"
+type="password"
+placeholder="🔑 Password"
+>
+
+<div
+class="login-error"
+id="loginError"
+>
+❌ Username किंवा Password चुकीचा आहे!
+</div>
+
+<button
+class="btn"
+onclick="adminLogin()"
+>
+🔓 Login
+</button>
+
+<button
+class="admin-close"
+onclick="closeAdminLogin()"
+>
+✖ बंद करा
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     🛠️ ADMIN PANEL
+===================================================== -->
+
+<div
+class="admin-panel"
+id="adminPanel"
+>
+
+<div class="admin-header">
+
+<h2>
+🚩 क्रांती सम्राट — Admin Panel
+</h2>
+
+<button
+class="admin-close"
+onclick="logoutAdmin()"
+>
+🚪 Logout
+</button>
+
+</div>
+
+
+<div class="admin-content">
+
+
+<!-- GENERAL -->
+
+<div class="admin-card">
+
+<h3>
+🏛️ मंडळाची माहिती
+</h3>
+
+<input
+class="admin-input"
+id="editMandalName"
+placeholder="मंडळाचे नाव"
+>
+
+<input
+class="admin-input"
+id="editLocation"
+placeholder="पत्ता"
+>
+
+<button
+class="admin-save"
+onclick="saveGeneral()"
+>
+💾 Save
+</button>
+
+<div
+class="admin-message"
+id="generalSaved"
+>
+✅ माहिती Save झाली!
+</div>
+
+</div>
+
+
+
+<!-- PROGRAM -->
+
+<div class="admin-card">
+
+<h3>
+📅 कार्यक्रम
+</h3>
+
+<div class="admin-grid">
+
+<div>
+
+<label>
+🚩 गणपती आगमन
+</label>
+
+<input
+class="admin-input"
+id="arrivalDate"
+type="date"
+>
+
+<input
+class="admin-input"
+id="arrivalTime"
+type="time"
+>
+
+</div>
+
+
+<div>
+
+<label>
+🍛 महाप्रसाद
+</label>
+
+<input
+class="admin-input"
+id="prasadDate"
+type="date"
+>
+
+<input
+class="admin-input"
+id="prasadTime"
+type="text"
+placeholder="उदा. सायं. ५:०० ते रात्री ९:००"
+>
+
+</div>
+
+</div>
+
+<button
+class="admin-save"
+onclick="saveProgram()"
+>
+💾 कार्यक्रम Save करा
+</button>
+
+<div
+class="admin-message"
+id="programSaved"
+>
+✅ कार्यक्रम Save झाला!
+</div>
+
+</div>
+
+
+
+<!-- FESTIVAL -->
+
+<div class="admin-card">
+
+<h3>
+🎉 सण / जयंती शुभेच्छा
+</h3>
+
+<input
+class="admin-input"
+id="wishTitle"
+placeholder="उदा. गणेश चतुर्थीच्या हार्दिक
