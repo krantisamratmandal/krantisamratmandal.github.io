@@ -28,6 +28,10 @@ nav a:hover,nav a.active{background:#e7a300;color:#570000}
 section{max-width:1100px;margin:auto;padding:38px 14px}
 .title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .home-event-cards{
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  }
 .event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
 .event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
 .event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
@@ -50,10 +54,10 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
 .gallery img{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f}
 footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{font-size:13px;opacity:.9}
-
+.cards{grid-template-columns:repeat(3,1fr);gap:7px}
 @media(max-width:600px){
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
-.cards{grid-template-columns:repeat(3,1fr);gap:7px}.person{padding:10px 4px;font-size:13px;word-break:break-word}.person b{font-size:14px}
+.cards{grid-template-columns:repeat(2,1fr);gap:7px}
 .countdown{gap:6px}.time-box{padding:10px 3px}.time-box small{font-size:11px}
 .gallery{grid-template-columns:repeat(2,1fr)}.member-admin-row{grid-template-columns:1fr auto auto}
 }
@@ -174,10 +178,50 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 
 <section id="homeSection" class="page-section active-section">
 <h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
-<div class="cards">
-<div class="event"><div class="icon">🚩</div><b>गणपती आगमन</b><p id="arrivalCard">सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p></div>
-<div class="event"><div class="icon">🍛</div><b>महाप्रसाद</b><p id="prasadCard">मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p></div>
-<div class="event"><div class="icon">🌺</div><b>विसर्जन</b><p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p></div>
+<div class="cards home-event-cards">
+
+<div class="event">
+<div class="icon">🚩</div>
+<b>गणपती आगमन</b>
+<p id="arrivalCard">
+सोमवार<br>
+१४ सप्टेंबर २०२६<br>
+सायं. ४:०० वाजता
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🙏</div>
+<b>सत्यनारायण पूजा व महाआरती</b>
+<p>
+मंगळवार<br>
+१५ सप्टेंबर २०२६<br>
+सकाळी ११:०० — सत्यनारायण पूजा<br>
+सायं. ४:०० — महाआरती
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🍛</div>
+<b>महाप्रसाद</b>
+<p id="prasadCard">
+मंगळवार<br>
+१५ सप्टेंबर २०२६<br>
+सायं. ५:०० ते रात्री ९:००
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🌺</div>
+<b>विसर्जन</b>
+<p>
+शुक्रवार<br>
+२५ सप्टेंबर २०२६<br>
+रात्री ७:०० वाजता
+</p>
+</div>
+
+</div>
 </div>
 
 
@@ -222,7 +266,45 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
 <div class="box">
 <div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
-<div class="info">🙏 <b>स्थापना व आरती:</b> गणेशोत्सवातील धार्मिक कार्यक्रम</div>
+<div class="info">
+🙏 <b>आरती व आरतीचे मानकरी</b><br><br>
+
+📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:     <br><br>
+
+📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 सत्यनारायण पूजा व महाआरतीचे मानकरी:       <br><br>
+
+📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:          <br><br>
+
+📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी: नाव येथे टाका<br><br>
+
+📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        
+</div>
 <div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
 <div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</span></div>
 <div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
