@@ -86,6 +86,65 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 .countdown{gap:6px}.time-box{padding:10px 3px}.time-box small{font-size:11px}
 .gallery{grid-template-columns:repeat(2,1fr)}.admin-grid{grid-template-columns:1fr}.member-admin-row{grid-template-columns:1fr auto auto}
 }
+
+/* ================= GALLERY VIEW / DOWNLOAD ================= */
+.gallery img{
+  cursor:pointer;
+  transition:.2s;
+}
+.gallery img:hover{transform:scale(1.04)}
+.photo-viewer{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:10050;
+  background:rgba(0,0,0,.94);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:20px;
+}
+.photo-viewer.show{display:flex}
+.photo-viewer img{
+  max-width:96vw;
+  max-height:78vh;
+  object-fit:contain;
+  border-radius:12px;
+  box-shadow:0 8px 35px #000;
+}
+.photo-actions{
+  display:flex;
+  gap:10px;
+  margin-top:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.photo-actions button,.photo-actions a{
+  border:2px solid #ffd34f;
+  background:#fff;
+  color:#700000;
+  padding:11px 18px;
+  border-radius:25px;
+  font-weight:900;
+  text-decoration:none;
+  cursor:pointer;
+}
+.photo-close{
+  position:absolute;
+  top:15px;
+  right:18px;
+  color:#fff;
+  font-size:34px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.gallery-note{
+  text-align:center;
+  font-weight:800;
+  color:#700000;
+  margin-top:10px;
+}
+
 </style>
 </head>
 
@@ -183,10 +242,10 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 
 <section id="gallery" class="page-section">
 <h2 class="title">📸 Photo & Video Gallery</h2>
-<p style="text-align:center">मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे पुढे जोडता येतील.</p>
+<p class="gallery-note">📷 फोटोवर टच करा → मोठा फोटो पाहा → Download करा</p>
 <div class="gallery">
-<img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onerror="this.style.display='none'">
-<img src="ganeshotsav.jpg" alt="गणेशोत्सव फोटो" onerror="this.style.display='none'">
+  <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  <img src="ganeshotsav.jpg" alt="गणेशोत्सव फोटो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
 </div>
 </section>
 
@@ -199,6 +258,17 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <a class="btn" href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी" target="_blank">🔎 Google</a>
 </div>
 </section>
+
+
+<!-- PHOTO VIEWER -->
+<div class="photo-viewer" id="photoViewer" onclick="closePhoto(event)">
+  <div class="photo-close" onclick="closePhoto()">✕</div>
+  <img id="viewerImage" src="" alt="">
+  <div class="photo-actions">
+    <a id="downloadPhoto" href="#" download>⬇️ Download Photo</a>
+    <button type="button" onclick="closePhoto()">✖ बंद करा</button>
+  </div>
+</div>
 
 <footer>
 <b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
@@ -293,38 +363,4 @@ function setMembers(arr){localStorage.setItem("members",JSON.stringify(arr))}
 function formatDate(dateStr){
  if(!dateStr)return "";
  const d=new Date(dateStr+"T00:00:00");
- return DAYS[d.getDay()]+", "+d.getDate()+" "+MONTHS[d.getMonth()]+" "+d.getFullYear();
-}
-function renderMembers(){
- const arr=getMembers();
- document.getElementById("memberCount").textContent=arr.length;
- document.getElementById("membersList").innerHTML=arr.map((n,i)=>`<div class="person">${i+1}. ${escapeHtml(n)}</div>`).join("");
- renderAdminMembers();
-}
-function renderAdminMembers(){
- const arr=getMembers();
- document.getElementById("adminMemberList").innerHTML=arr.map((n,i)=>`
- <div class="member-admin-row">
- <input class="admin-input" id="member_${i}" value="${escapeAttr(n)}">
- <button class="edit-btn" onclick="editMember(${i})">✏️ Edit</button>
- <button class="delete-btn" onclick="deleteMember(${i})">🗑️</button>
- </div>`).join("");
-}
-function addMember(){
- const input=document.getElementById("newMemberName");
- const name=input.value.trim();
- if(!name){alert("सदस्याचे नाव टाका.");return}
- const arr=getMembers();arr.push(name);setMembers(arr);input.value="";
- renderMembers();showSaved("memberSaved");
-}
-function editMember(i){
- const el=document.getElementById("member_"+i);
- const name=el.value.trim();
- if(!name){alert("सदस्याचे नाव रिकामे ठेवू नका.");return}
- const arr=getMembers();arr[i]=name;setMembers(arr);renderMembers();showSaved("memberSaved");
-}
-function deleteMember(i){
- if(!confirm("हा सदस्य Delete करायचा आहे का?"))return;
- const arr=getMembers();arr.splice(i,1);setMembers(arr);renderMembers();showSaved("memberSaved");
-}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&a
+ return DAYS[d.getD
