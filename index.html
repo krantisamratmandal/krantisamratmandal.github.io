@@ -130,6 +130,21 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 .countdown{display:grid!important}
 .countdown-end{display:none}
 
+
+.page-section{
+  display:none !important;
+  min-height:100px;
+}
+.page-section.active-section{
+  display:block !important;
+}
+.global-contact{
+  display:none !important;
+}
+.global-contact.active-section{
+  display:block !important;
+}
+
 </style>
 </head>
 
@@ -174,6 +189,10 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
     <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
     <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
   </div>
+
+
+  <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
+</div>
 <div id="homeMandalInfo" class="home-mandal-info">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
 <div class="box">
@@ -185,18 +204,15 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 </div>
 </div>
 </div>
-
-  <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
-</div>
 </section>
 
 <section id="mandal" class="page-section">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
 <div class="box">
-<p><b id="mandalNameText">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
+<p><b id="mandalNameTextSection">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
 <div class="cards">
 <div class="person"><b>स्थापना</b>१९९२</div><div class="person"><b>गणेशोत्सव</b>२०२६</div>
-<div class="person"><b>ठिकाण</b><span id="locationText">पडवळवाडी, ता. वाळवा, जि. सांगली</span></div>
+<div class="person"><b>ठिकाण</b><span id="locationTextSection">पडवळवाडी, ता. वाळवा, जि. सांगली</span></div>
 <div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
 </div>
 </div>
@@ -223,7 +239,10 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 </div>
 </section>
 
-<section id="members" class="page-section"><h2 class="title">👥 मंडळाचे सदस्य — ४०</h2><div class="box"><div class="cards"><div class="person">1. अरुण खोत</div><div class="person">2. राहुल खोत</div><div class="person">3. प्रवीण मोरे</div><div class="person">4. कैलास खोत</div><div class="person">5. महेंद्र पवार</div><div class="person">6. जयंत खोत</div><div class="person">7. आदित्य घाडगे</div><div class="person">8. जगदीश लोहार</div><div class="person">9. सुशांत पवार</div><div class="person">10. प्रवीण पवार</div><div class="person">11. दिलीप खोत</div><div class="person">12. आशिष खोत</div><div class="person">13. विशाल घाडगे</div><div class="person">14. अमोल घाडगे</div><div class="person">15. अनिकेत घाडगे</div><div class="person">16. अजित घाडगे</div><div class="person">17. संदीप कोकाटे</div><div class="person">18. संग्राम घाडगे</div><div class="person">19. सुशांत चव्हाण</div><div class="person">20. स्वप्नील घाडगे</div><div class="person">21. विक्रम घाडगे</div><div class="person">22. प्रणव खोत</div><div class="person">23. राहुल जाधव</div><div class="person">24. भूषण खोत</div><div class="person">25. किशोर बाड</div><div class="person">26. शुभम जगदाळे</div><div class="person">27. गणेश खोत</div><div class="person">28. सुजय दिंडे</div><div class="person">29. संस्कार मोरे</div><div class="person">30. विराज घाडगे</div><div class="person">31. ऋतुराज खोत</div><div class="person">32. पवन फार्णे</div><div class="person">33. आर्यन खोत</div><div class="person">34. श्रेयश पवार</div><div class="person">35. शिवराज खोत-नांगरे</div><div class="person">36. श्रेयश खोत</div><div class="person">37. राजवर्धन घोरपडे</div><div class="person">38. राजवीर मोरे</div><div class="person">39. श्रेयश जावीर</div><div class="person">40. अनसाली चाऊस</div></div></div></section>
+<section id="members" class="page-section">
+<h2 class="title">👥 मंडळाचे सदस्य — 41</h2>
+<div class="box"><div class="cards"><div class="person">1. अरुण खोत</div><div class="person">2. राहुल खोत</div><div class="person">3. प्रवीण मोरे</div><div class="person">4. कैलास खोत</div><div class="person">5. महेंद्र पवार</div><div class="person">6. जयंत खोत</div><div class="person">7. आदित्य घाडगे</div><div class="person">8. जगदीश लोहार</div><div class="person">9. सुशांत पवार</div><div class="person">10. प्रवीण पवार</div><div class="person">11. दिलीप खोत</div><div class="person">12. आशिष खोत</div><div class="person">13. विशाल घाडगे</div><div class="person">14. अमोल घाडगे</div><div class="person">15. अनिकेत घाडगे</div><div class="person">16. अजित घाडगे</div><div class="person">17. संदीप कोकाटे</div><div class="person">18. संग्राम घाडगे</div><div class="person">19. सुशांत चव्हाण</div><div class="person">20. स्वप्नील घाडगे</div><div class="person">21. विक्रम घाडगे</div><div class="person">22. प्रणव खोत</div><div class="person">23. राहुल जाधव</div><div class="person">24. भूषण खोत</div><div class="person">25. किशोर बाड</div><div class="person">26. शुभम जगदाळे</div><div class="person">27. गणेश खोत</div><div class="person">28. सुजय दिंडे</div><div class="person">29. संस्कार मोरे</div><div class="person">30. विराज घाडगे</div><div class="person">31. ऋतुराज खोत</div><div class="person">32. पवन फार्णे</div><div class="person">33. आर्यन खोत</div><div class="person">34. श्रेयश पवार</div><div class="person">35. शिवराज खोत-नांगरे</div><div class="person">36. श्रेयश खोत</div><div class="person">37. राजवर्धन घोरपडे</div><div class="person">38. राजवीर मोरे</div><div class="person">39. अथर्व पवार</div><div class="person">40. श्रेयश जावीर</div><div class="person">41. अनसाली चाऊस</div></div></div>
+</section>
 
 <section id="gallery" class="page-section">
 <h2 class="title">📸 Photo & Video Gallery</h2>
@@ -262,29 +281,92 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <div class="small">© २०२६ सर्व हक्क राखीव</div><br><br>
 </footer>
 
+
+
 <script>
-(function () {
-  function startKrantiCountdown() {
-    var target = new Date(2026, 8, 14, 16, 0, 0, 0).getTime();
-    function tick() {
-      var diff = target - Date.now();
-      if (diff < 0) diff = 0;
-      var d=document.getElementById("days"), h=document.getElementById("hours");
-      var m=document.getElementById("minutes"), s=document.getElementById("seconds");
-      var grid=document.getElementById("countdown"), end=document.getElementById("countdownEnd");
-      if(!d||!h||!m||!s) return;
-      d.textContent=String(Math.floor(diff/86400000)).padStart(2,"0");
-      h.textContent=String(Math.floor((diff%86400000)/3600000)).padStart(2,"0");
-      m.textContent=String(Math.floor((diff%3600000)/60000)).padStart(2,"0");
-      s.textContent=String(Math.floor((diff%60000)/1000)).padStart(2,"0");
-      if(grid) grid.style.display=diff===0?"none":"grid";
-      if(end) end.style.display=diff===0?"block":"none";
+function showSection(id){
+  document.querySelectorAll(".page-section, .global-contact").forEach(function(section){
+    section.classList.remove("active-section");
+  });
+
+  var target = document.getElementById(id);
+  if(!target) return;
+
+  target.classList.add("active-section");
+
+  document.querySelectorAll("nav a").forEach(function(link){
+    link.classList.remove("active");
+  });
+
+  var activeLink = document.querySelector('nav a[onclick*="' + id + '"]');
+  if(activeLink) activeLink.classList.add("active");
+
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+</script>
+
+
+
+
+
+
+<script>
+function openPhoto(src, altText){
+  var viewer = document.getElementById("photoViewer");
+  var image = document.getElementById("viewerImage");
+  var download = document.getElementById("downloadPhoto");
+  if(!viewer || !image || !download) return;
+
+  image.src = src;
+  image.alt = altText || "Gallery Photo";
+  download.href = src;
+  download.download = (altText || "photo").replace(/\s+/g,"_") + ".jpg";
+  viewer.classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closePhoto(event){
+  if(event && event.target && event.target.id === "viewerImage") return;
+  var viewer = document.getElementById("photoViewer");
+  if(!viewer) return;
+  viewer.classList.remove("show");
+  document.body.style.overflow = "";
+}
+</script>
+
+
+<script>
+(function(){
+  const targetDate = new Date("2026-09-14T16:00:00+05:30").getTime();
+
+  function updateKrantiCountdown(){
+    const diff = Math.max(0, targetDate - Date.now());
+
+    const days = document.getElementById("days");
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+    const grid = document.getElementById("countdown");
+    const end = document.getElementById("countdownEnd");
+
+    if(!days || !hours || !minutes || !seconds) return;
+
+    days.textContent = String(Math.floor(diff / 86400000)).padStart(2,"0");
+    hours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,"0");
+    minutes.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
+    seconds.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
+
+    if(diff === 0){
+      if(grid) grid.style.display = "none";
+      if(end) end.style.display = "block";
+    }else{
+      if(grid) grid.style.display = "grid";
+      if(end) end.style.display = "none";
     }
-    tick();
-    setInterval(tick,1000);
   }
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",startKrantiCountdown);
-  else startKrantiCountdown();
+
+  updateKrantiCountdown();
+  setInterval(updateKrantiCountdown,1000);
 })();
 </script>
 
