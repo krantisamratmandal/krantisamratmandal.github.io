@@ -148,6 +148,17 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 .countdown-box{display:block!important;visibility:visible!important;opacity:1!important;max-width:900px!important;margin:28px auto!important;padding:22px 12px!important;text-align:center!important;border-radius:22px!important;color:#fff!important;background:linear-gradient(135deg,#650000,#b40000,#f39a00)!important;border:3px solid #ffd34f!important;box-shadow:0 8px 30px #0005!important}
 .countdown{display:grid!important;visibility:visible!important;opacity:1!important;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
+
+.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
+.countdown{display:grid!important;grid-template-columns:repeat(4,1fr);gap:10px}
+.countdown-end{display:none}
+
+
+
+.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
+.countdown{display:grid!important}
+.countdown-end{display:none}
+
 </style>
 </head>
 
@@ -184,7 +195,15 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 </div>
 
 
-<div id="homeMandalInfo class="home-mandal-info">
+<div class="countdown-box" id="countdownBox">
+  <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
+  <div class="countdown" id="countdown">
+    <div class="time-box"><span id="days">00</span><small>दिवस</small></div>
+    <div class="time-box"><span id="hours">00</span><small>तास</small></div>
+    <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
+    <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
+  </div>
+<div id="homeMandalInfo" class="home-mandal-info">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
 <div class="box">
 <p><b id="mandalNameText">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
@@ -198,14 +217,7 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 
   <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
 </div>
-<div class="countdown-box" id="countdownBox">
-  <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
-  <div class="countdown" id="countdown">
-    <div class="time-box"><span id="days">00</span><small>दिवस</small></div>
-    <div class="time-box"><span id="hours">00</span><small>तास</small></div>
-    <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
-    <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
-  </div></section>
+</section>
 
 <section id="mandal" class="page-section">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
@@ -604,45 +616,55 @@ renderGalleryPhotos();
 
 
 
-/* SIMPLE WORKING COUNTDOWN */
-document.addEventListener("DOMContentLoaded", function () {
-  function runCountdown() {
-    var target = new Date(2026, 8, 14, 16, 0, 0).getTime(); // 14 Sep 2026, 4:00 PM
-    var now = new Date().getTime();
-    var distance = target - now;
-
-    var d = document.getElementById("days");
-    var h = document.getElementById("hours");
-    var m = document.getElementById("minutes");
-    var s = document.getElementById("seconds");
-    var grid = document.getElementById("countdown");
-    var end = document.getElementById("countdownEnd");
-
-    if (!d || !h || !m || !s) return;
-
-    if (distance <= 0) {
-      d.textContent = "00";
-      h.textContent = "00";
-      m.textContent = "00";
-      s.textContent = "00";
-      if (grid) grid.style.display = "none";
-      if (end) end.style.display = "block";
-      return;
-    }
-
-    if (grid) grid.style.display = "grid";
-    if (end) end.style.display = "none";
-
-    d.textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0");
-    h.textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
-    m.textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
-    s.textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, "0");
-  }
-
-  runCountdown();
-  setInterval(runCountdown, 1000);
-});
 
 </script>
+
+
+
+
+<script>
+(function () {
+  function startKrantiCountdown() {
+    var target = new Date(2026, 8, 14, 16, 0, 0, 0).getTime();
+
+    function tick() {
+      var diff = target - Date.now();
+      if (diff < 0) diff = 0;
+
+      var d = document.getElementById("days");
+      var h = document.getElementById("hours");
+      var m = document.getElementById("minutes");
+      var s = document.getElementById("seconds");
+      var grid = document.getElementById("countdown");
+      var end = document.getElementById("countdownEnd");
+
+      if (!d || !h || !m || !s) return;
+
+      d.textContent = String(Math.floor(diff / 86400000)).padStart(2, "0");
+      h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+
+      if (diff === 0) {
+        if (grid) grid.style.display = "none";
+        if (end) end.style.display = "block";
+      } else {
+        if (grid) grid.style.display = "grid";
+        if (end) end.style.display = "none";
+      }
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startKrantiCountdown);
+  } else {
+    startKrantiCountdown();
+  }
+})();
+</script>
+
 </body>
 </html>
