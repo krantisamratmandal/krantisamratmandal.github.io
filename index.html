@@ -11,6 +11,12 @@
 body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
 header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
 .logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
+
+.logo-wrap{width:105px;height:105px;margin:0 auto;position:relative}
+.logo-wrap .logo{width:95px;height:95px}
+.logo-fallback{display:none;width:95px;height:95px;border-radius:50%;background:#fff;align-items:center;justify-content:center;flex-direction:column;color:#8a0000;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007;font-size:35px;font-weight:900;line-height:.85}
+.logo-fallback span{font-size:12px;margin-top:5px}
+
 h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
 header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
 .tag{font-size:19px;font-weight:800;margin:8px}.location{font-size:15px}
@@ -86,7 +92,11 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 <body>
 
 <header id="home">
-<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो">
+<div class="logo-wrap">
+<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो"
+onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
+<div id="logoFallback" class="logo-fallback">🚩<span>क्रांती<br>सम्राट</span></div>
+</div>
 <h1 id="siteNameTitle">क्रांती सम्राट</h1>
 <h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
 <div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
@@ -158,12 +168,17 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <section id="office" class="page-section">
 <h2 class="title">👑 पदाधिकारी</h2>
-<div class="cards" id="officeList"></div>
+<div class="cards">
+<div class="person"><b>संग्राम पवार</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>अथर्व खोत</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>संदेश पवार</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>अमोल पवार</b>सचिव<br><span class="badge">पदाधिकारी</span></div>
+</div>
 </section>
 
 <section id="members" class="page-section">
-<h2 class="title">👥 मंडळाचे सदस्य — <span id="memberCount">४०</span></h2>
-<div class="box"><div class="cards" id="membersList"></div></div>
+<h2 class="title">👥 मंडळाचे सदस्य — ४०</h2>
+<div class="box"><div class="cards"><div class="person">1. अरुण खोत</div><div class="person">2. राहुल खोत</div><div class="person">3. प्रवीण मोरे</div><div class="person">4. कैलास खोत</div><div class="person">5. महेंद्र पवार</div><div class="person">6. जयंत खोत</div><div class="person">7. आदित्य घाडगे</div><div class="person">8. जगदीश लोहार</div><div class="person">9. सुशांत पवार</div><div class="person">10. प्रवीण पवार</div><div class="person">11. दिलीप खोत</div><div class="person">12. आशिष खोत</div><div class="person">13. विशाल घाडगे</div><div class="person">14. अमोल घाडगे</div><div class="person">15. अनिकेत घाडगे</div><div class="person">16. अजित घाडगे</div><div class="person">17. संदीप कोकाटे</div><div class="person">18. संग्राम घाडगे</div><div class="person">19. सुशांत चव्हाण</div><div class="person">20. स्वप्नील घाडगे</div><div class="person">21. विक्रम घाडगे</div><div class="person">22. प्रणव खोत</div><div class="person">23. राहुल जाधव</div><div class="person">24. भूषण खोत</div><div class="person">25. किशोर बाड</div><div class="person">26. शुभम जगदाळे</div><div class="person">27. गणेश खोत</div><div class="person">28. सुजय दिंडे</div><div class="person">29. संस्कार मोरे</div><div class="person">30. विराज घाडगे</div><div class="person">31. ऋतुराज खोत</div><div class="person">32. पवन फार्णे</div><div class="person">33. आर्यन खोत</div><div class="person">34. श्रेयश पवार</div><div class="person">35. शिवराज खोत-नांगरे</div><div class="person">36. श्रेयश खोत</div><div class="person">37. राजवर्धन घोरपडे</div><div class="person">38. राजवीर मोरे</div><div class="person">39. श्रेयश जावीर</div><div class="person">40. अनसाली चाऊस</div></div></div>
 </section>
 
 <section id="gallery" class="page-section">
@@ -312,165 +327,4 @@ function deleteMember(i){
  if(!confirm("हा सदस्य Delete करायचा आहे का?"))return;
  const arr=getMembers();arr.splice(i,1);setMembers(arr);renderMembers();showSaved("memberSaved");
 }
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
-function escapeAttr(s){return escapeHtml(s)}
-
-function renderOffice(){
- const data={
- president:localStorage.getItem("president")||"संग्राम पवार",
- vice:localStorage.getItem("vicePresident")||"अथर्व खोत",
- treasurer:localStorage.getItem("treasurer")||"संदेश पवार",
- secretary:localStorage.getItem("secretary")||"अमोल पवार"
- };
- document.getElementById("officeList").innerHTML=`
- <div class="person"><b>${escapeHtml(data.president)}</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
- <div class="person"><b>${escapeHtml(data.vice)}</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
- <div class="person"><b>${escapeHtml(data.treasurer)}</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
- <div class="person"><b>${escapeHtml(data.secretary)}</b>सचिव<br><span class="badge">पदाधिकारी</span></div>`;
-}
-
-function renderGeneral(){
- const name=localStorage.getItem("mandalName")||"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ";
- const loc=localStorage.getItem("location")||"पडवळवाडी, ता. वाळवा, जि. सांगली";
- document.getElementById("siteNameTitle").textContent=name.replace(" कला क्रीडा व सांस्कृतिक मंडळ","");
- document.getElementById("siteLocation").textContent="📍 "+loc;
- document.getElementById("mandalNameText").textContent=name;
- document.getElementById("locationText").textContent=loc;
-}
-
-function renderProgram(){
- const ad=localStorage.getItem("arrivalDate")||"2026-09-14";
- const at=localStorage.getItem("arrivalTime")||"16:00";
- const pd=localStorage.getItem("prasadDate")||"2026-09-15";
- const pt=localStorage.getItem("prasadTime")||"सायं. ५:०० ते रात्री ९:००";
- const arrivalText=formatDate(ad)+" — "+formatTime(at);
- const prasadText=formatDate(pd)+" — "+pt;
- document.getElementById("arrivalInfo").textContent=arrivalText;
- document.getElementById("prasadInfo").textContent=prasadText;
- document.getElementById("arrivalCard").innerHTML=formatDate(ad)+"<br>"+new Date(ad+"T00:00:00").getDate()+" "+MONTHS[new Date(ad+"T00:00:00").getMonth()]+" "+new Date(ad+"T00:00:00").getFullYear()+"<br>"+formatTime(at);
- document.getElementById("prasadCard").innerHTML=formatDate(pd)+"<br>"+new Date(pd+"T00:00:00").getDate()+" "+MONTHS[new Date(pd+"T00:00:00").getMonth()]+" "+new Date(pd+"T00:00:00").getFullYear()+"<br>"+pt;
- updateCountdown();
-}
-function formatTime(t){
- if(!t)return "";
- const [h,m]=t.split(":").map(Number);const am=h<12;const hh=h%12||12;
- return (am?"सकाळी ":"सायं. ")+hh+":"+String(m).padStart(2,"0")+" वाजता";
-}
-
-function saveGeneral(){
- localStorage.setItem("mandalName",document.getElementById("editMandalName").value.trim());
- localStorage.setItem("location",document.getElementById("editLocation").value.trim());
- renderGeneral();showSaved("generalSaved");
-}
-function saveProgram(){
- localStorage.setItem("arrivalDate",document.getElementById("arrivalDate").value);
- localStorage.setItem("arrivalTime",document.getElementById("arrivalTime").value);
- localStorage.setItem("prasadDate",document.getElementById("prasadDate").value);
- localStorage.setItem("prasadTime",document.getElementById("prasadTime").value);
- renderProgram();showSaved("programSaved");
-}
-function saveOffice(){
- localStorage.setItem("president",document.getElementById("president").value.trim());
- localStorage.setItem("vicePresident",document.getElementById("vicePresident").value.trim());
- localStorage.setItem("treasurer",document.getElementById("treasurer").value.trim());
- localStorage.setItem("secretary",document.getElementById("secretary").value.trim());
- renderOffice();showSaved("officeSaved");
-}
-
-function loadAdminData(){
- document.getElementById("editMandalName").value=localStorage.getItem("mandalName")||"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ";
- document.getElementById("editLocation").value=localStorage.getItem("location")||"पडवळवाडी, ता. वाळवा, जि. सांगली";
- document.getElementById("arrivalDate").value=localStorage.getItem("arrivalDate")||"2026-09-14";
- document.getElementById("arrivalTime").value=localStorage.getItem("arrivalTime")||"16:00";
- document.getElementById("prasadDate").value=localStorage.getItem("prasadDate")||"2026-09-15";
- document.getElementById("prasadTime").value=localStorage.getItem("prasadTime")||"सायं. ५:०० ते रात्री ९:००";
- document.getElementById("president").value=localStorage.getItem("president")||"संग्राम पवार";
- document.getElementById("vicePresident").value=localStorage.getItem("vicePresident")||"अथर्व खोत";
- document.getElementById("treasurer").value=localStorage.getItem("treasurer")||"संदेश पवार";
- document.getElementById("secretary").value=localStorage.getItem("secretary")||"अमोल पवार";
- renderAdminMembers();
-}
-
-function showSaved(id){
- const e=document.getElementById(id);e.style.display="block";
- setTimeout(()=>e.style.display="none",2500);
-}
-
-function openAdminLogin(){
- document.getElementById("adminLogin").style.display="flex";
- document.getElementById("adminUsername").focus();
-}
-function closeAdminLogin(){
- document.getElementById("adminLogin").style.display="none";
- document.getElementById("loginError").style.display="none";
-}
-function adminLogin(){
- const u=document.getElementById("adminUsername").value;
- const p=document.getElementById("adminPassword").value;
- if(u==="admin" && p==="Kranti@2026"){
-  closeAdminLogin();document.getElementById("adminPanel").style.display="block";loadAdminData();
- }else document.getElementById("loginError").style.display="block";
-}
-function logoutAdmin(){
- document.getElementById("adminPanel").style.display="none";
- document.getElementById("adminUsername").value="";
- document.getElementById("adminPassword").value="";
-}
-
-let countdownTimer;
-function updateCountdown(){
- const date=localStorage.getItem("arrivalDate")||"2026-09-14";
- const time=localStorage.getItem("arrivalTime")||"16:00";
- const target=new Date(date+"T"+time+":00").getTime();
- const now=Date.now(),distance=target-now;
- if(distance<=0){
-  document.getElementById("countdown").style.display="none";
-  document.getElementById("countdownEnd").style.display="block";return;
- }
- document.getElementById("countdown").style.display="grid";
- document.getElementById("countdownEnd").style.display="none";
- document.getElementById("days").textContent=String(Math.floor(distance/86400000)).padStart(2,"0");
- document.getElementById("hours").textContent=String(Math.floor(distance%86400000/3600000)).padStart(2,"0");
- document.getElementById("minutes").textContent=String(Math.floor(distance%3600000/60000)).padStart(2,"0");
- document.getElementById("seconds").textContent=String(Math.floor(distance%60000/1000)).padStart(2,"0");
-}
-clearInterval(countdownTimer);countdownTimer=setInterval(updateCountdown,1000);
-
-function showSection(id){
- document.querySelectorAll(".page-section").forEach(function(s){
-   s.classList.remove("active-section");
- });
- if(id==="homeSection"){
-   document.getElementById("homeSection").classList.add("active-section");
-   document.getElementById("homeMandalInfo").style.display="block";
- }else{
-   var target=document.getElementById(id);
-   if(target) target.classList.add("active-section");
-   var hm=document.getElementById("homeMandalInfo");
-   if(hm) hm.style.display="none";
- }
- document.querySelectorAll("nav a").forEach(function(a){a.classList.remove("active")});
- var key=id==="homeSection"?"home":id;
- var link=document.querySelector('nav a[onclick*="showSection(\''+key+'\'")');
- if(link) link.classList.add("active");
- window.scrollTo(0,0);
-}
-
-if(!localStorage.getItem("committee2026Final")){
- localStorage.setItem("president","संग्राम पवार");
- localStorage.setItem("vicePresident","अथर्व खोत");
- localStorage.setItem("treasurer","संदेश पवार");
- localStorage.setItem("secretary","अमोल पवार");
- localStorage.setItem("members",JSON.stringify(DEFAULT_MEMBERS));
- localStorage.setItem("committee2026Final","1");
-}
-showSection('homeSection');
-
-/* INITIAL LOAD */
-renderGeneral();
-renderProgram();
-renderOffice();
-renderMembers();
-</script>
-</body>
-</html>
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&a
