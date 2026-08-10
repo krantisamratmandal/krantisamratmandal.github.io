@@ -69,6 +69,9 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{
 .edit-btn{background:#e6a000;color:#500;border:0;border-radius:9px;padding:10px;cursor:pointer}
 .member-list-admin{max-height:350px;overflow:auto;margin-top:12px}
 
+
+.page-section{display:none;min-height:calc(100vh - 120px)}
+.page-section.active-section{display:block}
 @media(max-width:600px){
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(3,1fr);gap:7px}.person{padding:10px 4px;font-size:13px;word-break:break-word}.person b{font-size:14px}
@@ -89,11 +92,16 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </header>
 
 <nav>
-<a href="#home">🏠 Home</a><a href="#mandal">🏛️ मंडळ</a><a href="#program">📅 कार्यक्रम</a>
-<a href="#office">👑 पदाधिकारी</a><a href="#members">👥 सदस्य</a><a href="#gallery">📸 Gallery</a><a href="#contact">📞 संपर्क</a>
+<a href="#home" onclick="showSection('homeSection');return false;">🏠 Home</a>
+<a href="#mandal" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
+<a href="#program" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
+<a href="#office" onclick="showSection('office');return false;">👑 पदाधिकारी</a>
+<a href="#members" onclick="showSection('members');return false;">👥 सदस्य</a>
+<a href="#gallery" onclick="showSection('gallery');return false;">📸 Gallery</a>
+<a href="#contact" onclick="showSection('contact');return false;">📞 संपर्क</a>
 </nav>
 
-<section>
+<section id="homeSection" class="page-section active-section">
 <h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
 <div class="cards">
 <div class="event"><div class="icon">🚩</div><b>गणपती आगमन</b><p id="arrivalCard">सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p></div>
@@ -113,7 +121,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<section id="mandal">
+<section id="mandal" class="page-section">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
 <div class="box">
 <p><b id="mandalNameText">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
@@ -125,7 +133,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<section id="program">
+<section id="program" class="page-section">
 <h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
 <div class="box">
 <div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
@@ -136,17 +144,17 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<section id="office">
+<section id="office" class="page-section">
 <h2 class="title">👑 पदाधिकारी</h2>
 <div class="cards" id="officeList"></div>
 </section>
 
-<section id="members">
-<h2 class="title">👥 मंडळाचे सदस्य — <span id="memberCount">२८</span></h2>
+<section id="members" class="page-section">
+<h2 class="title">👥 मंडळाचे सदस्य — <span id="memberCount">४०</span></h2>
 <div class="box"><div class="cards" id="membersList"></div></div>
 </section>
 
-<section id="gallery">
+<section id="gallery" class="page-section">
 <h2 class="title">📸 Photo & Video Gallery</h2>
 <p style="text-align:center">मंडळाचे गणेशोत्सव फोटो आणि व्हिडिओ येथे पुढे जोडता येतील.</p>
 <div class="gallery">
@@ -155,7 +163,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<section id="contact">
+<section id="contact" class="page-section">
 <h2 class="title">📞 संपर्क</h2>
 <div class="box" style="text-align:center">
 <p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</b></p>
@@ -243,11 +251,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <script>
 const DEFAULT_MEMBERS=[
-"अरुण खोत","राहुल खोत","प्रवीण मोरे","कैलास खोत","जगदीश लोहार","महेंद्र पवार",
-"आदित्य घाडगे","जयंत खोत","सुशांत पवार","प्रवीण पवार","दिलीप खोत","आशिष खोत",
-"विशाल घाडगे","अमोल घाडगे","अनिकेत घाडगे","संग्राम घाडगे","सुशांत चव्हाण","प्रणव खोत",
-"राहुल जाधव","भूषण खोत","सुजय दिंडे","संस्कार मोरे","विराज घाडगे","ऋतुराज खोत",
-"आर्यन खोत","श्रेयश पवार","अनसाली चाऊस","श्रेयश जावीर"
+"अरुण खोत","राहुल खोत","प्रवीण मोरे","कैलास खोत","महेंद्र पवार","जयंत खोत","आदित्य घाडगे","जगदीश लोहार","सुशांत पवार","प्रवीण पवार","दिलीप खोत","आशिष खोत","विशाल घाडगे","अमोल घाडगे","अनिकेत घाडगे","अजित घाडगे","संदीप कोकाटे","संग्राम घाडगे","सुशांत चव्हाण","स्वप्नील घाडगे","विक्रम घाडगे","प्रणव खोत","राहुल जाधव","भूषण खोत","किशोर बाड","शुभम जगदाळे","गणेश खोत","सुजय दिंडे","संस्कार मोरे","विराज घाडगे","ऋतुराज खोत","पवन फार्णे","आर्यन खोत","श्रेयश पवार","शिवराज खोत-नांगरे","श्रेयश खोत","राजवर्धन घोरपडे","राजवीर मोरे","श्रेयश जावीर","अनसाली चाऊस"
 ];
 
 const DAYS=["रविवार","सोमवार","मंगळवार","बुधवार","गुरुवार","शुक्रवार","शनिवार"];
@@ -301,8 +305,8 @@ function escapeAttr(s){return escapeHtml(s)}
 
 function renderOffice(){
  const data={
- president:localStorage.getItem("president")||"अथर्व खोत",
- vice:localStorage.getItem("vicePresident")||"संग्राम पवार",
+ president:localStorage.getItem("president")||"संग्राम पवार",
+ vice:localStorage.getItem("vicePresident")||"अथर्व खोत",
  treasurer:localStorage.getItem("treasurer")||"संदेश पवार",
  secretary:localStorage.getItem("secretary")||"अमोल पवार"
  };
@@ -354,85 +358,4 @@ function saveProgram(){
  renderProgram();showSaved("programSaved");
 }
 function saveOffice(){
- localStorage.setItem("president",document.getElementById("president").value.trim());
- localStorage.setItem("vicePresident",document.getElementById("vicePresident").value.trim());
- localStorage.setItem("treasurer",document.getElementById("treasurer").value.trim());
- localStorage.setItem("secretary",document.getElementById("secretary").value.trim());
- renderOffice();showSaved("officeSaved");
-}
-
-function loadAdminData(){
- document.getElementById("editMandalName").value=localStorage.getItem("mandalName")||"क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ";
- document.getElementById("editLocation").value=localStorage.getItem("location")||"पडवळवाडी, ता. वाळवा, जि. सांगली";
- document.getElementById("arrivalDate").value=localStorage.getItem("arrivalDate")||"2026-09-14";
- document.getElementById("arrivalTime").value=localStorage.getItem("arrivalTime")||"16:00";
- document.getElementById("prasadDate").value=localStorage.getItem("prasadDate")||"2026-09-15";
- document.getElementById("prasadTime").value=localStorage.getItem("prasadTime")||"सायं. ५:०० ते रात्री ९:००";
- document.getElementById("president").value=localStorage.getItem("president")||"अथर्व खोत";
- document.getElementById("vicePresident").value=localStorage.getItem("vicePresident")||"संग्राम पवार";
- document.getElementById("treasurer").value=localStorage.getItem("treasurer")||"संदेश पवार";
- document.getElementById("secretary").value=localStorage.getItem("secretary")||"अमोल पवार";
- renderAdminMembers();
-}
-
-function showSaved(id){
- const e=document.getElementById(id);e.style.display="block";
- setTimeout(()=>e.style.display="none",2500);
-}
-
-function openAdminLogin(){
- document.getElementById("adminLogin").style.display="flex";
- document.getElementById("adminUsername").focus();
-}
-function closeAdminLogin(){
- document.getElementById("adminLogin").style.display="none";
- document.getElementById("loginError").style.display="none";
-}
-function adminLogin(){
- const u=document.getElementById("adminUsername").value;
- const p=document.getElementById("adminPassword").value;
- if(u==="admin" && p==="Kranti@2026"){
-  closeAdminLogin();document.getElementById("adminPanel").style.display="block";loadAdminData();
- }else document.getElementById("loginError").style.display="block";
-}
-function logoutAdmin(){
- document.getElementById("adminPanel").style.display="none";
- document.getElementById("adminUsername").value="";
- document.getElementById("adminPassword").value="";
-}
-
-let countdownTimer;
-function updateCountdown(){
- const date=localStorage.getItem("arrivalDate")||"2026-09-14";
- const time=localStorage.getItem("arrivalTime")||"16:00";
- const target=new Date(date+"T"+time+":00").getTime();
- const now=Date.now(),distance=target-now;
- if(distance<=0){
-  document.getElementById("countdown").style.display="none";
-  document.getElementById("countdownEnd").style.display="block";return;
- }
- document.getElementById("countdown").style.display="grid";
- document.getElementById("countdownEnd").style.display="none";
- document.getElementById("days").textContent=String(Math.floor(distance/86400000)).padStart(2,"0");
- document.getElementById("hours").textContent=String(Math.floor(distance%86400000/3600000)).padStart(2,"0");
- document.getElementById("minutes").textContent=String(Math.floor(distance%3600000/60000)).padStart(2,"0");
- document.getElementById("seconds").textContent=String(Math.floor(distance%60000/1000)).padStart(2,"0");
-}
-clearInterval(countdownTimer);countdownTimer=setInterval(updateCountdown,1000);
-
-const links=document.querySelectorAll("nav a");
-const sections=[...links].map(a=>document.querySelector(a.getAttribute("href"))).filter(Boolean);
-window.addEventListener("scroll",()=>{
- let current="home";
- sections.forEach(s=>{if(window.scrollY>=s.offsetTop-130)current=s.id});
- links.forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+current));
-});
-
-/* INITIAL LOAD */
-renderGeneral();
-renderProgram();
-renderOffice();
-renderMembers();
-</script>
-</body>
-</html>
+ localStorage.setIt
