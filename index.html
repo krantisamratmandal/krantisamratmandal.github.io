@@ -28,10 +28,7 @@ nav a:hover,nav a.active{background:#e7a300;color:#570000}
 section{max-width:1100px;margin:auto;padding:38px 14px}
 .title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-  .home-event-cards{
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  }
+.home-event-cards{grid-template-columns:repeat(4,1fr);gap:12px}
 .event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
 .event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
 .event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
@@ -54,101 +51,32 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
 .gallery img{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f}
 footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{font-size:13px;opacity:.9}
-.cards{grid-template-columns:repeat(3,1fr);gap:7px}
+
+.aarti-box{background:#fffcf2;border:2px solid #e2a000;border-radius:16px;padding:20px;margin-bottom:20px;line-height:1.9;font-size:16px;text-align:center}
+.aarti-box h3{color:#8a0000;font-size:22px;margin-top:0;border-bottom:2px dashed #e2a000;padding-bottom:10px}
+
 @media(max-width:600px){
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(2,1fr);gap:7px}
+.home-event-cards{grid-template-columns:repeat(2,1fr)}
 .countdown{gap:6px}.time-box{padding:10px 3px}.time-box small{font-size:11px}
-.gallery{grid-template-columns:repeat(2,1fr)}.member-admin-row{grid-template-columns:1fr auto auto}
+.gallery{grid-template-columns:repeat(2,1fr)}
 }
 
-/* ================= GALLERY VIEW / DOWNLOAD ================= */
-.gallery img{
-  cursor:pointer;
-  transition:.2s;
-}
+.gallery img{cursor:pointer;transition:.2s}
 .gallery img:hover{transform:scale(1.04)}
-.photo-viewer{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:10050;
-  background:rgba(0,0,0,.94);
-  align-items:center;
-  justify-content:center;
-  flex-direction:column;
-  padding:20px;
-}
+.photo-viewer{display:none;position:fixed;inset:0;z-index:10050;background:rgba(0,0,0,.94);align-items:center;justify-content:center;flex-direction:column;padding:20px}
 .photo-viewer.show{display:flex}
-.photo-viewer img{
-  max-width:96vw;
-  max-height:78vh;
-  object-fit:contain;
-  border-radius:12px;
-  box-shadow:0 8px 35px #000;
-}
-.photo-actions{
-  display:flex;
-  gap:10px;
-  margin-top:16px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
-.photo-actions button,.photo-actions a{
-  border:2px solid #ffd34f;
-  background:#fff;
-  color:#700000;
-  padding:11px 18px;
-  border-radius:25px;
-  font-weight:900;
-  text-decoration:none;
-  cursor:pointer;
-}
-.photo-close{
-  position:absolute;
-  top:15px;
-  right:18px;
-  color:#fff;
-  font-size:34px;
-  cursor:pointer;
-  font-weight:bold;
-}
-.gallery-note{
-  text-align:center;
-  font-weight:800;
-  color:#700000;
-  margin-top:10px;
-}
+.photo-viewer img{max-width:96vw;max-height:78vh;object-fit:contain;border-radius:12px;box-shadow:0 8px 35px #000}
+.photo-actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;justify-content:center}
+.photo-actions button,.photo-actions a{border:2px solid #ffd34f;background:#fff;color:#700000;padding:11px 18px;border-radius:25px;font-weight:900;text-decoration:none;cursor:pointer}
+.photo-close{position:absolute;top:15px;right:18px;color:#fff;font-size:34px;cursor:pointer;font-weight:bold}
+.gallery-note{text-align:center;font-weight:800;color:#700000;margin-top:10px}
 
-
-.countdown-box{display:block!important;visibility:visible!important;opacity:1!important;max-width:900px!important;margin:28px auto!important;padding:22px 12px!important;text-align:center!important;border-radius:22px!important;color:#fff!important;background:linear-gradient(135deg,#650000,#b40000,#f39a00)!important;border:3px solid #ffd34f!important;box-shadow:0 8px 30px #0005!important}
-.countdown{display:grid!important;visibility:visible!important;opacity:1!important;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
-
-.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
-.countdown{display:grid!important;grid-template-columns:repeat(4,1fr);gap:10px}
-.countdown-end{display:none}
-
-
-
-.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
-.countdown{display:grid!important}
-.countdown-end{display:none}
-
-
-.page-section{
-  display:none !important;
-  min-height:100px;
-}
-.page-section.active-section{
-  display:block !important;
-}
-.global-contact{
-  display:none !important;
-}
-.global-contact.active-section{
-  display:block !important;
-}
-
+.page-section{display:none !important;min-height:100px}
+.page-section.active-section{display:block !important}
+.global-contact{display:none !important}
+.global-contact.active-section{display:block !important}
 </style>
 </head>
 
@@ -156,8 +84,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <header id="home">
 <div class="logo-wrap">
-<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो"
-onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
+<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
 <div id="logoFallback" class="logo-fallback">🚩<span>क्रांती<br>सम्राट</span></div>
 </div>
 <h1 id="siteNameTitle">क्रांती सम्राट</h1>
@@ -170,6 +97,7 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <a href="#" onclick="showSection('homeSection');return false;">🏠 Home</a>
 <a href="#" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
 <a href="#" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
+<a href="#" onclick="showSection('aartiSection');return false;">🎵 आरती व स्तोत्र</a>
 <a href="#" onclick="showSection('office');return false;">👑 पदाधिकारी</a>
 <a href="#" onclick="showSection('members');return false;">👥 सदस्य</a>
 <a href="#" onclick="showSection('gallery');return false;">📸 Gallery</a>
@@ -183,48 +111,28 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <div class="event">
 <div class="icon">🚩</div>
 <b>गणपती आगमन</b>
-<p id="arrivalCard">
-सोमवार<br>
-१४ सप्टेंबर २०२६<br>
-सायं. ४:०० वाजता
-</p>
+<p id="arrivalCard">सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p>
 </div>
 
 <div class="event">
 <div class="icon">🙏</div>
 <b>सत्यनारायण पूजा व महाआरती</b>
-<p>
-मंगळवार<br>
-१५ सप्टेंबर २०२६<br>
-सकाळी ११:०० — सत्यनारायण पूजा<br>
-  
-सायं. ४:०० — महाआरती
-</p>
+<p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सकाळी ११:०० — सत्यनारायण पूजा<br>सायं. ४:०० — महाआरती</p>
 </div>
 
 <div class="event">
 <div class="icon">🍛</div>
 <b>महाप्रसाद</b>
-<p id="prasadCard">
-मंगळवार<br>
-१५ सप्टेंबर २०२६<br>
-सायं. ५:०० ते रात्री ९:००
-</p>
+<p id="prasadCard">मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p>
 </div>
 
 <div class="event">
 <div class="icon">🌺</div>
 <b>विसर्जन</b>
-<p>
-शुक्रवार<br>
-२५ सप्टेंबर २०२६<br>
-रात्री ७:०० वाजता
-</p>
+<p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p>
 </div>
 
 </div>
-</div>
-
 
 <div class="countdown-box" id="countdownBox">
   <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
@@ -234,11 +142,10 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
     <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
     <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
   </div>
-
-
   <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
 </div>
-<div id="homeMandalInfo" class="home-mandal-info">
+
+<div id="homeMandalInfo" class="home-mandal-info" style="margin-top:20px;">
 <h2 class="title">🏛️ मंडळाची माहिती</h2>
 <div class="box">
 <p><b id="mandalNameText">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
@@ -269,46 +176,58 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
 <div class="info">
 🙏 <b>आरती व आरतीचे मानकरी</b><br><br>
-
-📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:     <br><br>
-
-📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 सत्यनारायण पूजा व महाआरतीचे मानकरी:                        <br><br>
-
-📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:         <br><br>
-
-📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:        <br><br>
-
-📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:          <br><br>
-
-📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:         <br><br>
-
-📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:        <br><br>
-
-📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:         <br><br>
-
-📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:           <br><br>
-
-📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:        <br><br>
-
-📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:        <br><br>
-
-📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
-👤 आरतीचे मानकरी:        
+📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 सत्यनारायण पूजा व महाआरतीचे मानकरी: <br><br>
+📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
+📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: 
 </div>
 <div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
 <div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</span></div>
 <div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
+</div>
+</section>
+
+<!-- 🎵 नवीन आरती व स्तोत्र सेक्शन -->
+<section id="aartiSection" class="page-section">
+<h2 class="title">🎵 श्री गणपती आरती व स्तोत्र</h2>
+
+<div class="aarti-box">
+  <h3>🌺 श्री गणपतीची आरती 🌺</h3>
+  <p>
+    सुखकर्ता दुखहर्ता वार्ता विघ्नाची ॥ नुरवी पुरवी प्रेम कृपा याणाची ॥<br>
+    सर्वांगी सुंदर उटी शेंदुराची ॥ कंठी झळके माळ मुक्ताफळांची ॥ १ ॥<br><br>
+    <b>जय देव जय देव जय मंगलमूर्ती ॥ दर्शनमात्रे मनकामना पुरती ॥ जय देव जय देव ॥</b><br><br>
+    रत्नखचित फरा तुझ गौरीकुमरा ॥ चंदनाची उटी कुमकुम केशरा ॥<br>
+    हीरे जडित मुकुट शोभतो बरा ॥ रुणझुणती नूपुरे चरणी घागरिया ॥ २ ॥<br><br>
+    <b>जय देव जय देव जय मंगलमूर्ती...</b><br><br>
+    लंबोदर पीतांबर फणिवरबंधना ॥ सरळ सोंड वक्रतुंड त्रिणयना ॥<br>
+    दास रामाचा वाट पाहे सदना ॥ संकटी पावावे निर्वाणी रक्षावे सुरवरवंदना ॥ ३ ॥<br><br>
+    <b>जय देव जय देव जय मंगलमूर्ती...</b>
+  </p>
+</div>
+
+<div class="aarti-box">
+  <h3>🙏 संकटनाशन गणेश स्तोत्रम् 🙏</h3>
+  <p>
+    प्रणम्य शिरसा देवं गौरीपुत्रं विनायकम् ।<br>
+    भक्तावासं स्मरेन्नित्यमायुःकामार्थसिद्धये ॥ १ ॥<br><br>
+    प्रथमं वक्रतुण्डं च एकदन्तं द्वितीयकम् ।<br>
+    तृतीयं कृष्णपिङ्गाक्षं गजवक्त्रं चतुर्थकम् ॥ २ ॥<br><br>
+    लम्बोदरं पञ्चमं च षष्ठं विकटमेव च ।<br>
+    सप्तमं विघ्नराजेन्द्रं धुम्रवर्णं तथाष्टमम् ॥ ३ ॥<br><br>
+    नवमं भालचन्द्रं च दशमं तु विनायकम् ।<br>
+    एकादशं गणपतिं द्वादशं तु गजाननम् ॥ ४ ॥<br><br>
+    द्वादशैतानि नामानि त्रिसन्ध्यं यः पठेन्नरः ।<br>
+    न च विघ्नभयं तस्य सर्वसिद्धिकरं प्रभो ॥ ५ ॥
+  </p>
 </div>
 </section>
 
@@ -326,7 +245,6 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <h2 class="title">👥 मंडळाचे सदस्य — 43</h2>
 <div class="box">
 <div class="cards">
-
 <div class="person">1. अरुण खोत</div>
 <div class="person">2. राहुल खोत</div>
 <div class="person">3. प्रवीण मोरे</div>
@@ -370,7 +288,6 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <div class="person">41. अथर्व पवार</div>
 <div class="person">42. श्रेयश जावीर</div>
 <div class="person">43. अनसाली चाऊस</div>
-
 </div>
 </div>
 </section>
@@ -394,7 +311,6 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 </div>
 </section>
 
-
 <!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photoViewer" onclick="closePhoto(event)">
   <div class="photo-close" onclick="closePhoto()">✕</div>
@@ -411,8 +327,6 @@ onerror="this.style.display='none';document.getElementById('logoFallback').style
 <div class="small">Website Designed & Created by — संदेश पवार</div><br>
 <div class="small">© २०२६ सर्व हक्क राखीव</div><br><br>
 </footer>
-
-
 
 <script>
 function showSection(id){
@@ -434,14 +348,7 @@ function showSection(id){
 
   window.scrollTo({top:0, behavior:"smooth"});
 }
-</script>
 
-
-
-
-
-
-<script>
 function openPhoto(src, altText){
   var viewer = document.getElementById("photoViewer");
   var image = document.getElementById("viewerImage");
@@ -463,10 +370,7 @@ function closePhoto(event){
   viewer.classList.remove("show");
   document.body.style.overflow = "";
 }
-</script>
 
-
-<script>
 (function(){
   const targetDate = new Date("2026-09-14T16:00:00+05:30").getTime();
 
