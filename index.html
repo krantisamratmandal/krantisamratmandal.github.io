@@ -3,365 +3,503 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली - अधिकृत संकेतस्थळ">
+<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी, ता. वाळवा, जि. सांगली">
 <title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
 <style>
-:root {
-  --primary-maroon: #650000;
-  --mid-maroon: #8a0000;
-  --bright-red: #c90000;
-  --saffron: #e65100;
-  --gold: #ffc107;
-  --gold-light: #fff3cd;
-  --gold-border: #ffd54f;
-  --bg-cream: #fff9ef;
-  --text-dark: #3a1005;
-  --shadow-sm: 0 4px 12px rgba(0,0,0,0.08);
-  --shadow-md: 0 8px 24px rgba(0,0,0,0.14);
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
+header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
+.logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
+
+.logo-wrap{width:105px;height:105px;margin:0 auto;position:relative}
+.logo-wrap .logo{width:95px;height:95px}
+.logo-fallback{display:none;width:95px;height:95px;border-radius:50%;background:#fff;align-items:center;justify-content:center;flex-direction:column;color:#8a0000;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007;font-size:35px;font-weight:900;line-height:.85}
+.logo-fallback span{font-size:12px;margin-top:5px}
+
+h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
+header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
+.tag{font-size:19px;font-weight:800;margin:8px}.location{font-size:15px}
+
+nav{position:sticky;top:0;z-index:99;background:#620000;display:flex;justify-content:center;flex-wrap:wrap;box-shadow:0 3px 14px #0005}
+nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-right:1px solid #d99a00}
+nav a:hover,nav a.active{background:#e7a300;color:#570000}
+
+section{max-width:1100px;margin:auto;padding:38px 14px}
+.title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .home-event-cards{
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  }
+.event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
+.event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
+.event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
+.event .icon{font-size:40px}.event b{display:block;font-size:21px;margin:6px}.event p{margin:0;line-height:1.7}
+.box{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px #0002;border:1px solid #ffd38a}
+.info{background:#fff5df;border-left:5px solid #e2a000;padding:14px;border-radius:9px;margin:10px 0;line-height:1.6}
+.person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
+.person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
+.badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
+
+.countdown-box{max-width:900px;margin:28px auto 0;padding:22px 12px;text-align:center;border-radius:22px;color:#fff;background:linear-gradient(135deg,#650000,#b40000,#f39a00);border:3px solid #ffd34f;box-shadow:0 8px 30px #0005;animation:glow 2s infinite alternate}
+.countdown-title{font-size:clamp(20px,5vw,30px);font-weight:900;margin-bottom:15px}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
+.time-box{background:#fff;color:#700000;border-radius:15px;padding:12px 5px;box-shadow:0 4px 15px #0004}
+.time-box span{display:block;font-size:clamp(25px,7vw,45px);font-weight:900;line-height:1}.time-box small{font-size:13px;font-weight:800}
+.countdown-end{display:none;font-size:25px;font-weight:900}
+@keyframes glow{from{box-shadow:0 8px 25px #0004}to{box-shadow:0 8px 35px #ffd34f99}}
+
+.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.gallery img{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f}
+footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{font-size:13px;opacity:.9}
+.cards{grid-template-columns:repeat(3,1fr);gap:7px}
+@media(max-width:600px){
+nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
+.cards{grid-template-columns:repeat(2,1fr);gap:7px}
+.countdown{gap:6px}.time-box{padding:10px 3px}.time-box small{font-size:11px}
+.gallery{grid-template-columns:repeat(2,1fr)}.member-admin-row{grid-template-columns:1fr auto auto}
 }
 
-* { box-sizing: border-box; scroll-behavior: smooth; }
-body { margin: 0; padding: 0; font-family: 'Noto Sans Devanagari', Arial, sans-serif; background-color: var(--bg-cream); color: var(--text-dark); line-height: 1.6; }
-
-header {
-  background: linear-gradient(135deg, #4a0000 0%, #8a0000 45%, #d94b00 100%);
-  color: #ffffff; text-align: center; padding: 28px 16px 36px; position: relative; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+/* ================= GALLERY VIEW / DOWNLOAD ================= */
+.gallery img{
+  cursor:pointer;
+  transition:.2s;
+}
+.gallery img:hover{transform:scale(1.04)}
+.photo-viewer{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:10050;
+  background:rgba(0,0,0,.94);
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:20px;
+}
+.photo-viewer.show{display:flex}
+.photo-viewer img{
+  max-width:96vw;
+  max-height:78vh;
+  object-fit:contain;
+  border-radius:12px;
+  box-shadow:0 8px 35px #000;
+}
+.photo-actions{
+  display:flex;
+  gap:10px;
+  margin-top:16px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.photo-actions button,.photo-actions a{
+  border:2px solid #ffd34f;
+  background:#fff;
+  color:#700000;
+  padding:11px 18px;
+  border-radius:25px;
+  font-weight:900;
+  text-decoration:none;
+  cursor:pointer;
+}
+.photo-close{
+  position:absolute;
+  top:15px;
+  right:18px;
+  color:#fff;
+  font-size:34px;
+  cursor:pointer;
+  font-weight:bold;
+}
+.gallery-note{
+  text-align:center;
+  font-weight:800;
+  color:#700000;
+  margin-top:10px;
 }
 
-.logo-wrap { width: 110px; height: 110px; margin: 0 auto 12px; position: relative; }
-.logo { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; background: #ffffff; padding: 5px; border: 4px solid var(--gold-border); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); }
-.logo-fallback { display: none; width: 110px; height: 110px; border-radius: 50%; background: #ffffff; align-items: center; justify-content: center; flex-direction: column; color: var(--mid-maroon); border: 4px solid var(--gold-border); box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); font-size: 32px; font-weight: 900; line-height: 1.1; text-align: center; }
-.logo-fallback span { font-size: 11px; margin-top: 3px; font-weight: 800; color: #333; }
 
-h1 { font-size: clamp(28px, 7.5vw, 54px); margin: 6px 0 0; font-weight: 900; text-shadow: 2px 3px 6px rgba(0,0,0,0.5); }
-header h2 { font-size: clamp(16px, 4vw, 26px); margin: 4px 0; font-weight: 700; color: #ffe89e; }
-.tag { display: inline-block; background: rgba(0, 0, 0, 0.25); padding: 6px 18px; border-radius: 30px; font-size: clamp(15px, 3.8vw, 20px); font-weight: 800; margin: 10px 0 4px; border: 1px solid rgba(255, 213, 79, 0.5); color: var(--gold-border); }
-.location { font-size: clamp(13px, 3.2vw, 16px); opacity: 0.95; margin-top: 4px; }
+.countdown-box{display:block!important;visibility:visible!important;opacity:1!important;max-width:900px!important;margin:28px auto!important;padding:22px 12px!important;text-align:center!important;border-radius:22px!important;color:#fff!important;background:linear-gradient(135deg,#650000,#b40000,#f39a00)!important;border:3px solid #ffd34f!important;box-shadow:0 8px 30px #0005!important}
+.countdown{display:grid!important;visibility:visible!important;opacity:1!important;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
 
-.sound-toggle-btn { position: absolute; top: 15px; right: 15px; background: rgba(255, 255, 255, 0.2); border: 1px solid var(--gold-border); color: #fff; border-radius: 50px; padding: 8px 14px; font-size: 13px; font-weight: 700; cursor: pointer; backdrop-filter: blur(5px); display: flex; align-items: center; gap: 6px; }
+.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
+.countdown{display:grid!important;grid-template-columns:repeat(4,1fr);gap:10px}
+.countdown-end{display:none}
 
-nav { position: sticky; top: 0; z-index: 999; background: var(--primary-maroon); display: flex; justify-content: center; flex-wrap: wrap; box-shadow: 0 4px 16px rgba(0,0,0,0.3); border-bottom: 3px solid var(--gold); }
-nav a { color: #ffffff; text-decoration: none; font-weight: 800; font-size: 14px; padding: 12px 14px; border-right: 1px solid rgba(255, 213, 79, 0.2); white-space: nowrap; }
-nav a:hover, nav a.active { background: var(--gold); color: var(--primary-maroon); }
 
-section { max-width: 1100px; margin: auto; padding: 36px 16px; }
-.page-section { display: none; }
-.page-section.active-section { display: block; animation: fadeIn 0.35s ease-in-out; }
 
-@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.countdown-box{display:block!important;visibility:visible!important;opacity:1!important}
+.countdown{display:grid!important}
+.countdown-end{display:none}
 
-.title { text-align: center; color: var(--mid-maroon); font-size: clamp(24px, 5.5vw, 32px); font-weight: 900; margin: 0 0 24px; position: relative; display: block; }
-.title::after { content: ""; display: block; width: 70px; height: 4px; background: var(--saffron); margin: 8px auto 0; border-radius: 2px; }
 
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.home-event-cards { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.page-section{
+  display:none !important;
+  min-height:100px;
+}
+.page-section.active-section{
+  display:block !important;
+}
+.global-contact{
+  display:none !important;
+}
+.global-contact.active-section{
+  display:block !important;
+}
 
-.event { color: #ffffff; text-align: center; padding: 22px 14px; border-radius: 18px; border: 2px solid var(--gold-border); box-shadow: var(--shadow-md); background: linear-gradient(145deg, #8a0000, #d94b00); }
-.event:nth-child(2) { background: linear-gradient(145deg, #c74d00, #f59e00); }
-.event:nth-child(3) { background: linear-gradient(145deg, #6c0048, #b8125d); }
-.event:nth-child(4) { background: linear-gradient(145deg, #0f6838, #2ea05d); }
-.event .icon { font-size: 42px; margin-bottom: 6px; }
-.event b { display: block; font-size: 20px; margin-bottom: 8px; }
-.event p { margin: 0; line-height: 1.6; font-size: 14px; }
-
-.box { background: #ffffff; border-radius: 20px; padding: 24px; box-shadow: var(--shadow-sm); border: 1px solid var(--gold-border); margin-bottom: 20px; }
-.info-item { background: var(--gold-light); border-left: 5px solid var(--gold); padding: 14px 18px; border-radius: 10px; margin: 12px 0; line-height: 1.7; font-size: 15px; }
-
-.person { background: #ffffff; border: 1px solid #ffe0b2; border-radius: 16px; text-align: center; padding: 16px 12px; font-size: 16px; }
-.person b { display: block; color: var(--mid-maroon); margin-bottom: 6px; font-size: 18px; }
-.badge { display: inline-block; background: var(--gold-light); color: var(--primary-maroon); padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 800; border: 1px solid var(--gold); margin-top: 6px; }
-
-.countdown-box { max-width: 900px; margin: 32px auto 10px; padding: 26px 16px; text-align: center; border-radius: 24px; color: #ffffff; background: linear-gradient(135deg, #5b0000 0%, #a30000 50%, #e65100 100%); border: 3px solid var(--gold-border); box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
-.countdown-title { font-size: clamp(20px, 5vw, 30px); font-weight: 900; margin-bottom: 18px; }
-.countdown { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 650px; margin: auto; }
-.time-box { background: #ffffff; color: var(--primary-maroon); border-radius: 16px; padding: 14px 6px; border: 2px solid var(--gold-border); }
-.time-box span { display: block; font-size: clamp(26px, 7vw, 46px); font-weight: 900; line-height: 1; color: var(--mid-maroon); }
-.time-box small { font-size: 13px; font-weight: 800; color: #555; margin-top: 4px; display: block; }
-.countdown-end { display: none; font-size: 28px; font-weight: 900; color: #ffe082; }
-
-.search-container { max-width: 450px; margin: 0 auto 20px; }
-.search-input { width: 100%; padding: 12px 18px; font-size: 15px; border: 2px solid var(--gold-border); border-radius: 30px; outline: none; font-family: inherit; }
-
-.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; margin-top: 20px; }
-.gallery-card { background: #fff; border-radius: 16px; overflow: hidden; border: 2px solid var(--gold-border); cursor: pointer; }
-.gallery-card img { width: 100%; height: 170px; object-fit: cover; display: block; }
-.gallery-card-title { padding: 10px; text-align: center; font-weight: 700; font-size: 14px; color: var(--primary-maroon); }
-
-.photo-viewer { display: none; position: fixed; inset: 0; z-index: 10000; background: rgba(0, 0, 0, 0.92); align-items: center; justify-content: center; flex-direction: column; padding: 20px; backdrop-filter: blur(8px); }
-.photo-viewer.show { display: flex; }
-.photo-viewer img { max-width: 94vw; max-height: 75vh; object-fit: contain; border-radius: 14px; border: 3px solid var(--gold-border); }
-.photo-actions { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; justify-content: center; }
-
-.btn { border: 2px solid var(--gold-border); background: linear-gradient(135deg, var(--saffron), var(--mid-maroon)); color: #ffffff; padding: 11px 22px; border-radius: 30px; font-weight: 800; font-size: 14px; text-decoration: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
-
-footer { background: var(--primary-maroon); color: #ffffff; text-align: center; padding: 32px 16px; margin-top: 40px; border-top: 4px solid var(--gold); }
-footer .small { font-size: 13px; opacity: 0.9; }
-
-@media (max-width: 900px) { .home-event-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 650px) { nav a { padding: 10px 8px; font-size: 13px; } section { padding: 26px 12px; } .cards { grid-template-columns: repeat(2, 1fr); } .home-event-cards { grid-template-columns: repeat(1, 1fr); } }
 </style>
 </head>
 
 <body>
 
-<header id="homeHeader">
-  <button class="sound-toggle-btn" onclick="toggleFestiveSound()" id="soundBtn">🔔 <span>घंटी वाजवा</span></button>
-  <div class="logo-wrap">
-    <img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळ लोगो" onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
-    <div id="logoFallback" class="logo-fallback">🚩<span>क्रांती<br>सम्राट</span></div>
-  </div>
-  <h1 id="siteNameTitle">क्रांती सम्राट</h1>
-  <h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
-  <div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
-  <div class="location" id="siteLocation">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
+<header id="home">
+<div class="logo-wrap">
+<img class="logo" src="mandal-logo.jpg" alt="क्रांती सम्राट मंडळाचा लोगो"
+onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex';">
+<div id="logoFallback" class="logo-fallback">🚩<span>क्रांती<br>सम्राट</span></div>
+</div>
+<h1 id="siteNameTitle">क्रांती सम्राट</h1>
+<h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
+<div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
+<div class="location" id="siteLocation">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
 </header>
 
 <nav>
-  <a href="#home" class="active" onclick="showSection('homeSection', this);return false;">🏠 Home</a>
-  <a href="#mandal" onclick="showSection('mandal', this);return false;">🏛️ मंडळ</a>
-  <a href="#program" onclick="showSection('program', this);return false;">📅 कार्यक्रम</a>
-  <a href="#office" onclick="showSection('office', this);return false;">👑 पदाधिकारी</a>
-  <a href="#members" onclick="showSection('members', this);return false;">👥 सदस्य</a>
-  <a href="#gallery" onclick="showSection('gallery', this);return false;">📸 Gallery</a>
-  <a href="#contact" onclick="showSection('contact', this);return false;">📞 संपर्क</a>
+<a href="#" onclick="showSection('homeSection');return false;">🏠 Home</a>
+<a href="#" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
+<a href="#" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
+<a href="#" onclick="showSection('office');return false;">👑 पदाधिकारी</a>
+<a href="#" onclick="showSection('members');return false;">👥 सदस्य</a>
+<a href="#" onclick="showSection('gallery');return false;">📸 Gallery</a>
+<a href="#" onclick="showSection('contact');return false;">📞 संपर्क</a>
 </nav>
 
 <section id="homeSection" class="page-section active-section">
-  <h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
+<h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
+<div class="cards home-event-cards">
+
+<div class="event">
+<div class="icon">🚩</div>
+<b>गणपती आगमन</b>
+<p id="arrivalCard">
+सोमवार<br>
+१४ सप्टेंबर २०२६<br>
+सायं. ४:०० वाजता
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🙏</div>
+<b>सत्यनारायण पूजा व महाआरती</b>
+<p>
+मंगळवार<br>
+१५ सप्टेंबर २०२६<br>
+सकाळी ११:०० — सत्यनारायण पूजा<br>
   
-  <div class="cards home-event-cards">
-    <div class="event"><div class="icon">🚩</div><b>गणपती आगमन</b><p>सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ४:०० वाजता</p></div>
-    <div class="event"><div class="icon">🙏</div><b>सत्यनारायण पूजा</b><p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सकाळी ११:०० वाजता</p></div>
-    <div class="event"><div class="icon">🍛</div><b>महाप्रसाद</b><p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते ९:००</p></div>
-    <div class="event"><div class="icon">🌺</div><b>विसर्जन</b><p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p></div>
+सायं. ४:०० — महाआरती
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🍛</div>
+<b>महाप्रसाद</b>
+<p id="prasadCard">
+मंगळवार<br>
+१५ सप्टेंबर २०२६<br>
+सायं. ५:०० ते रात्री ९:००
+</p>
+</div>
+
+<div class="event">
+<div class="icon">🌺</div>
+<b>विसर्जन</b>
+<p>
+शुक्रवार<br>
+२५ सप्टेंबर २०२६<br>
+रात्री ७:०० वाजता
+</p>
+</div>
+
+</div>
+</div>
+
+
+<div class="countdown-box" id="countdownBox">
+  <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
+  <div class="countdown" id="countdown">
+    <div class="time-box"><span id="days">00</span><small>दिवस</small></div>
+    <div class="time-box"><span id="hours">00</span><small>तास</small></div>
+    <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
+    <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
   </div>
 
-  <!-- INVITATION CARD DOWNLOAD BUTTON -->
-  <div style="text-align: center; margin: 24px 0 10px;">
-    <a class="btn" href="nimantran-patrika.jpg" download="Kranti_Samrat_Ganeshotsav_2026_Invitation.jpg">
-      📜 गणेशोत्सव निमंत्रण पत्रिका डाऊनलोड करा (Image/PDF)
-    </a>
-  </div>
 
-  <div class="countdown-box" id="countdownBox">
-    <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
-    <div class="countdown" id="countdown">
-      <div class="time-box"><span id="days">00</span><small>दिवस</small></div>
-      <div class="time-box"><span id="hours">00</span><small>तास</small></div>
-      <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
-      <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
-    </div>
-    <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
-  </div>
+  <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
+</div>
+<div id="homeMandalInfo" class="home-mandal-info">
+<h2 class="title">🏛️ मंडळाची माहिती</h2>
+<div class="box">
+<p><b id="mandalNameText">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
+<div class="cards">
+<div class="person"><b>स्थापना</b>१९९२</div><div class="person"><b>गणेशोत्सव</b>२०२६</div>
+<div class="person"><b>ठिकाण</b><span id="locationText">पडवळवाडी, ता. वाळवा, जि. सांगली</span></div>
+<div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
+</div>
+</div>
+</div>
 </section>
 
 <section id="mandal" class="page-section">
-  <h2 class="title">🏛️ मंडळाची माहिती</h2>
-  <div class="box">
-    <p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम अखंडपणे राबविणारे मंडळ आहे.</p>
-  </div>
+<h2 class="title">🏛️ मंडळाची माहिती</h2>
+<div class="box">
+<p><b id="mandalNameTextSection">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
+<div class="cards">
+<div class="person"><b>स्थापना</b>१९९२</div><div class="person"><b>गणेशोत्सव</b>२०२६</div>
+<div class="person"><b>ठिकाण</b><span id="locationTextSection">पडवळवाडी, ता. वाळवा, जि. सांगली</span></div>
+<div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
+</div>
+</div>
 </section>
 
 <section id="program" class="page-section">
-  <h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
-  <div class="box">
-    <div class="info-item">🚩 <b>गणपती आगमन:</b> सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</div>
-    <div class="info-item">🍛 <b>महाप्रसाद:</b> मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</div>
-    <div class="info-item">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
-  </div>
+<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
+<div class="box">
+<div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
+<div class="info">
+🙏 <b>आरती व आरतीचे मानकरी</b><br><br>
+
+📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:     <br><br>
+
+📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 सत्यनारायण पूजा व महाआरतीचे मानकरी:                        <br><br>
+
+📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:          <br><br>
+
+📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:         <br><br>
+
+📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:           <br><br>
+
+📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        <br><br>
+
+📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>
+👤 आरतीचे मानकरी:        
+</div>
+<div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
+<div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</span></div>
+<div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
+</div>
 </section>
 
 <section id="office" class="page-section">
-  <h2 class="title">👑 प्रमुख पदाधिकारी</h2>
-  <div class="cards">
-    <div class="person"><b>संग्राम पवार</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-    <div class="person"><b>अथर्व खोत</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
-    <div class="person"><b>संदेश पवार</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
-    <div class="person"><b>अमोल पवार</b>सचिव<br><span class="badge">पदाधिकारी</span></div>
-  </div>
+<h2 class="title">👑 पदाधिकारी</h2>
+<div class="cards">
+<div class="person"><b>संग्राम पवार</b>अध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>अथर्व खोत</b>उपाध्यक्ष<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>संदेश पवार</b>खजिनदार<br><span class="badge">पदाधिकारी</span></div>
+<div class="person"><b>अमोल पवार</b>सचिव<br><span class="badge">पदाधिकारी</span></div>
+</div>
 </section>
 
 <section id="members" class="page-section">
-  <h2 class="title">👥 मंडळाचे सदस्य (<span id="memberCount">43</span>)</h2>
-  <div class="search-container">
-    <input type="text" id="memberSearch" class="search-input" placeholder="🔍 सदस्याचे नाव शोधा..." onkeyup="filterMembers()">
-  </div>
-  <div class="box">
-    <div class="cards" id="membersGrid">
-      <div class="person member-card">1. अरुण खोत</div>
-      <div class="person member-card">2. राहुल खोत</div>
-      <div class="person member-card">3. प्रवीण मोरे</div>
-      <div class="person member-card">4. कैलास खोत</div>
-      <div class="person member-card">5. महेंद्र पवार</div>
-      <div class="person member-card">6. जयंत खोत</div>
-      <div class="person member-card">7. आदित्य घाडगे</div>
-      <div class="person member-card">8. जगदीश लोहार</div>
-      <div class="person member-card">9. सुशांत पवार</div>
-      <div class="person member-card">10. प्रवीण पवार</div>
-      <div class="person member-card">11. दिलीप खोत</div>
-      <div class="person member-card">12. आशिष खोत</div>
-      <div class="person member-card">13. विशाल घाडगे</div>
-      <div class="person member-card">14. अमोल घाडगे</div>
-      <div class="person member-card">15. अनिकेत घाडगे</div>
-      <div class="person member-card">16. अजित घाडगे</div>
-      <div class="person member-card">17. संदीप कोकाटे</div>
-      <div class="person member-card">18. संग्राम घाडगे</div>
-      <div class="person member-card">19. सुशांत चव्हाण</div>
-      <div class="person member-card">20. नितीन पवार</div>
-      <div class="person member-card">21. स्वप्नील घाडगे</div>
-      <div class="person member-card">22. विक्रम घाडगे</div>
-      <div class="person member-card">23. प्रणव खोत</div>
-      <div class="person member-card">24. राहुल जाधव</div>
-      <div class="person member-card">25. सचिन जाधव</div>
-      <div class="person member-card">26. भूषण खोत</div>
-      <div class="person member-card">27. किशोर बाड</div>
-      <div class="person member-card">28. शुभम जगदाळे</div>
-      <div class="person member-card">29. गणेश खोत</div>
-      <div class="person member-card">30. सुजय दिंडे</div>
-      <div class="person member-card">31. संस्कार मोरे</div>
-      <div class="person member-card">32. विराज घाडगे</div>
-      <div class="person member-card">33. ऋतुराज खोत</div>
-      <div class="person member-card">34. पवन फार्णे</div>
-      <div class="person member-card">35. आर्यन खोत</div>
-      <div class="person member-card">36. श्रेयश पवार</div>
-      <div class="person member-card">37. शिवराज खोत-नांगरे</div>
-      <div class="person member-card">38. श्रेयश खोत</div>
-      <div class="person member-card">39. राजवर्धन घोरपडे</div>
-      <div class="person member-card">40. राजवीर मोरे</div>
-      <div class="person member-card">41. अथर्व पवार</div>
-      <div class="person member-card">42. श्रेयश जावीर</div>
-      <div class="person member-card">43. अनसाली चाऊस</div>
-    </div>
-  </div>
+<h2 class="title">👥 मंडळाचे सदस्य — 43</h2>
+<div class="box">
+<div class="cards">
+
+<div class="person">1. अरुण खोत</div>
+<div class="person">2. राहुल खोत</div>
+<div class="person">3. प्रवीण मोरे</div>
+<div class="person">4. कैलास खोत</div>
+<div class="person">5. महेंद्र पवार</div>
+<div class="person">6. जयंत खोत</div>
+<div class="person">7. आदित्य घाडगे</div>
+<div class="person">8. जगदीश लोहार</div>
+<div class="person">9. सुशांत पवार</div>
+<div class="person">10. प्रवीण पवार</div>
+<div class="person">11. दिलीप खोत</div>
+<div class="person">12. आशिष खोत</div>
+<div class="person">13. विशाल घाडगे</div>
+<div class="person">14. अमोल घाडगे</div>
+<div class="person">15. अनिकेत घाडगे</div>
+<div class="person">16. अजित घाडगे</div>
+<div class="person">17. संदीप कोकाटे</div>
+<div class="person">18. संग्राम घाडगे</div>
+<div class="person">19. सुशांत चव्हाण</div>
+<div class="person">20. नितीन पवार</div>
+<div class="person">21. स्वप्नील घाडगे</div>
+<div class="person">22. विक्रम घाडगे</div>
+<div class="person">23. प्रणव खोत</div>
+<div class="person">24. राहुल जाधव</div>
+<div class="person">25. सचिन जाधव</div>
+<div class="person">26. भूषण खोत</div>
+<div class="person">27. किशोर बाड</div>
+<div class="person">28. शुभम जगदाळे</div>
+<div class="person">29. गणेश खोत</div>
+<div class="person">30. सुजय दिंडे</div>
+<div class="person">31. संस्कार मोरे</div>
+<div class="person">32. विराज घाडगे</div>
+<div class="person">33. ऋतुराज खोत</div>
+<div class="person">34. पवन फार्णे</div>
+<div class="person">35. आर्यन खोत</div>
+<div class="person">36. श्रेयश पवार</div>
+<div class="person">37. शिवराज खोत-नांगरे</div>
+<div class="person">38. श्रेयश खोत</div>
+<div class="person">39. राजवर्धन घोरपडे</div>
+<div class="person">40. राजवीर मोरे</div>
+<div class="person">41. अथर्व पवार</div>
+<div class="person">42. श्रेयश जावीर</div>
+<div class="person">43. अनसाली चाऊस</div>
+
+</div>
+</div>
 </section>
 
 <section id="gallery" class="page-section">
-  <h2 class="title">📸 Photo & Video Gallery</h2>
-  <div class="gallery">
-    <div class="gallery-card" onclick="openPhoto('nimantran-patrika.jpg', 'गणेशोत्सव निमंत्रण पत्रिका')">
-      <img src="nimantran-patrika.jpg" alt="निमंत्रण पत्रिका" onerror="this.src=generateFallbackSVG('निमंत्रण पत्रिका')">
-      <div class="gallery-card-title">📜 निमंत्रण पत्रिका</div>
-    </div>
-    <div class="gallery-card" onclick="openPhoto('mandal-logo.jpg', 'मंडळाचा लोगो')">
-      <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onerror="this.src=generateFallbackSVG('मंडळ लोगो')">
-      <div class="gallery-card-title">🚩 मंडळाचा लोगो</div>
-    </div>
-  </div>
+<h2 class="title">📸 Photo & Video Gallery</h2>
+<p class="gallery-note">📷 फोटोवर टच करा → मोठा फोटो पाहा → Download करा</p>
+<div class="gallery">
+  <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  <img src="ganeshotsav.jpg" alt="गणेशोत्सव फोटो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+</div>
 </section>
 
-<section id="contact" class="page-section">
-  <h2 class="title">📞 संपर्क</h2>
-  <div class="box" style="text-align: center;">
-    <p style="font-size: 18px; font-weight: 800;">🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</p>
-    <p>📍 पडवळवाडी, ता. वाळवा, जि. सांगली</p>
-  </div>
+<section id="contact" class="global-contact">
+<h2 class="title">📞 संपर्क</h2>
+<div class="box" style="text-align:center">
+<p><b>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ</b></p>
+<p>📍 पडवळवाडी, ता. वाळवा, जि. सांगली</p>
+<a class="btn" href="https://www.instagram.com/kranti_samrat_ganesh_mandal/" target="_blank">📷 Instagram</a>
+<a class="btn" href="https://www.google.com/search?q=क्रांती+सम्राट+पडवळवाडी" target="_blank">🔎 Google</a>
+</div>
 </section>
 
+
+<!-- PHOTO VIEWER -->
 <div class="photo-viewer" id="photoViewer" onclick="closePhoto(event)">
-  <div style="position:absolute; top:18px; right:22px; color:#fff; font-size:32px; cursor:pointer;" onclick="closePhoto()">✕</div>
-  <img id="viewerImage" src="" alt="Gallery Image">
+  <div class="photo-close" onclick="closePhoto()">✕</div>
+  <img id="viewerImage" src="" alt="">
   <div class="photo-actions">
-    <a id="downloadPhoto" class="btn" href="#" download>⬇️ डाउनलोड फोटो</a>
-    <button class="btn" type="button" onclick="closePhoto()">✖ बंद करा</button>
+    <a id="downloadPhoto" href="#" download>⬇️ Download Photo</a>
+    <button type="button" onclick="closePhoto()">✖ बंद करा</button>
   </div>
 </div>
 
 <footer>
-  <b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
-  <div class="small">Website Designed & Created by — <b>संदेश पवार</b></div>
+<b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
+गणेशोत्सव २०२६<br><br>
+<div class="small">Website Designed & Created by — संदेश पवार</div><br>
+<div class="small">© २०२६ सर्व हक्क राखीव</div><br><br>
 </footer>
 
-<script>
-function showSection(sectionId, element){
-  document.querySelectorAll(".page-section").forEach(sec => sec.classList.remove("active-section"));
-  const target = document.getElementById(sectionId);
-  if(target) target.classList.add("active-section");
-  document.querySelectorAll("nav a").forEach(link => link.classList.remove("active"));
-  if(element) element.classList.add("active");
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}
 
+
+<script>
+function showSection(id){
+  document.querySelectorAll(".page-section, .global-contact").forEach(function(section){
+    section.classList.remove("active-section");
+  });
+
+  var target = document.getElementById(id);
+  if(!target) return;
+
+  target.classList.add("active-section");
+
+  document.querySelectorAll("nav a").forEach(function(link){
+    link.classList.remove("active");
+  });
+
+  var activeLink = document.querySelector('nav a[onclick*="' + id + '"]');
+  if(activeLink) activeLink.classList.add("active");
+
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+</script>
+
+
+
+
+
+
+<script>
 function openPhoto(src, altText){
-  const viewer = document.getElementById("photoViewer");
-  const image = document.getElementById("viewerImage");
-  const download = document.getElementById("downloadPhoto");
+  var viewer = document.getElementById("photoViewer");
+  var image = document.getElementById("viewerImage");
+  var download = document.getElementById("downloadPhoto");
   if(!viewer || !image || !download) return;
+
   image.src = src;
   image.alt = altText || "Gallery Photo";
   download.href = src;
-  download.download = (altText || "photo").replace(/\s+/g, "_") + ".jpg";
+  download.download = (altText || "photo").replace(/\s+/g,"_") + ".jpg";
   viewer.classList.add("show");
   document.body.style.overflow = "hidden";
 }
 
 function closePhoto(event){
   if(event && event.target && event.target.id === "viewerImage") return;
-  const viewer = document.getElementById("photoViewer");
-  if(viewer) viewer.classList.remove("show");
+  var viewer = document.getElementById("photoViewer");
+  if(!viewer) return;
+  viewer.classList.remove("show");
   document.body.style.overflow = "";
 }
-
-function generateFallbackSVG(text) {
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200"><rect width="100%" height="100%" fill="#650000"/><text x="50%" y="50%" fill="#ffd54f" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle">🚩 ${text}</text></svg>`;
-  return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
-}
-
-function filterMembers() {
-  const input = document.getElementById("memberSearch").value.toLowerCase().trim();
-  const members = document.querySelectorAll("#membersGrid .member-card");
-  let count = 0;
-  members.forEach(member => {
-    if(member.textContent.toLowerCase().includes(input)) {
-      member.style.display = "block";
-      count++;
-    } else {
-      member.style.display = "none";
-    }
-  });
-  document.getElementById("memberCount").textContent = count;
-}
-
-(function initCountdown(){
-  const targetDate = new Date("2026-09-14T16:00:00+05:30").getTime();
-  function updateCountdown(){
-    const diff = targetDate - new Date().getTime();
-    if(diff <= 0){
-      document.getElementById("countdown").style.display = "none";
-      document.getElementById("countdownEnd").style.display = "block";
-      return;
-    }
-    document.getElementById("days").textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
-    document.getElementById("hours").textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
-    document.getElementById("minutes").textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
-    document.getElementById("seconds").textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-})();
-
-let audioCtx = null;
-function toggleFestiveSound() {
-  try {
-    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    const osc = audioCtx.createOscillator();
-    const gain = audioCtx.createGain();
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(880, audioCtx.currentTime);
-    osc.frequency.exponentialRampToValueAtTime(440, audioCtx.currentTime + 1.2);
-    gain.gain.setValueAtTime(0.6, audioCtx.currentTime);
-    gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
-    osc.connect(gain);
-    gain.connect(audioCtx.destination);
-    osc.start();
-    osc.stop(audioCtx.currentTime + 1.2);
-  } catch (e) {}
-}
 </script>
+
+
+<script>
+(function(){
+  const targetDate = new Date("2026-09-14T16:00:00+05:30").getTime();
+
+  function updateKrantiCountdown(){
+    const diff = Math.max(0, targetDate - Date.now());
+
+    const days = document.getElementById("days");
+    const hours = document.getElementById("hours");
+    const minutes = document.getElementById("minutes");
+    const seconds = document.getElementById("seconds");
+    const grid = document.getElementById("countdown");
+    const end = document.getElementById("countdownEnd");
+
+    if(!days || !hours || !minutes || !seconds) return;
+
+    days.textContent = String(Math.floor(diff / 86400000)).padStart(2,"0");
+    hours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,"0");
+    minutes.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
+    seconds.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
+
+    if(diff === 0){
+      if(grid) grid.style.display = "none";
+      if(end) end.style.display = "block";
+    }else{
+      if(grid) grid.style.display = "grid";
+      if(end) end.style.display = "none";
+    }
+  }
+
+  updateKrantiCountdown();
+  setInterval(updateKrantiCountdown,1000);
+})();
+</script>
+
 </body>
 </html>
