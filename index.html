@@ -39,13 +39,6 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
 .badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
 
-.countdown-box{max-width:900px;margin:28px auto 0;padding:22px 12px;text-align:center;border-radius:22px;color:#fff;background:linear-gradient(135deg,#650000,#b40000,#f39a00);border:3px solid #ffd34f;box-shadow:0 8px 30px #0005;animation:glow 2s infinite alternate}
-.countdown-title{font-size:clamp(20px,5vw,30px);font-weight:900;margin-bottom:15px}
-.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:650px;margin:auto}
-.time-box{background:#fff;color:#700000;border-radius:15px;padding:12px 5px;box-shadow:0 4px 15px #0004}
-.time-box span{display:block;font-size:clamp(25px,7vw,45px);font-weight:900;line-height:1}.time-box small{font-size:13px;font-weight:800}
-.countdown-end{display:none;font-size:25px;font-weight:900}
-@keyframes glow{from{box-shadow:0 8px 25px #0004}to{box-shadow:0 8px 35px #ffd34f99}}
 
 .btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
 .btn-whatsapp{background:linear-gradient(135deg,#25d366,#128c7e);color:#fff}
@@ -65,7 +58,6 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(2,1fr);gap:7px}
 .home-event-cards{grid-template-columns:repeat(2,1fr)}
-.countdown{gap:6px}.time-box{padding:10px 3px}.time-box small{font-size:11px}
 .gallery{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -109,47 +101,33 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <!-- 🏠 मुख्य स्क्रीन (Home) -->
 <section id="homeSection" class="page-section active-section">
-<h2 class="title">🚩 गणेशोत्सव २०२६ — प्रमुख कार्यक्रम</h2>
+<h2 class="title">🪔 आरती व आरतीचे मानकरी 🪔</h2>
+<div class="box" style="margin-top:10px">
+  <div class="aarti-box" style="margin-bottom:0">
+    <h3>🪔 आरती व आरतीचे मानकरी 🪔</h3>
+    <p>
+      <b>१४ सप्टेंबर</b> — श्री आदित्य घाडगे<br><br>
+      <b>१५ सप्टेंबर</b> — सत्यनारायण पूजा व महाआरती — सौ व श्री प्रणव खोत<br><br>
+      <b>१६ सप्टेंबर</b> — सौ व श्री शिवाजी जगदाळे<br><br>
+      <b>१७ सप्टेंबर</b> — सौ व श्री सागर फार्णे<br><br>
+      <b>१८ सप्टेंबर</b> — सौ व श्री कैलास खोत<br><br>
+      <b>१९ सप्टेंबर</b> — सौ व श्री आशिष खोत<br><br>
+      <b>२० सप्टेंबर</b> — सौ व श्री नितीन मोरे<br><br>
+      <b>२१ सप्टेंबर</b> — सौ व श्री अमोल पवार<br><br>
+      <b>२२ सप्टेंबर</b> — सौ व श्री दिलीप खोत<br><br>
+      <b>२३ सप्टेंबर</b> — सौ व श्री प्रवीण पवार<br><br>
+      <b>२४ सप्टेंबर</b> — सौ व श्री विशाल घाडगे<br><br>
+      <b>२५ सप्टेंबर</b> — मंडळातील सर्व पदाधिकारी सदस्य
+    </p>
+  </div>
+</div>
 <div class="cards home-event-cards">
-
-<div class="event">
-<div class="icon">🚩</div>
-<b>गणपती आगमन</b>
-<p id="arrivalCard">सोमवार<br>१४ सप्टेंबर २०२६<br>सायं. ५:०० वाजता</p>
-</div>
-
-<div class="event">
-<div class="icon">🙏</div>
-<b>सत्यनारायण पूजा व महाआरती</b>
-<p>मंगळवार<br>१५ सप्टेंबर २०२६<br>सकाळी ११:०० — सत्यनारायण पूजा<br>सायं. ४:०० — महाआरती</p>
-</div>
-
-<div class="event">
-<div class="icon">🍛</div>
-<b>महाप्रसाद</b>
-<p id="prasadCard">मंगळवार<br>१५ सप्टेंबर २०२६<br>सायं. ५:०० ते रात्री ९:००</p>
-</div>
-
 <div class="event">
 <div class="icon">🌺</div>
 <b>विसर्जन</b>
 <p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p>
 </div>
-
 </div>
-
-<div class="countdown-box" id="countdownBox">
-  <div class="countdown-title">🚩 गणपती आगमनाला उरले आहेत 🚩</div>
-  <div class="countdown" id="countdown">
-    <div class="time-box"><span id="days">00</span><small>दिवस</small></div>
-    <div class="time-box"><span id="hours">00</span><small>तास</small></div>
-    <div class="time-box"><span id="minutes">00</span><small>मिनिटे</small></div>
-    <div class="time-box"><span id="seconds">00</span><small>सेकंद</small></div>
-  </div>
-  <div class="countdown-end" id="countdownEnd">🚩 गणपती बाप्पा मोरया! 🚩</div>
-</div>
-
-<!-- 📲 Social Share Box -->
 <div class="share-container">
   <b style="color: #700000; font-size: 18px; display: block; margin-bottom: 8px;">📲 ही वेबसाईट मित्र आणि नातेवाईकांना पाठवा</b>
   <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">💬 WhatsApp वर शेअर करा</button>
@@ -177,18 +155,18 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 <div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
 <div class="info">
 🙏 <b>आरती व आरतीचे मानकरी</b><br><br>
-📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 सत्यनारायण पूजा व महाआरतीचे मानकरी: <br><br>
-📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: <br><br>
-📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: 
+📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: श्री आदित्य घाडगे<br><br>
+📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 सत्यनारायण पूजा व महाआरतीचे मानकरी: सौ व श्री प्रणव खोत<br><br>
+📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री शिवाजी जगदाळे<br><br>
+📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री सागर फार्णे<br><br>
+📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री कैलास खोत<br><br>
+📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री आशिष खोत<br><br>
+📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री नितीन मोरे<br><br>
+📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री अमोल पवार<br><br>
+📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री दिलीप खोत<br><br>
+📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री प्रवीण पवार<br><br>
+📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री विशाल घाडगे<br><br>
+📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: मंडळातील सर्व पदाधिकारी सदस्य
 </div>
 <div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
 <div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</span></div>
@@ -416,39 +394,6 @@ function shareWebPage() {
     alert("वेबसाईट लिंक कॉपी झाली आहे!");
   }
 }
-
-(function(){
-  const targetDate = new Date("2026-09-14T16:00:00+05:30").getTime();
-
-  function updateKrantiCountdown(){
-    const diff = Math.max(0, targetDate - Date.now());
-
-    const days = document.getElementById("days");
-    const hours = document.getElementById("hours");
-    const minutes = document.getElementById("minutes");
-    const seconds = document.getElementById("seconds");
-    const grid = document.getElementById("countdown");
-    const end = document.getElementById("countdownEnd");
-
-    if(!days || !hours || !minutes || !seconds) return;
-
-    days.textContent = String(Math.floor(diff / 86400000)).padStart(2,"0");
-    hours.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2,"0");
-    minutes.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2,"0");
-    seconds.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2,"0");
-
-    if(diff === 0){
-      if(grid) grid.style.display = "none";
-      if(end) end.style.display = "block";
-    }else{
-      if(grid) grid.style.display = "grid";
-      if(end) end.style.display = "none";
-    }
-  }
-
-  updateKrantiCountdown();
-  setInterval(updateKrantiCountdown,1000);
-})();
 </script>
 
 </body>
