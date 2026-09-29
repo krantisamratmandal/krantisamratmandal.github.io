@@ -28,7 +28,7 @@ nav a:hover,nav a.active{background:#e7a300;color:#570000}
 section{max-width:1100px;margin:auto;padding:38px 14px}
 .title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.home-event-cards{grid-template-columns:repeat(4,1fr);gap:12px}
+.home-event-cards{grid-template-columns:repeat(3,1fr);gap:12px}
 .event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
 .event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
 .event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
@@ -39,11 +39,29 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
 .badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
 
-
 .btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
 .btn-whatsapp{background:linear-gradient(135deg,#25d366,#128c7e);color:#fff}
 .btn-share{background:linear-gradient(135deg,#ff9800,#e65100);color:#fff}
 .share-container{text-align:center;margin:25px 0 10px;padding:15px;background:#fff0d4;border-radius:15px;border:1px dashed #d99a00}
+
+.hero-banner{background:linear-gradient(135deg,#8a0000,#e65100);color:#fff;text-align:center;padding:25px 15px;border-radius:18px;margin-bottom:25px;box-shadow:0 6px 20px rgba(0,0,0,0.15);border:2px solid #ffd54f}
+.hero-banner h3{font-size:26px;margin:0 0 10px;color:#ffe08a}
+.hero-banner p{font-size:17px;margin:0;line-height:1.6}
+
+.countdown-box{background:#fff;border:2px solid #e2a000;border-radius:18px;padding:20px;text-align:center;margin-bottom:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08)}
+.countdown-title{font-size:20px;font-weight:900;color:#8a0000;margin-bottom:15px}
+.timer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:500px;margin:0 auto}
+.timer-item{background:linear-gradient(145deg,#650000,#8a0000);color:#fff;padding:12px 5px;border-radius:12px;border:1px solid #ffd54f}
+.timer-item .num{font-size:26px;font-weight:900;color:#ffd54f}
+.timer-item .label{font-size:12px;font-weight:bold;margin-top:2px}
+
+.coming-soon-box{background:#fff5df;padding:20px;border-radius:12px;border:2px dashed #d94b00;text-align:center;font-size:18px;font-weight:bold;color:#8a0000;margin-top:15px}
+
+/* 💬 Wishbox Styles */
+.wish-form input, .wish-form textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #d99a00;border-radius:10px;font-family:inherit;font-size:15px}
+.wish-list{margin-top:20px;max-height:300px;overflow-y:auto}
+.wish-card{background:#fff5df;border-left:4px solid #8a0000;padding:12px;border-radius:8px;margin-bottom:10px;text-align:left}
+.wish-card b{color:#8a0000;display:block;margin-bottom:4px}
 
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
 .gallery img{width:115px;height:115px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f;cursor:pointer;transition:.2s}
@@ -57,7 +75,7 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{
 @media(max-width:600px){
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(2,1fr);gap:7px}
-.home-event-cards{grid-template-columns:repeat(2,1fr)}
+.home-event-cards{grid-template-columns:repeat(1,1fr)}
 .gallery{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -83,56 +101,77 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 <h1 id="siteNameTitle">क्रांती सम्राट</h1>
 <h2>कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</h2>
-<div class="tag">🚩 गणेशोत्सव २०२६ 🚩</div>
+<div class="tag">🚩 गणेशोत्सव २०२७ 🚩</div>
 <div class="location" id="siteLocation">📍 पडवळवाडी, ता. वाळवा, जि. सांगली</div>
 </header>
 
-<!-- 🎯 फक्त 1 वेळ Home सह सिंगल मुख्य नेव्हिगेशन मेनू -->
 <nav>
 <a href="#" class="active" onclick="showSection('homeSection');return false;">🏠 Home</a>
 <a href="#" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
 <a href="#" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
 <a href="#" onclick="showSection('aartiSection');return false;">🎵 आरती व स्तोत्र</a>
+<a href="#" onclick="showSection('wishesSection');return false;">💬 शुभेच्छा बॉक्स</a>
 <a href="#" onclick="showSection('office');return false;">👑 पदाधिकारी</a>
 <a href="#" onclick="showSection('members');return false;">👥 सदस्य</a>
 <a href="#" onclick="showSection('gallery');return false;">📸 Gallery</a>
 <a href="#" onclick="showSection('contact');return false;">📞 संपर्क</a>
 </nav>
 
-<!-- 🏠 मुख्य स्क्रीन (Home) -->
+<!-- 🏠 Home Section (गणेशोत्सव २०२७) -->
 <section id="homeSection" class="page-section active-section">
-<h2 class="title">🪔 आरती व आरतीचे मानकरी 🪔</h2>
-<div class="box" style="margin-top:10px">
-  <div class="aarti-box" style="margin-bottom:0">
-    <h3>🪔 आरती व आरतीचे मानकरी 🪔</h3>
-    <p>
-      <b>१४ सप्टेंबर</b> — श्री आदित्य घाडगे<br><br>
-      <b>१५ सप्टेंबर</b> — सत्यनारायण पूजा व महाआरती — सौ व श्री प्रणव खोत<br><br>
-      <b>१६ सप्टेंबर</b> — सौ व श्री शिवाजी जगदाळे<br><br>
-      <b>१७ सप्टेंबर</b> — सौ व श्री सागर फार्णे<br><br>
-      <b>१८ सप्टेंबर</b> — सौ व श्री कैलास खोत<br><br>
-      <b>१९ सप्टेंबर</b> — सौ व श्री आशिष खोत<br><br>
-      <b>२० सप्टेंबर</b> — सौ व श्री नितीन मोरे<br><br>
-      <b>२१ सप्टेंबर</b> — सौ व श्री अमोल पवार<br><br>
-      <b>२२ सप्टेंबर</b> — सौ व श्री दिलीप खोत<br><br>
-      <b>२३ सप्टेंबर</b> — सौ व श्री प्रवीण पवार<br><br>
-      <b>२४ सप्टेंबर</b> — सौ व श्री विशाल घाडगे<br><br>
-      <b>२५ सप्टेंबर</b> — मंडळातील सर्व पदाधिकारी सदस्य
-    </p>
+
+  <!-- 🌟 १. स्वागत बॅनर -->
+  <div class="hero-banner">
+    <h3>🌺 सहर्ष स्वागत 🌺</h3>
+    <p>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी आयोजित <b>श्री गणेशोत्सव २०२७</b> मध्ये सर्वांचे हार्दिक स्वागत!</p>
   </div>
-</div>
-<div class="cards home-event-cards">
-<div class="event">
-<div class="icon">🌺</div>
-<b>विसर्जन</b>
-<p>शुक्रवार<br>२५ सप्टेंबर २०२६<br>रात्री ७:०० वाजता</p>
-</div>
-</div>
-<div class="share-container">
-  <b style="color: #700000; font-size: 18px; display: block; margin-bottom: 8px;">📲 ही वेबसाईट मित्र आणि नातेवाईकांना पाठवा</b>
-  <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">💬 WhatsApp वर शेअर करा</button>
-  <button class="btn btn-share" onclick="shareWebPage()">🔗 लिंक कॉपी / शेअर करा</button>
-</div>
+
+  <!-- ⏱️ २. गणपती आगमन काउंटडाउन टायमर -->
+  <div class="countdown-box">
+    <div class="countdown-title">🚩 श्री गणपती आगमनासाठी बाकी वेळ 🚩</div>
+    <div class="timer-grid">
+      <div class="timer-item"><div class="num" id="days">00</div><div class="label">दिवस</div></div>
+      <div class="timer-item"><div class="num" id="hours">00</div><div class="label">तास</div></div>
+      <div class="timer-item"><div class="num" id="minutes">00</div><div class="label">मिनिटे</div></div>
+      <div class="timer-item"><div class="num" id="seconds">00</div><div class="label">सेकंद</div></div>
+    </div>
+  </div>
+
+  <!-- ✨ ३. मुख्य कार्यक्रम हायलाइट्स -->
+  <h2 class="title">✨ गणेशोत्सव २०२७ विशेष हायलाइट्स ✨</h2>
+  <div class="cards home-event-cards">
+    <div class="event">
+      <div class="icon">🥁</div>
+      <b>श्री गणपती आगमन</b>
+      <p>शनिवार, ४ सप्टेंबर २०२७<br>सायंकाळी ४:०० वाजता</p>
+    </div>
+    <div class="event">
+      <div class="icon">🍛</div>
+      <b>महाप्रसाद</b>
+      <p>रविवार, ५ सप्टेंबर २०२७<br>सायं. ५:०० ते ९:०० वाजता</p>
+    </div>
+    <div class="event">
+      <div class="icon">🌺</div>
+      <b>भव्य विसर्जन मिरवणूक</b>
+      <p>मंगळवार, १४ सप्टेंबर २०२७<br>रात्री ७:०० वाजता</p>
+    </div>
+  </div>
+
+  <!-- 🪔 ४. आरती मानकरी - कमिंग सून बॉक्स -->
+  <div class="box" style="margin-top:30px">
+    <h3 style="color:#8a0000; text-align:center; font-size:24px; margin-top:0;">🪔 दैनंदिन आरती व आरतीचे मानकरी २०२७ 🪔</h3>
+    <div class="coming-soon-box">
+      ⏳ गणेशोत्सव २०२७ साठी आरतीच्या मानकऱ्यांची यादी लवकरच जाहीर केली जाईल!
+    </div>
+  </div>
+
+  <!-- 📲 ५. शेअर बटणे -->
+  <div class="share-container">
+    <b style="color: #700000; font-size: 18px; display: block; margin-bottom: 8px;">📲 ही वेबसाईट मित्र आणि नातेवाईकांना पाठवा</b>
+    <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">💬 WhatsApp वर शेअर करा</button>
+    <button class="btn btn-share" onclick="shareWebPage()">🔗 लिंक कॉपी / शेअर करा</button>
+  </div>
+
 </section>
 
 <!-- 🏛️ मंडळ -->
@@ -141,7 +180,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 <div class="box">
 <p><b id="mandalNameTextSection">क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी</b> हे कला, क्रीडा, सांस्कृतिक आणि सामाजिक उपक्रम राबविणारे मंडळ आहे.</p>
 <div class="cards">
-<div class="person"><b>स्थापना</b>१९९२</div><div class="person"><b>गणेशोत्सव</b>२०२६</div>
+<div class="person"><b>स्थापना</b>१९९२</div><div class="person"><b>गणेशोत्सव</b>२०२७</div>
 <div class="person"><b>ठिकाण</b><span id="locationTextSection">पडवळवाडी, ता. वाळवा, जि. सांगली</span></div>
 <div class="person"><b>उद्देश</b>कला • क्रीडा • संस्कृती • सामाजिक एकोपा</div>
 </div>
@@ -150,27 +189,16 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <!-- 📅 कार्यक्रम -->
 <section id="program" class="page-section">
-<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती</h2>
+<h2 class="title">📅 कार्यक्रमांची संपूर्ण माहिती (२०२७)</h2>
 <div class="box">
-<div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">सोमवार, १४ सप्टेंबर २०२६ — सायं. ४:०० वाजता</span></div>
+<div class="info">🚩 <b>गणपती आगमन:</b> <span id="arrivalInfo">शनिवार, ४ सप्टेंबर २०२७ — सायं. ४:०० वाजता</span></div>
 <div class="info">
 🙏 <b>आरती व आरतीचे मानकरी</b><br><br>
-📅 <b>१४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: श्री आदित्य घाडगे<br><br>
-📅 <b>१५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 सत्यनारायण पूजा व महाआरतीचे मानकरी: सौ व श्री प्रणव खोत<br><br>
-📅 <b>१६ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री शिवाजी जगदाळे<br><br>
-📅 <b>१७ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री सागर फार्णे<br><br>
-📅 <b>१८ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री कैलास खोत<br><br>
-📅 <b>१९ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री आशिष खोत<br><br>
-📅 <b>२० सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री नितीन मोरे<br><br>
-📅 <b>२१ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री अमोल पवार<br><br>
-📅 <b>२२ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री दिलीप खोत<br><br>
-📅 <b>२३ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री प्रवीण पवार<br><br>
-📅 <b>२४ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: सौ व श्री विशाल घाडगे<br><br>
-📅 <b>२५ सप्टेंबर २०२६</b> — रात्री ८:०० वाजता<br>👤 आरतीचे मानकरी: मंडळातील सर्व पदाधिकारी सदस्य
+⏳ <i>गणेशोत्सव २०२७ साठी आरतीच्या मानकऱ्यांची यादी लवकरच प्रसिद्ध करण्यात येईल.</i>
 </div>
 <div class="info">🎉 <b>सांस्कृतिक कार्यक्रम:</b> विविध सांस्कृतिक व विशेष कार्यक्रम</div>
-<div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">मंगळवार, १५ सप्टेंबर २०२६ — सायं. ५:०० ते रात्री ९:००</span></div>
-<div class="info">🌺 <b>विसर्जन:</b> शुक्रवार, २५ सप्टेंबर २०२६ — रात्री ७:०० वाजता</div>
+<div class="info">🍛 <b>महाप्रसाद:</b> <span id="prasadInfo">रविवार, ५ सप्टेंबर २०२७ — सायं. ५:०० ते रात्री ९:००</span></div>
+<div class="info">🌺 <b>विसर्जन:</b> मंगळवार, १४ सप्टेंबर २०२७ — रात्री ७:०० वाजता</div>
 </div>
 </section>
 
@@ -225,6 +253,28 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     द्वादशैतानि नामानि त्रिसन्ध्यं यः पठेन्नरः ।<br>
     न च विघ्नभयं तस्य सर्वसिद्धिकरं प्रभो ॥ ५ ॥
   </p>
+</div>
+</section>
+
+<!-- 💬 गणेशोत्सव शुभेच्छा व अभिप्राय बॉक्स (Wishbox) -->
+<section id="wishesSection" class="page-section">
+<h2 class="title">💬 गणेशोत्सव शुभेच्छा व अभिप्राय</h2>
+<div class="box" style="text-align:center;">
+  <p style="font-size:17px; font-weight:bold;">गणपती बाप्पाच्या चरणी व मंडळाला आपल्या शुभेच्छा नक्की पाठवा! 🙏</p>
+  
+  <div class="wish-form">
+    <input type="text" id="wishName" placeholder="तुमचे नाव येथे लिहा..." required>
+    <textarea id="wishMessage" rows="3" placeholder="तुमचा शुभेच्छा मेसेज येथे लिहा..." required></textarea>
+    <button class="btn" onclick="addWish()">🚩 शुभेच्छा पाठवा</button>
+  </div>
+
+  <h3 style="color:#8a0000; margin-top:30px;">💐 प्राप्त झालेल्या शुभेच्छा 💐</h3>
+  <div class="wish-list" id="wishList">
+    <div class="wish-card">
+      <b>महेंद्र पवार</b>
+      <p>क्रांती सम्राट मंडळाला गणेशोत्सवाच्या हार्दिक शुभेच्छा! बाप्पा सर्वांना उदंड आयुष्य व सुख-समृद्धी देवो. 🚩🌺</p>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -326,9 +376,9 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <footer>
 <b>🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी 🚩</b><br>
-गणेशोत्सव २०२६<br><br>
+गणेशोत्सव २०२७<br><br>
 <div class="small">Website Designed & Created by — Sandesh Mahendra Pawar</div><br>
-<div class="small">© २०२६ सर्व हक्क राखीव</div><br><br>
+<div class="small">© २०२७ सर्व हक्क राखीव</div><br><br>
 </footer>
 
 <script>
@@ -377,7 +427,7 @@ function closePhoto(event){
 }
 
 function shareOnWhatsApp() {
-  const text = "🚩 *क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी* 🚩\n\nगणेशोत्सव २०२६ च्या संपूर्ण कार्यक्रमांची माहिती, आरती व फोटो पाहा खालील लिंकवर:\n";
+  const text = "🚩 *क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी* 🚩\n\nगणेशोत्सव २०२७ च्या संपूर्ण कार्यक्रमांची माहिती, आरती व फोटो पाहा खालील लिंकवर:\n";
   const url = window.location.href;
   window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + url), "_blank");
 }
@@ -386,7 +436,7 @@ function shareWebPage() {
   if (navigator.share) {
     navigator.share({
       title: 'क्रांती सम्राट मंडळ | पडवळवाडी',
-      text: '🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी — गणेशोत्सव २०२६ 🚩',
+      text: '🚩 क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी — गणेशोत्सव २०२७ 🚩',
       url: window.location.href
     }).catch(console.error);
   } else {
@@ -394,6 +444,53 @@ function shareWebPage() {
     alert("वेबसाईट लिंक कॉपी झाली आहे!");
   }
 }
+
+/* 💬 शुभेच्छा ॲड करण्याची फंक्शनॅलिटी */
+function addWish() {
+  const name = document.getElementById('wishName').value.trim();
+  const message = document.getElementById('wishMessage').value.trim();
+
+  if (!name || !message) {
+    alert("कृपया तुमचे नाव आणि मेसेज दोन्ही लिहा!");
+    return;
+  }
+
+  const wishList = document.getElementById('wishList');
+  const newWish = document.createElement('div');
+  newWish.className = 'wish-card';
+  newWish.innerHTML = `<b>${name}</b><p>${message}</p>`;
+
+  wishList.prepend(newWish);
+
+  document.getElementById('wishName').value = '';
+  document.getElementById('wishMessage').value = '';
+  alert("तुमची शुभेच्छा संदेश जोडला गेला आहे! धन्यवाद 🙏");
+}
+
+/* ⏱️ आगमनाचा टायमर स्क्रिप्ट (४ सप्टेंबर २०२७) */
+const arrivalDate = new Date("September 4, 2027 16:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const diff = arrivalDate - now;
+
+  if (diff > 0) {
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+    document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+    document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+  } else {
+    document.querySelector(".countdown-box").innerHTML = "<div class='countdown-title'>🌺 श्री गणपती बाप्पांचे आगमन झाले आहे! 🌺</div>";
+  }
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
 </script>
 
 </body>
