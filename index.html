@@ -3,47 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी - श्री गणेशोत्सव">
+<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी - श्री गणेशोत्सव २०२७">
 <title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
 
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;font-family:"Noto Sans Devanagari","Mangal",Arial,sans-serif;background:#fff7e8;color:#35120b}
-header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
-.logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
 
+/* Header & Theme Styling */
+header{background:linear-gradient(135deg,#650000,#a90000 48%,#f39a00);color:#fff;text-align:center;padding:22px 12px 30px}
 .logo-wrap{width:105px;height:105px;margin:0 auto;position:relative}
-.logo-wrap .logo{width:95px;height:95px}
+.logo-wrap .logo{width:95px;height:95px;object-fit:contain;border-radius:50%;background:#fff;padding:5px;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007}
 .logo-fallback{display:none;width:95px;height:95px;border-radius:50%;background:#fff;align-items:center;justify-content:center;flex-direction:column;color:#8a0000;border:3px solid #ffd54f;box-shadow:0 4px 18px #0007;font-size:35px;font-weight:900;line-height:.85}
 .logo-fallback span{font-size:12px;margin-top:5px}
 
 h1{font-size:clamp(30px,8vw,58px);margin:8px 0 0;font-weight:900}
 header h2{font-size:clamp(17px,4.5vw,29px);margin:3px 0}
-.tag{font-size:19px;font-weight:800;margin:8px}.location{font-size:15px}
+.tag{font-size:19px;font-weight:800;margin:8px}
+.location{font-size:15px}
 
+/* Sticky Navigation Bar */
 nav{position:sticky;top:0;z-index:99;background:#620000;display:flex;justify-content:center;flex-wrap:wrap;box-shadow:0 3px 14px #0005}
-nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:13px 10px;border-right:1px solid #d99a00}
+nav a{color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 9px;border-right:1px solid #d99a00;transition:all 0.2s}
 nav a:hover,nav a.active{background:#e7a300;color:#570000}
 
-section{max-width:1100px;margin:auto;padding:38px 14px}
-.title{text-align:center;color:#8a0000;font-size:29px;font-weight:900;margin:0 0 20px}
+/* Content Layout Containers */
+section{max-width:1100px;margin:auto;padding:35px 14px}
+.title{text-align:center;color:#8a0000;font-size:28px;font-weight:900;margin:0 0 20px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .home-event-cards{grid-template-columns:repeat(3,1fr);gap:12px}
+
+/* Cards & Info Elements */
 .event{color:#fff;text-align:center;padding:22px 12px;border-radius:18px;border:2px solid #ffc94d;box-shadow:0 6px 18px #0003;background:linear-gradient(145deg,#8a0000,#ed4b00)}
 .event:nth-child(2){background:linear-gradient(145deg,#d05b00,#f6a600)}
 .event:nth-child(3){background:linear-gradient(145deg,#70004e,#bd1763)}
 .event .icon{font-size:40px}.event b{display:block;font-size:21px;margin:6px}.event p{margin:0;line-height:1.7}
+
 .box{background:#fff;border-radius:18px;padding:20px;box-shadow:0 5px 22px #0002;border:1px solid #ffd38a}
 .info{background:#fff5df;border-left:5px solid #e2a000;padding:14px;border-radius:9px;margin:10px 0;line-height:1.6}
 .person{background:#fff;border:1px solid #ffd28a;border-radius:15px;text-align:center;padding:15px;box-shadow:0 3px 12px #0001;font-size:17px}
 .person b{display:block;color:#8a0000;margin-bottom:5px;font-size:18px}
 .badge{display:inline-block;background:#ffe08a;color:#650000;padding:3px 9px;border-radius:15px;font-size:12px;font-weight:bold}
 
-.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer}
+/* Interactive Buttons */
+.btn{display:inline-block;margin:6px;padding:12px 18px;border-radius:25px;background:linear-gradient(135deg,#d94b00,#820000);color:#fff;text-decoration:none;font-weight:bold;border:0;cursor:pointer;transition:transform 0.2s;text-align:center}
+.btn:active{transform:scale(0.97)}
+.btn-sm{padding:8px 14px;font-size:13px;border-radius:20px}
 .btn-whatsapp{background:linear-gradient(135deg,#25d366,#128c7e);color:#fff}
 .btn-share{background:linear-gradient(135deg,#ff9800,#e65100);color:#fff}
 .share-container{text-align:center;margin:25px 0 10px;padding:15px;background:#fff0d4;border-radius:15px;border:1px dashed #d99a00}
 
+/* Hero Section & Countdown Timer */
 .hero-banner{background:linear-gradient(135deg,#8a0000,#e65100);color:#fff;text-align:center;padding:25px 15px;border-radius:18px;margin-bottom:25px;box-shadow:0 6px 20px rgba(0,0,0,0.15);border:2px solid #ffd54f}
 .hero-banner h3{font-size:26px;margin:0 0 10px;color:#ffe08a}
 .hero-banner p{font-size:17px;margin:0;line-height:1.6}
@@ -57,35 +67,42 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 
 .coming-soon-box{background:#fff5df;padding:20px;border-radius:12px;border:2px dashed #d94b00;text-align:center;font-size:18px;font-weight:bold;color:#8a0000;margin-top:15px}
 
-/* 🎥 Video Container Styles inside Gallery */
-.gallery-video-item{background:#fff;border:2px solid #ffd38a;border-radius:16px;padding:12px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
-.gallery-video-item h4{margin:5px 0 10px;color:#8a0000;font-size:18px}
-.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid #e2a000;background:#000}
-.video-container video{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+/* 📸 Gallery Section & Video Containers */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:20px}
+.gallery-item{background:#fff;border:2px solid #ffd38a;border-radius:16px;padding:14px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.06);display:flex;flex-direction:column;justify-content:space-between}
+.gallery-item h4{margin:5px 0 12px;color:#8a0000;font-size:18px;font-weight:bold}
 
-/* 💬 Wishbox Styles */
+.gallery img{width:100%;height:230px;object-fit:cover;display:block;margin:0 auto;border-radius:12px;border:2px solid #ffd34f;cursor:pointer;transition:.2s}
+.gallery img:hover{transform:scale(1.02)}
+
+.video-wrapper{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:12px;border:2px solid #e2a000;overflow:hidden}
+.video-wrapper video{position:absolute;top:0;left:0;width:100%;height:100%;border:0;object-fit:contain;background:#000}
+
+.video-btn-container{display:flex;gap:8px;justify-content:center;margin-top:10px;flex-wrap:wrap}
+
+/* 💬 Wishbox Styling */
 .wish-form input, .wish-form textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #d99a00;border-radius:10px;font-family:inherit;font-size:15px}
 .wish-list{margin-top:20px;max-height:300px;overflow-y:auto}
 .wish-card{background:#fff5df;border-left:4px solid #8a0000;padding:12px;border-radius:8px;margin-bottom:10px;text-align:left}
 .wish-card b{color:#8a0000;display:block;margin-bottom:4px}
 
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:20px}
-.gallery img{width:100%;height:220px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f;cursor:pointer;transition:.2s}
-.gallery img:hover{transform:scale(1.03)}
-
+/* Footer & Aarti Cards */
 footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{font-size:13px;opacity:.9}
-
 .aarti-box{background:#fffcf2;border:2px solid #e2a000;border-radius:16px;padding:20px;margin-bottom:20px;line-height:1.9;font-size:16px;text-align:center}
 .aarti-box h3{color:#8a0000;font-size:22px;margin-top:0;border-bottom:2px dashed #e2a000;padding-bottom:10px}
 
+/* Responsive Overrides */
 @media(max-width:600px){
-nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
+nav a{padding:10px 6px;font-size:12px}
+section{padding:25px 10px}
+.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(2,1fr);gap:7px}
 .home-event-cards{grid-template-columns:repeat(1,1fr)}
 .gallery{grid-template-columns:repeat(1,1fr)}
-.gallery img{height:180px}
+.gallery img{height:190px}
 }
 
+/* Lightbox Modal */
 .photo-viewer{display:none;position:fixed;inset:0;z-index:10050;background:rgba(0,0,0,.94);align-items:center;justify-content:center;flex-direction:column;padding:20px}
 .photo-viewer.show{display:flex}
 .photo-viewer img{max-width:96vw;max-height:78vh;object-fit:contain;border-radius:12px;box-shadow:0 8px 35px #000}
@@ -114,7 +131,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <nav>
 <a href="#" class="active" onclick="showSection('homeSection');return false;">🏠 Home</a>
-<a href="#" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
+<a href="#" onclick="showSection('mandal');return false;">🏛 मंडळ</a>
 <a href="#" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
 <a href="#" onclick="showSection('aartiSection');return false;">🎵 आरती व स्तोत्र</a>
 <a href="#" onclick="showSection('wishesSection');return false;">💬 शुभेच्छा बॉक्स</a>
@@ -133,7 +150,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     <p>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी आयोजित <b>श्री गणेशोत्सव २०२७</b> मध्ये सर्वांचे हार्दिक स्वागत!</p>
   </div>
 
-  <!-- ⏱️ गणपती आगमन काउंटडाउन टायमर -->
+  <!-- ⏱️️ गणपती आगमन काउंटडाउन टायमर -->
   <div class="countdown-box">
     <div class="countdown-title">🚩 श्री गणपती आगमनासाठी बाकी वेळ 🚩</div>
     <div class="timer-grid">
@@ -164,7 +181,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     </div>
   </div>
 
-  <!-- 🪔 आरती मानकरी - कमिंग सून बॉक्स -->
+  <!-- 🪔 आरती मानकरी -->
   <div class="box" style="margin-top:30px">
     <h3 style="color:#8a0000; text-align:center; font-size:24px; margin-top:0;">🪔 दैनंदिन आरती व आरतीचे मानकरी २०२७ 🪔</h3>
     <div class="coming-soon-box">
@@ -232,7 +249,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
   <h3>🌸 घालीन लोटांगण 🌸</h3>
   <p>
     घालीन लोटांगण वंदीन चरण । डोळ्यांनी पाहीन रूप तुझे ॥<br>
-    प्रेमे आलिंगीन आनंदे पूजीन । भावे ओवाळीन म्हणे नामा ॥ १ ॥<br><br>
+    प्रेमे आलिंगीन आनंदे पूजीन । भावे ओवालीन म्हणे नामा ॥ १ ॥<br><br>
     त्वमेव माता च पिता त्वमेव । त्वमेव बंधुश्च सखा त्वमेव ॥<br>
     त्वमेव विद्या द्रविणं त्वमेव । त्वमेव सर्वं मम देवदेव ॥ २ ॥<br><br>
     कायेन वाचा मनसेंद्रियैर्वा । बुद्ध्यात्मना वा प्रकृतेः स्वभावात् ॥<br>
@@ -263,7 +280,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<!-- 💬 गणेशोत्सव शुभेच्छा व अभिप्राय बॉक्स (Wishbox) -->
+<!-- 💬 शुभेच्छा बॉक्स (Wishbox) -->
 <section id="wishesSection" class="page-section">
 <h2 class="title">💬 गणेशोत्सव शुभेच्छा व अभिप्राय</h2>
 <div class="box" style="text-align:center;">
@@ -275,9 +292,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     <button class="btn" onclick="addWish()">🚩 शुभेच्छा पाठवा</button>
   </div>
   
-  <div class="wish-list" id="wishList">
-    <!-- पाठवलेल्या शुभेच्छा येथे दिसतील -->
-  </div>
+  <div class="wish-list" id="wishList"></div>
 </div>
 </section>
 
@@ -344,41 +359,51 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<!-- 📸 GALLERY (फोटो आणि व्हिडिओ एकत्र) -->
+<!-- 📸 GALLERY (फोटो आणि व्हिडिओ) -->
 <section id="gallery" class="page-section">
 <h2 class="title">📸 Gallery (फोटो व व्हिडिओ)</h2>
-<p class="gallery-note">📷 फोटोवर टच करा → मोठा फोटो पाहा | 🎬 व्हिडिओ प्ले करून पाहा</p>
+<p class="gallery-note">📷 फोटोवर टच करून मोठा फोटो पाहा | 🎬 व्हिडिओ प्ले करून पाहा</p>
 
 <div class="gallery">
   <!-- १. फोटो - मंडळाचा लोगो -->
-  <div>
-    <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  <div class="gallery-item">
+    <h4>🚩 मंडळाचा अधिकृत लोगो</h4>
+    <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.src='https://placehold.co/600x400/8a0000/ffffff?text=%E0%A5%A1+%E0%A4%95%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%82%E0%A4%A4%E0%A5%80+%E0%A4%B8%E0%A4%AE%E0%A5%8D%E0%A4%B0%E0%A4%BE%E0%A4%9F'">
   </div>
 
-  <!-- २. फोटो - गणपती बाप्पा (ganpati2.jpg) -->
-  <div>
-    <img src="ganpati2.jpg" alt="श्री गणपती बाप्पा - क्रांती सम्राट पडवळवाडी" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  <!-- २. फोटो - गणपती बाप्पा -->
+  <div class="gallery-item">
+    <h4>🌺 श्री गणपती बाप्पा २०२७</h4>
+    <img src="ganpati2.jpg" alt="श्री गणपती बाप्पा - क्रांती सम्राट पडवळवाडी" onclick="openPhoto(this.src,this.alt)" onerror="this.src='https://placehold.co/600x400/d05b00/ffffff?text=%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80+%E0%A4%97%E0%A4%A3%E0%A4%AA%E0%A4%A4%E0%A5%80+%E0%A4%AC%E0%A4%BE%E0%A4%AA%E0%A5%8D%E0%A4%AA%E0%A4%BE'">
   </div>
 
   <!-- ३. व्हिडिओ - आगमन (ganpati-agman.mp4) -->
-  <div class="gallery-video-item">
+  <div class="gallery-item">
     <h4>🥁 गणपती आगमन व्हिडिओ</h4>
-    <div class="video-container">
-      <video controls poster="ganpati2.jpg">
+    <div class="video-wrapper">
+      <video id="agmanVideo" controls preload="metadata" playsinline poster="ganpati2.jpg">
         <source src="ganpati-agman.mp4" type="video/mp4">
         तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
       </video>
     </div>
+    <div class="video-btn-container">
+      <button class="btn btn-sm" onclick="playOrOpenVideo('agmanVideo', 'ganpati-agman.mp4')">▶️ व्हिडिओ प्ले / ओपन करा</button>
+      <a class="btn btn-sm btn-share" href="ganpati-agman.mp4" target="_blank" download>⬇️ डाऊनलोड / ओपन</a>
+    </div>
   </div>
 
   <!-- ४. व्हिडिओ - विसर्जन (ganpati-visarjan.mp4) -->
-  <div class="gallery-video-item">
+  <div class="gallery-item">
     <h4>🌺 गणपती विसर्जन व्हिडिओ</h4>
-    <div class="video-container">
-      <video controls poster="ganpati2.jpg">
+    <div class="video-wrapper">
+      <video id="visarjanVideo" controls preload="metadata" playsinline poster="ganpati2.jpg">
         <source src="ganpati-visarjan.mp4" type="video/mp4">
         तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
       </video>
+    </div>
+    <div class="video-btn-container">
+      <button class="btn btn-sm" onclick="playOrOpenVideo('visarjanVideo', 'ganpati-visarjan.mp4')">▶️ व्हिडिओ प्ले / ओपन करा</button>
+      <a class="btn btn-sm btn-share" href="ganpati-visarjan.mp4" target="_blank" download>⬇️ डाऊनलोड / ओपन</a>
     </div>
   </div>
 </div>
@@ -397,7 +422,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<!-- PHOTO VIEWER -->
+<!-- PHOTO VIEWER LIGHTBOX -->
 <div class="photo-viewer" id="photoViewer" onclick="closePhoto(event)">
   <div class="photo-close" onclick="closePhoto()">✕</div>
   <img id="viewerImage" src="" alt="">
@@ -415,6 +440,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </footer>
 
 <script>
+// Section Switcher Logic
 function showSection(id){
   document.querySelectorAll(".page-section").forEach(function(sec){
     sec.classList.remove("active-section");
@@ -437,6 +463,7 @@ function showSection(id){
   window.scrollTo({top:0, behavior:"smooth"});
 }
 
+// Photo Lightbox Viewer Functions
 function openPhoto(src, altText){
   var viewer = document.getElementById("photoViewer");
   var image = document.getElementById("viewerImage");
@@ -459,6 +486,25 @@ function closePhoto(event){
   document.body.style.overflow = "";
 }
 
+// Mobile/Browser Friendly Video Trigger
+function playOrOpenVideo(videoId, fileUrl) {
+  var video = document.getElementById(videoId);
+  if (video) {
+    var playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(function() {
+        // Video started playing successfully
+      }).catch(function(error) {
+        // Fallback: Open video file directly in browser tab
+        window.open(fileUrl, '_blank');
+      });
+    }
+  } else {
+    window.open(fileUrl, '_blank');
+  }
+}
+
+// Social Sharing Logic
 function shareOnWhatsApp() {
   const text = "🚩 *क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी* 🚩\n\nगणेशोत्सव २०२७ च्या संपूर्ण कार्यक्रमांची माहिती, फोटो आणि व्हिडिओ पाहा खालील लिंकवर:\n";
   const url = window.location.href;
@@ -473,12 +519,16 @@ function shareWebPage() {
       url: window.location.href
     }).catch(console.error);
   } else {
-    navigator.clipboard.writeText(window.location.href);
-    alert("वेबसाईट लिंक कॉपी झाली आहे!");
+    try {
+      document.execCommand('copy');
+      alert("वेबसाईट लिंक कॉपी झाली आहे!");
+    } catch(e) {
+      alert("वेबसाईट लिंक: " + window.location.href);
+    }
   }
 }
 
-/* 💬 शुभेच्छा ॲड करण्याची फंक्शनॅलिटी */
+// Wish Box Submission System
 function addWish() {
   const name = document.getElementById('wishName').value.trim();
   const message = document.getElementById('wishMessage').value.trim();
@@ -500,7 +550,7 @@ function addWish() {
   alert("तुमचा शुभेच्छा संदेश जोडला गेला आहे! धन्यवाद 🙏");
 }
 
-/* ⏱️ आगमनाचा टायमर स्क्रिप्ट (४ सप्टेंबर २०२७) */
+// Countdown Timer Logic (Arrival: 4 Sept 2027)
 const arrivalDate = new Date("September 4, 2027 16:00:00").getTime();
 
 function updateCountdown() {
@@ -518,7 +568,8 @@ function updateCountdown() {
     document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
     document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
   } else {
-    document.querySelector(".countdown-box").innerHTML = "<div class='countdown-title'>🌺 श्री गणपती बाप्पांचे आगमन झाले आहे! 🌺</div>";
+    const cdBox = document.querySelector(".countdown-box");
+    if(cdBox) cdBox.innerHTML = "<div class='countdown-title'>🌺 श्री गणपती बाप्पांचे आगमन झाले आहे! 🌺</div>";
   }
 }
 
