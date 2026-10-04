@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी - श्री गणपती आगमन व विसर्जन व्हिडिओ आणि गणेशोत्सव">
-<title>🚩 क्रांती सम्राट मंडळ | गणपती उत्सव व व्हिडिओ</title>
+<meta name="description" content="क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी - श्री गणेशोत्सव">
+<title>🚩 क्रांती सम्राट मंडळ | पडवळवाडी</title>
 
 <style>
 *{box-sizing:border-box;scroll-behavior:smooth}
@@ -57,10 +57,11 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 
 .coming-soon-box{background:#fff5df;padding:20px;border-radius:12px;border:2px dashed #d94b00;text-align:center;font-size:18px;font-weight:bold;color:#8a0000;margin-top:15px}
 
-/* 🎥 Video Box Styles */
-.video-section-box{background:#fff;border:2px solid #ffd38a;border-radius:18px;padding:20px;margin-bottom:25px;box-shadow:0 5px 20px rgba(0,0,0,0.08);text-align:center}
-.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid #e2a000;background:#000;margin-top:15px}
-.video-container video, .video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+/* 🎥 Video Container Styles inside Gallery */
+.gallery-video-item{background:#fff;border:2px solid #ffd38a;border-radius:16px;padding:12px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.06)}
+.gallery-video-item h4{margin:5px 0 10px;color:#8a0000;font-size:18px}
+.video-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;border:2px solid #e2a000;background:#000}
+.video-container video{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
 
 /* 💬 Wishbox Styles */
 .wish-form input, .wish-form textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #d99a00;border-radius:10px;font-family:inherit;font-size:15px}
@@ -68,8 +69,8 @@ section{max-width:1100px;margin:auto;padding:38px 14px}
 .wish-card{background:#fff5df;border-left:4px solid #8a0000;padding:12px;border-radius:8px;margin-bottom:10px;text-align:left}
 .wish-card b{color:#8a0000;display:block;margin-bottom:4px}
 
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
-.gallery img{width:100%;height:180px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f;cursor:pointer;transition:.2s}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:20px}
+.gallery img{width:100%;height:220px;object-fit:cover;display:block;margin:0 auto;border-radius:15px;border:3px solid #ffd34f;cursor:pointer;transition:.2s}
 .gallery img:hover{transform:scale(1.03)}
 
 footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{font-size:13px;opacity:.9}
@@ -81,8 +82,8 @@ footer{background:#570000;color:#fff;text-align:center;padding:28px 12px}.small{
 nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px;height:82px}
 .cards{grid-template-columns:repeat(2,1fr);gap:7px}
 .home-event-cards{grid-template-columns:repeat(1,1fr)}
-.gallery{grid-template-columns:repeat(2,1fr)}
-.gallery img{height:130px}
+.gallery{grid-template-columns:repeat(1,1fr)}
+.gallery img{height:180px}
 }
 
 .photo-viewer{display:none;position:fixed;inset:0;z-index:10050;background:rgba(0,0,0,.94);align-items:center;justify-content:center;flex-direction:column;padding:20px}
@@ -113,7 +114,6 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 
 <nav>
 <a href="#" class="active" onclick="showSection('homeSection');return false;">🏠 Home</a>
-<a href="#" onclick="showSection('videoSection');return false;">🎥 उत्सव व्हिडिओ</a>
 <a href="#" onclick="showSection('mandal');return false;">🏛️ मंडळ</a>
 <a href="#" onclick="showSection('program');return false;">📅 कार्यक्रम</a>
 <a href="#" onclick="showSection('aartiSection');return false;">🎵 आरती व स्तोत्र</a>
@@ -124,35 +124,16 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 <a href="#" onclick="showSection('contact');return false;">📞 संपर्क</a>
 </nav>
 
-<!-- 🏠 Home Section (गणेशोत्सव २०२७) -->
+<!-- 🏠 Home Section -->
 <section id="homeSection" class="page-section active-section">
 
-  <!-- 🌟 १. स्वागत बॅनर -->
+  <!-- 🌟 स्वागत बॅनर -->
   <div class="hero-banner">
     <h3>🌺 सहर्ष स्वागत 🌺</h3>
     <p>क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी आयोजित <b>श्री गणेशोत्सव २०२७</b> मध्ये सर्वांचे हार्दिक स्वागत!</p>
   </div>
 
-  <!-- 🎬 १.१ गणपती आगमन व्हिडिओ हायलाइट -->
-  <div class="video-section-box">
-    <h3 style="color:#8a0000; margin:0 0 8px; font-size:22px;">🥁 श्री गणपती आगमन सोहळा व्हिडियो 🥁</h3>
-    <p style="margin:0; font-weight:bold; color:#d94b00;">पडवळवाडी येथील क्रांती सम्राट मंडळाच्या भव्य आगमन सोहळ्याचे खास क्षण!</p>
-
-    <!-- ganpati-agman.mp4 व्हिडिओ -->
-    <div class="video-container">
-      <video controls poster="ganpati2.jpg">
-        <source src="ganpati-agman.mp4" type="video/mp4">
-        तुमचा ब्राऊझर व्हिडिओ प्ले करण्यास सपोर्ट करत नाही.
-      </video>
-    </div>
-    
-    <div style="margin-top:12px;">
-      <button class="btn" onclick="showSection('videoSection')">📺 आगमन व विसर्जन व्हिडिओ पाहा</button>
-      <button class="btn btn-whatsapp" onclick="shareVideo('agman')">💬 आगमन व्हिडियो शेअर करा</button>
-    </div>
-  </div>
-
-  <!-- ⏱️ २. गणपती आगमन काउंटडाउन टायमर -->
+  <!-- ⏱️ गणपती आगमन काउंटडाउन टायमर -->
   <div class="countdown-box">
     <div class="countdown-title">🚩 श्री गणपती आगमनासाठी बाकी वेळ 🚩</div>
     <div class="timer-grid">
@@ -163,7 +144,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     </div>
   </div>
 
-  <!-- ✨ ३. मुख्य कार्यक्रम हायलाइट्स -->
+  <!-- ✨ मुख्य कार्यक्रम हायलाइट्स -->
   <h2 class="title">✨ गणेशोत्सव २०२७ विशेष हायलाइट्स ✨</h2>
   <div class="cards home-event-cards">
     <div class="event">
@@ -183,7 +164,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     </div>
   </div>
 
-  <!-- 🪔 ४. आरती मानकरी - कमिंग सून बॉक्स -->
+  <!-- 🪔 आरती मानकरी - कमिंग सून बॉक्स -->
   <div class="box" style="margin-top:30px">
     <h3 style="color:#8a0000; text-align:center; font-size:24px; margin-top:0;">🪔 दैनंदिन आरती व आरतीचे मानकरी २०२७ 🪔</h3>
     <div class="coming-soon-box">
@@ -191,44 +172,13 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
     </div>
   </div>
 
-  <!-- 📲 ५. शेअर बटणे -->
+  <!-- 📲 शेअर बटणे -->
   <div class="share-container">
     <b style="color: #700000; font-size: 18px; display: block; margin-bottom: 8px;">📲 ही वेबसाईट मित्र आणि नातेवाईकांना पाठवा</b>
     <button class="btn btn-whatsapp" onclick="shareOnWhatsApp()">💬 WhatsApp वर शेअर करा</button>
     <button class="btn btn-share" onclick="shareWebPage()">🔗 लिंक कॉपी / शेअर करा</button>
   </div>
 
-</section>
-
-<!-- 🎥 खास गणपती आगमन व विसर्जन व्हिडिओ सेक्शन -->
-<section id="videoSection" class="page-section">
-  <h2 class="title">🎥 श्री गणपती उत्सव व्हिडिओ गॅलरी</h2>
-  
-  <!-- १. आगमन व्हिडिओ -->
-  <div class="video-section-box">
-    <h3 style="color:#8a0000; margin-top:0;">🚩 श्री गणपती आगमन सोहळा (ganpati-agman.mp4)</h3>
-    <div class="video-container">
-      <video controls poster="ganpati2.jpg">
-        <source src="ganpati-agman.mp4" type="video/mp4">
-        तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
-      </video>
-    </div>
-    <p style="margin-top:10px; font-weight:bold;">ढोल-ताशांचा गजर आणि बाप्पाच्या आगमनाचा अलोट उत्साह!</p>
-    <button class="btn btn-whatsapp" onclick="shareVideo('agman')">💬 आगमन व्हिडियो शेअर करा</button>
-  </div>
-
-  <!-- २. विसर्जन व्हिडिओ -->
-  <div class="video-section-box">
-    <h3 style="color:#8a0000; margin-top:0;">🌺 भव्य विसर्जन मिरवणूक (ganpati-visarjan.mp4)</h3>
-    <div class="video-container">
-      <video controls poster="ganpati2.jpg">
-        <source src="ganpati-visarjan.mp4" type="video/mp4">
-        तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
-      </video>
-    </div>
-    <p style="margin-top:10px; font-weight:bold;">पुढच्या वर्षाच्या आशेने बाप्पाला दिलेला भावपूर्ण निरोप!</p>
-    <button class="btn btn-whatsapp" onclick="shareVideo('visarjan')">💬 विसर्जन व्हिडियो शेअर करा</button>
-  </div>
 </section>
 
 <!-- 🏛️ मंडळ -->
@@ -394,13 +344,43 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
 </div>
 </section>
 
-<!-- 📸 GALLERY -->
+<!-- 📸 GALLERY (फोटो आणि व्हिडिओ एकत्र) -->
 <section id="gallery" class="page-section">
-<h2 class="title">📸 Photo Gallery</h2>
-<p class="gallery-note">📷 फोटोवर टच करा → मोठा फोटो पाहा → Download करा</p>
+<h2 class="title">📸 Gallery (फोटो व व्हिडिओ)</h2>
+<p class="gallery-note">📷 फोटोवर टच करा → मोठा फोटो पाहा | 🎬 व्हिडिओ प्ले करून पाहा</p>
+
 <div class="gallery">
-  <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
-  <img src="ganpati2.jpg" alt="श्री गणपती बाप्पा - क्रांती सम्राट पडवळवाडी" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  <!-- १. फोटो - मंडळाचा लोगो -->
+  <div>
+    <img src="mandal-logo.jpg" alt="मंडळाचा लोगो" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  </div>
+
+  <!-- २. फोटो - गणपती बाप्पा (ganpati2.jpg) -->
+  <div>
+    <img src="ganpati2.jpg" alt="श्री गणपती बाप्पा - क्रांती सम्राट पडवळवाडी" onclick="openPhoto(this.src,this.alt)" onerror="this.style.display='none'">
+  </div>
+
+  <!-- ३. व्हिडिओ - आगमन (ganpati-agman.mp4) -->
+  <div class="gallery-video-item">
+    <h4>🥁 गणपती आगमन व्हिडिओ</h4>
+    <div class="video-container">
+      <video controls poster="ganpati2.jpg">
+        <source src="ganpati-agman.mp4" type="video/mp4">
+        तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
+      </video>
+    </div>
+  </div>
+
+  <!-- ४. व्हिडिओ - विसर्जन (ganpati-visarjan.mp4) -->
+  <div class="gallery-video-item">
+    <h4>🌺 गणपती विसर्जन व्हिडिओ</h4>
+    <div class="video-container">
+      <video controls poster="ganpati2.jpg">
+        <source src="ganpati-visarjan.mp4" type="video/mp4">
+        तुमचा ब्राऊझर व्हिडिओ प्ले करू शकत नाही.
+      </video>
+    </div>
+  </div>
 </div>
 </section>
 
@@ -422,7 +402,7 @@ nav a{padding:11px 7px;font-size:13px}section{padding:30px 11px}.logo{width:82px
   <div class="photo-close" onclick="closePhoto()">✕</div>
   <img id="viewerImage" src="" alt="">
   <div class="photo-actions">
-    <a id="downloadPhoto" href="#" download>⬇️️ Download Photo</a>
+    <a id="downloadPhoto" href="#" download>⬇ Download Photo</a>
     <button type="button" onclick="closePhoto()">✖ बंद करा</button>
   </div>
 </div>
@@ -480,18 +460,7 @@ function closePhoto(event){
 }
 
 function shareOnWhatsApp() {
-  const text = "🚩 *क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी* 🚩\n\nगणेशोत्सव २०२७ च्या संपूर्ण कार्यक्रमांची माहिती, आरती व उत्सव व्हिडियो पाहा खालील लिंकवर:\n";
-  const url = window.location.href;
-  window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + url), "_blank");
-}
-
-function shareVideo(type) {
-  let text = "";
-  if(type === 'agman') {
-    text = "🥁 *क्रांती सम्राट मंडळ पडवळवाडी - श्री गणपती आगमन व्हिडियो!* 🚩\n\nखास आगमन सोहळ्याचा व्हिडियो पाहण्यासाठी लिंकवर क्लिक करा:\n";
-  } else {
-    text = "🌺 *क्रांती सम्राट मंडळ पडवळवाडी - भव्य विसर्जन मिरवणूक व्हिडियो!* 🚩\n\nभव्य विसर्जन सोहळ्याचा व्हिडियो पाहण्यासाठी लिंकवर क्लिक करा:\n";
-  }
+  const text = "🚩 *क्रांती सम्राट कला क्रीडा व सांस्कृतिक मंडळ, पडवळवाडी* 🚩\n\nगणेशोत्सव २०२७ च्या संपूर्ण कार्यक्रमांची माहिती, फोटो आणि व्हिडिओ पाहा खालील लिंकवर:\n";
   const url = window.location.href;
   window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + url), "_blank");
 }
